@@ -1,0 +1,13 @@
+<?php
+$movies = $block->getMovieData();
+?>
+<div class="movie-list">
+    <h2>Movie List</h2>
+    <?php foreach ($movies as $movie): ?>
+        <div class="movie-item">
+            <h3><?= $movie['name'] ?></h3>
+            <p><strong>Director:</strong> <?= $movie['director'] ?></p>
+            <p><strong>Actor:</strong> <?= $movie['actors'] ?></p>
+        </div>
+    <?php endforeach; ?>
+</div>

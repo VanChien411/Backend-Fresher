@@ -1,1 +1,0 @@
-/var/www/html/Backend-Fresher/vendor/magento/module-sales/view/adminhtml/web/js/grid/columns/multiselect.js
