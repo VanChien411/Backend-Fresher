@@ -52,6 +52,8 @@ class MovieList extends Template
             $movies[] = [
                 'name' => $movie->getName(),
                 'director' => $director->getName(),
+                'rating' => $movie->getRating(),
+                'description' => $movie->getDescription(),
                 'actors' => implode(', ', $actorNames)
             ];
         }
