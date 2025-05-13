@@ -8,7 +8,7 @@ class Interceptor extends \Magenest\Movie\Controller\Adminhtml\Movie\Index imple
 {
     use \Magento\Framework\Interception\Interceptor;
 
-    public function __construct(\Magento\Framework\App\Action\Context $context, \Magento\Framework\View\Result\PageFactory $resultPageFactory)
+    public function __construct(\Magento\Backend\App\Action\Context $context, \Magento\Framework\View\Result\PageFactory $resultPageFactory)
     {
         $this->___init();
         parent::__construct($context, $resultPageFactory);

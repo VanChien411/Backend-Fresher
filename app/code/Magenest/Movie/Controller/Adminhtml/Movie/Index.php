@@ -2,8 +2,8 @@
 
 namespace Magenest\Movie\Controller\Adminhtml\Movie;
 
-use Magento\Framework\App\Action\Action;
-use Magento\Framework\App\Action\Context;
+use Magento\Backend\App\Action;
+use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 
 class Index extends Action

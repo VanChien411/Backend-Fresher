@@ -9,7 +9,9 @@ class Movie extends \Magento\Backend\Block\Widget\Grid\Container
         $this->_blockGroup = 'Magenest_Movie';
         $this->_controller = 'adminhtml_movie';
         $this->_headerText = __('Manage Movies');
-        $this->_addButtonLabel = __('Add New Movie');
         parent::_construct();
+
+        // Xóa nút Add mặc định
+        $this->buttonList->remove('add');
     }
 }
