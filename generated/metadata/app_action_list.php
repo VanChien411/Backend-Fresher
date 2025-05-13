@@ -1,6 +1,10 @@
 <?php return array (
+  'magenest\\movie\\controller\\adminhtml\\actor\\add' => 'Magenest\\Movie\\Controller\\Adminhtml\\Actor\\Add',
   'magenest\\movie\\controller\\adminhtml\\actor\\index' => 'Magenest\\Movie\\Controller\\Adminhtml\\Actor\\Index',
+  'magenest\\movie\\controller\\adminhtml\\actor\\save' => 'Magenest\\Movie\\Controller\\Adminhtml\\Actor\\Save',
+  'magenest\\movie\\controller\\adminhtml\\director\\add' => 'Magenest\\Movie\\Controller\\Adminhtml\\Director\\Add',
   'magenest\\movie\\controller\\adminhtml\\director\\index' => 'Magenest\\Movie\\Controller\\Adminhtml\\Director\\Index',
+  'magenest\\movie\\controller\\adminhtml\\director\\save' => 'Magenest\\Movie\\Controller\\Adminhtml\\Director\\Save',
   'magenest\\movie\\controller\\adminhtml\\movie\\add' => 'Magenest\\Movie\\Controller\\Adminhtml\\Movie\\Add',
   'magenest\\movie\\controller\\adminhtml\\movie\\edit' => 'Magenest\\Movie\\Controller\\Adminhtml\\Movie\\Edit',
   'magenest\\movie\\controller\\adminhtml\\movie\\index' => 'Magenest\\Movie\\Controller\\Adminhtml\\Movie\\Index',
