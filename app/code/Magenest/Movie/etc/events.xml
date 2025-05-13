@@ -1,0 +1,12 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="customer_save_before">
+        <observer name="change_customer_firstname" instance="Magenest\Movie\Observer\ChangeCustomerName" />
+    </event>
+    <event name="magenest_movie_save">
+        <observer name="reset_movie_rating" instance="Magenest\Movie\Observer\ResetMovieRating" />
+    </event>
+    <event name="admin_system_config_changed_section_movie">
+        <observer name="change_ping_to_pong" instance="Magenest\Movie\Observer\ChangePingToPong" />
+    </event>
+
+</config>

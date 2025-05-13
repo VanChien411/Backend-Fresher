@@ -93,6 +93,10 @@
                                 <item name="value" xsi:type="string"></item>
                                 <item name="label" xsi:type="string">Select Rating</item>
                             </option>
+                            <option name="0" xsi:type="array">
+                                <item name="value" xsi:type="string">0</item>
+                                <item name="label" xsi:type="string">0 Rating</item>
+                            </option>
                             <option name="1" xsi:type="array">
                                 <item name="value" xsi:type="string">1</item>
                                 <item name="label" xsi:type="string">1 Rating</item>
