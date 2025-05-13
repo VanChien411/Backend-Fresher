@@ -1,6 +1,8 @@
 <?php return array (
   'magenest\\movie\\controller\\adminhtml\\actor\\index' => 'Magenest\\Movie\\Controller\\Adminhtml\\Actor\\Index',
   'magenest\\movie\\controller\\adminhtml\\director\\index' => 'Magenest\\Movie\\Controller\\Adminhtml\\Director\\Index',
+  'magenest\\movie\\controller\\adminhtml\\movie\\add' => 'Magenest\\Movie\\Controller\\Adminhtml\\Movie\\Add',
+  'magenest\\movie\\controller\\adminhtml\\movie\\edit' => 'Magenest\\Movie\\Controller\\Adminhtml\\Movie\\Edit',
   'magenest\\movie\\controller\\adminhtml\\movie\\index' => 'Magenest\\Movie\\Controller\\Adminhtml\\Movie\\Index',
   'magenest\\movie\\controller\\index\\movielist' => 'Magenest\\Movie\\Controller\\Index\\MovieList',
   'magento\\adminadobeims\\controller\\adminhtml\\oauth\\imscallback' => 'Magento\\AdminAdobeIms\\Controller\\Adminhtml\\OAuth\\ImsCallback',

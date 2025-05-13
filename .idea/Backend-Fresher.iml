@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/app/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/app/code/Magento" isTestSource="false" packagePrefix="Magento\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/build/publication/sanity/Magento/Tools/Sanity" isTestSource="true" packagePrefix="Magento\Tools\Sanity\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromClone/dev/build/publication/sanity/Magento/Tools/Sanity" isTestSource="true" packagePrefix="Magento\Tools\Sanity\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromClone/dev/tests/static/framework/Magento/Sniffs" isTestSource="true" packagePrefix="Magento\Sniffs\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromClone/dev/tests/static/framework/Magento/TestFramework/Inspection" isTestSource="true" packagePrefix="Magento\TestFramework\Inspection\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromClone/dev/tests/static/framework/Magento/TestFramework/Utility" isTestSource="true" packagePrefix="Magento\TestFramework\Utility\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromClone/dev/tools/Magento/Tools" isTestSource="true" packagePrefix="Magento\Tools\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromClone/lib/internal/Magento/Framework" isTestSource="false" packagePrefix="Magento\Framework\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromClone/setup/src/Magento/Setup" isTestSource="false" packagePrefix="Magento\Setup\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromCreateProject/dev/build/publication/sanity/Magento/Tools/Sanity" isTestSource="true" packagePrefix="Magento\Tools\Sanity\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromCreateProject/dev/tests/static/framework/Magento/Sniffs" isTestSource="true" packagePrefix="Magento\Sniffs\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromCreateProject/dev/tests/static/framework/Magento/TestFramework/Inspection" isTestSource="true" packagePrefix="Magento\TestFramework\Inspection\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromCreateProject/dev/tests/static/framework/Magento/TestFramework/Utility" isTestSource="true" packagePrefix="Magento\TestFramework\Utility\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromCreateProject/dev/tools/Magento/Tools" isTestSource="true" packagePrefix="Magento\Tools\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromCreateProject/dev/tools/performance-toolkit/framework/Magento/ToolkitFramework" isTestSource="true" packagePrefix="Magento\ToolkitFramework\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromCreateProject/lib/internal/Magento/Framework" isTestSource="false" packagePrefix="Magento\Framework\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromCreateProject/setup/src/Magento/Setup" isTestSource="false" packagePrefix="Magento\Setup\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testSkeleton/htdocs/lib/internal/Magento/Framework" isTestSource="false" packagePrefix="Magento\Framework\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testSkeleton/htdocs/setup/src/Magento/Setup" isTestSource="false" packagePrefix="Magento\Setup\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/integration/testsuite/Magento/Setup/Model/_files/testSkeleton/htdocs/lib/internal/Magento/Framework" isTestSource="false" packagePrefix="Magento\Framework\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/integration/testsuite/Magento/Setup/Model/_files/testSkeleton/htdocs/setup/src/Magento/Setup" isTestSource="false" packagePrefix="Magento\Setup\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/static/framework/Magento/PhpStan" isTestSource="true" packagePrefix="Magento\PhpStan\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/static/framework/Magento/Sniffs" isTestSource="true" packagePrefix="Magento\Sniffs\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/static/framework/Magento/TestFramework/Inspection" isTestSource="true" packagePrefix="Magento\TestFramework\Inspection\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tests/static/framework/Magento/TestFramework/Utility" isTestSource="true" packagePrefix="Magento\TestFramework\Utility\" />
+      <sourceFolder url="file://$MODULE_DIR$/dev/tools/Magento/Tools" isTestSource="true" packagePrefix="Magento\Tools\" />
+      <sourceFolder url="file://$MODULE_DIR$/generated/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/internal/Magento/Framework" isTestSource="false" packagePrefix="Magento\Framework\" />
+      <sourceFolder url="file://$MODULE_DIR$/setup/src/Magento/Setup" isTestSource="false" packagePrefix="Magento\Setup\" />
+      <sourceFolder url="file://$MODULE_DIR$/setup/src/Magento/Setup/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Acl/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Api/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/App/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Archive/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Async/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Authorization/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Autoload/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Backup/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Cache/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Code/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Component/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Composer/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Config/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Console/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Controller/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Convert/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Crontab/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Css/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/DB/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Data/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/DataObject/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Encryption/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/EntityManager/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Event/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Exception/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/File/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Filesystem/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Filter/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/GraphQl/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/HTTP/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Image/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Indexer/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Interception/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Json/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Jwt/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Locale/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Lock/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Logger/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Mail/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Math/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Measure/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Message/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Model/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Module/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Mview/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Notification/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Oauth/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/ObjectManager/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Phrase/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Pricing/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Profiler/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Reflection/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/RequireJs/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Search/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Serialize/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Session/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Setup/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Shell/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Simplexml/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Stdlib/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/TestFramework/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Translate/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Unserialize/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Url/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Validator/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/View/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Webapi/Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/magento/framework/Xml/Test" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/2tvenom/cborencode" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/allure-framework/allure-codeception" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/allure-framework/allure-php-commons" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/allure-framework/allure-phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/astock/stock-api-libphp" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/aws/aws-crt-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/aws/aws-sdk-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bacon/bacon-qr-code" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/beberlei/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/behat/gherkin" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/braintree/braintree_php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/brick/math" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/brick/varexporter" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/christian-riesen/base32" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/clue/ndjson-react" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codeception/codeception" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codeception/lib-asserts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codeception/lib-web" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codeception/module-asserts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codeception/module-sequence" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codeception/module-webdriver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codeception/stub" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/colinmollenhour/cache-backend-file" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/colinmollenhour/cache-backend-redis" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/colinmollenhour/credis" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/colinmollenhour/php-redis-session-abstract" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/csharpru/vault-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/dasprid/enum" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/dealerdirect/phpcodesniffer-composer-installer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/dg/bypass-finals" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/annotations" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/deprecations" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/elasticsearch/elasticsearch" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/endroid/qr-code" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/evenement/evenement" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ezimuel/guzzlestreams" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ezimuel/ringphp" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ezyang/htmlpurifier" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/fidry/cpu-core-counter" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/friendsofphp/php-cs-fixer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/google/recaptcha" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/justinrainbow/json-schema" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-captcha" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-code" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-config" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-crypt" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-db" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-di" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-diactoros" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-escaper" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-eventmanager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-feed" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-file" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-filter" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-http" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-i18n" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-json" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-loader" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-mail" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-math" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-mime" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-modulemanager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-mvc" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-oauth" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-permissions-acl" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-recaptcha" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-router" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-server" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-servicemanager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-session" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-soap" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-stdlib" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-text" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-translator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-uri" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-view" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/league/flysystem-aws-s3-v3" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/league/mime-type-detection" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/lusitanian/oauth" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/marc-mabe/php-enum" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/mtdowling/jmespath.php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/mustache/mustache" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/opensearch-project/opensearch-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/paragonie/constant_time_encoding" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/paragonie/random_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/paragonie/sodium_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/paypal/module-braintree-core" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/paypal/module-braintree-graph-ql" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/pdepend/pdepend" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/pelago/emogrifier" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phar-io/manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/php-amqplib/php-amqplib" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/php-webdriver/webdriver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpcsstandards/phpcsutils" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpgt/cssxpath" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpgt/dom" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmd/phpmd" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpseclib/mcrypt_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpseclib/phpseclib" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpstan/phpstan" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-code-coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-file-iterator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-invoker" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/clock" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ramsey/collection" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/react/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/react/child-process" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/react/dns" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/react/event-loop" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/react/promise" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/react/socket" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/react/stream" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rector/rector" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sabberworm/php-css-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/cli-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/code-unit" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/complexity" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/lines-of-code" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/object-enumerator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/object-reflector" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/phpcpd" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/resource-operations" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/type" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/seld/jsonlint" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/seld/phar-utils" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/seld/signal-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spomky-labs/aes-key-wrap" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spomky-labs/otphp" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spomky-labs/pki-framework" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/squizlabs/php_codesniffer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/config" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/dependency-injection" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/dotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/error-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/filesystem" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/http-client-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/http-kernel" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/intl" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/options-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php73" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php81" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/stopwatch" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/var-exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/tedivm/jshrink" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/temando/module-shipping-remover" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/thecodingmachine/safe" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/tubalmartin/cssmin" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/web-token/jwt-framework" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/webimpress/safe-writer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/webonyx/graphql-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/weew/helpers-array" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/wikimedia/less.php" />
+      <excludeFolder url="file://$MODULE_DIR$/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/dev" />
+      <excludeFolder url="file://$MODULE_DIR$/generated" />
+      <excludeFolder url="file://$MODULE_DIR$/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/phpserver" />
+      <excludeFolder url="file://$MODULE_DIR$/pub" />
+      <excludeFolder url="file://$MODULE_DIR$/setup" />
+      <excludeFolder url="file://$MODULE_DIR$/var" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
