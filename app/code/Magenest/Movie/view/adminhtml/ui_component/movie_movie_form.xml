@@ -10,7 +10,7 @@
                 <item name="name" xsi:type="string">save</item>
                 <item name="label" xsi:type="string" translate="true">Save</item>
                 <item name="class" xsi:type="string">primary</item>
-                <item name="url" xsi:type="string">*/*/save</item>
+                <item name="url" xsi:type="string">*/save</item>
             </item>
             <item name="back" xsi:type="array">
                 <item name="name" xsi:type="string">back</item>
@@ -18,6 +18,7 @@
                 <item name="class" xsi:type="string">back</item>
                 <item name="url" xsi:type="string">*/*/index</item>
             </item>
+
         </item>
     </argument>
     <settings>
@@ -33,6 +34,11 @@
             <argument name="name" xsi:type="string">movie_movie_form_data_source</argument>
             <argument name="primaryFieldName" xsi:type="string">movie_id</argument>
             <argument name="requestFieldName" xsi:type="string">id</argument>
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="submit_url" xsi:type="url" path="*/*/save"/>
+                </item>
+            </argument>
         </argument>
         <argument name="data" xsi:type="array">
             <item name="js_config" xsi:type="array">

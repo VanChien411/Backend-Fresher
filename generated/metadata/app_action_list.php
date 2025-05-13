@@ -4,6 +4,7 @@
   'magenest\\movie\\controller\\adminhtml\\movie\\add' => 'Magenest\\Movie\\Controller\\Adminhtml\\Movie\\Add',
   'magenest\\movie\\controller\\adminhtml\\movie\\edit' => 'Magenest\\Movie\\Controller\\Adminhtml\\Movie\\Edit',
   'magenest\\movie\\controller\\adminhtml\\movie\\index' => 'Magenest\\Movie\\Controller\\Adminhtml\\Movie\\Index',
+  'magenest\\movie\\controller\\adminhtml\\movie\\save' => 'Magenest\\Movie\\Controller\\Adminhtml\\Movie\\Save',
   'magenest\\movie\\controller\\index\\movielist' => 'Magenest\\Movie\\Controller\\Index\\MovieList',
   'magento\\adminadobeims\\controller\\adminhtml\\oauth\\imscallback' => 'Magento\\AdminAdobeIms\\Controller\\Adminhtml\\OAuth\\ImsCallback',
   'magento\\adminadobeims\\controller\\adminhtml\\oauth\\imsreauthcallback' => 'Magento\\AdminAdobeIms\\Controller\\Adminhtml\\OAuth\\ImsReauthCallback',
