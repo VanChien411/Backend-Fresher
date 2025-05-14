@@ -11,7 +11,7 @@ use Magento\Framework\Api\ExtensibleDataInterface;
 use Magento\Framework\Event\ManagerInterface as EventManager;
 
 /**
- * Cart item totals converter.
+ * CartAfter item totals converter.
  *
  * @codeCoverageIgnore
  */

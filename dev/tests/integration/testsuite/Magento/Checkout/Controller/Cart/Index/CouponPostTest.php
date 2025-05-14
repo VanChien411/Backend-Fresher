@@ -14,7 +14,7 @@ use Magento\Framework\App\Request\Http as HttpRequest;
 class CouponPostTest extends \Magento\TestFramework\TestCase\AbstractController
 {
     /**
-     * Test for \Magento\Checkout\Controller\Cart\CouponPost::execute() with simple product
+     * Test for \Magento\Checkout\Controller\CartAfter\CouponPost::execute() with simple product
      *
      * @magentoDataFixture Magento/Checkout/_files/quote_with_virtual_product_and_address.php
      */

@@ -216,7 +216,7 @@ define([
             addToCartButton.prop('title', addToCartButtonTextAdded);
 
             setTimeout(function () {
-                var addToCartButtonTextDefault = self.options.addToCartButtonTextDefault || $t('Add to Cart');
+                var addToCartButtonTextDefault = self.options.addToCartButtonTextDefault || $t('Add to CartAfter');
 
                 addToCartButton.removeClass(self.options.addToCartButtonDisabledClass);
                 addToCartButton.find('span').text(addToCartButtonTextDefault);

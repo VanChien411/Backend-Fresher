@@ -53,7 +53,7 @@
                      stepKey="loginAsCustomerFromCustomerPage">
             <argument name="customerId" value="$$createCustomer.id$$"/>
         </actionGroup>
-        <!-- Add Products to Cart -->
+        <!-- Add Products to CartAfter -->
         <actionGroup ref="AddSimpleProductToCartActionGroup" stepKey="addSimpleProduct1ToCart">
             <argument name="product" value="$$createProduct1$$"/>
         </actionGroup>

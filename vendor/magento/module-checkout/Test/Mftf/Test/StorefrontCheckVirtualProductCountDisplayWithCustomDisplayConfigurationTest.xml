@@ -18,7 +18,7 @@
         </annotations>
 
         <before>
-            <!--Set Mini Cart and Summary Block Display -->
+            <!--Set Mini CartAfter and Summary Block Display -->
             <magentoCLI stepKey="setMaxDisplayCountForMiniCart" command="config:set checkout/options/max_items_display_count 2"/>
             <magentoCLI stepKey="setMaxDisplayCountForOrderSummary" command="config:set checkout/sidebar/max_items_display_count 3"/>
             <!--Create  simple product-->
@@ -85,16 +85,16 @@
             <argument name="productName" value="$$virtualProduct4.name$$"/>
         </actionGroup>
 
-        <!-- Open Mini Cart -->
+        <!-- Open Mini CartAfter -->
         <actionGroup ref="StorefrontOpenMiniCartActionGroup" stepKey="openMiniCart"/>
 
-        <!-- Assert Product Count in Mini Cart -->
+        <!-- Assert Product Count in Mini CartAfter -->
         <actionGroup ref="StorefrontAssertMiniCartItemCountActionGroup" stepKey="assertProductCountAndTextInMiniCart">
             <argument name="productCount" value="4"/>
             <argument name="productCountText" value="3 of 4 Items in Cart"/>
         </actionGroup>
 
-        <!-- Assert Product1 in Mini Cart -->
+        <!-- Assert Product1 in Mini CartAfter -->
         <actionGroup ref="AssertStorefrontMiniCartItemsActionGroup" stepKey="assertSimpleProduct11MiniCart">
             <argument name="productName" value="$$virtualProduct1.name$$"/>
             <argument name="productPrice" value="$10.00"/>
@@ -102,7 +102,7 @@
             <argument name="qty" value="1"/>
         </actionGroup>
 
-        <!-- Assert Product2 in Mini Cart -->
+        <!-- Assert Product2 in Mini CartAfter -->
         <actionGroup ref="AssertStorefrontMiniCartItemsActionGroup" stepKey="assertSimpleProduct2MiniCart">
             <argument name="productName" value="$$virtualProduct2.name$$"/>
             <argument name="productPrice" value="$20.00"/>
@@ -110,7 +110,7 @@
             <argument name="qty" value="1"/>
         </actionGroup>
 
-        <!-- Assert Product3 in Mini Cart -->
+        <!-- Assert Product3 in Mini CartAfter -->
         <actionGroup ref="AssertStorefrontMiniCartItemsActionGroup" stepKey="assertSimpleProduct3MiniCart">
             <argument name="productName" value="$$virtualProduct3.name$$"/>
             <argument name="productPrice" value="$30.00"/>

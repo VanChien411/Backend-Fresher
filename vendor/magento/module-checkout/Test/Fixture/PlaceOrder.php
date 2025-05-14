@@ -59,7 +59,7 @@ class PlaceOrder implements RevertibleDataFixtureInterface
      * @param array $data Parameters
      * <pre>
      *    $data = [
-     *      'cart_id' => (int) Cart ID. Required
+     *      'cart_id' => (int) CartAfter ID. Required
      *    ]
      * </pre>
      */

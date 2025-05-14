@@ -23,12 +23,12 @@
             <magentoCLI command="config:set {{EnableFlatRateConfigData.path}} {{EnableFlatRateConfigData.value}}" stepKey="enableFlatRate"/>
             <!-- Create Simple Product -->
             <createData entity="defaultSimpleProduct" stepKey="createSimpleProduct"/>
-            <!-- Create Cart Price Rule without discount but with free shipping -->
+            <!-- Create CartAfter Price Rule without discount but with free shipping -->
             <createData entity="ApiSalesRule" stepKey="createCartPriceRule">
                 <field key="simple_free_shipping">1</field>
                 <field key="discount_amount">0</field>
             </createData>
-            <!-- Create Coupon code for the Cart Price Rule -->
+            <!-- Create Coupon code for the CartAfter Price Rule -->
             <createData entity="ApiSalesRuleCoupon" stepKey="createCartPriceRuleCoupon">
                 <requiredEntity createDataKey="createCartPriceRule"/>
             </createData>
@@ -51,7 +51,7 @@
             <argument name="Customer" value="$$createCustomer$$"/>
         </actionGroup>
 
-        <!-- Add Simple Product to Cart -->
+        <!-- Add Simple Product to CartAfter -->
         <actionGroup ref="StorefrontAddSimpleProductToShoppingCartActionGroup" stepKey="addProductToCart">
             <argument name="product" value="$$createSimpleProduct$$"/>
         </actionGroup>

@@ -82,7 +82,7 @@
         <!--Login to Paypal in-context-->
         <actionGroup ref="StorefrontLoginToPayPalPaymentAccountTwoStepActionGroup" stepKey="LoginToPayPal"/>
 
-        <!--Transfer Cart Line and Shipping Method assertion-->
+        <!--Transfer CartAfter Line and Shipping Method assertion-->
         <actionGroup ref="PayPalAssertTransferLineAndShippingMethodNotExistActionGroup" stepKey="assertPayPalSettings"/>
 
         <!--Click PayPal button and go back to Magento site-->

@@ -11,7 +11,7 @@ use Magento\Quote\Api\CartRepositoryInterface;
 use Magento\Quote\Model\QuoteIdMaskFactory;
 
 /**
- * Cart Repository class for guest carts.
+ * CartAfter Repository class for guest carts.
  */
 class GuestCartRepository implements GuestCartRepositoryInterface
 {

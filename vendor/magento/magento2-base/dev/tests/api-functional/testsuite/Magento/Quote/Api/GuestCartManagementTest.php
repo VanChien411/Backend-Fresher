@@ -108,7 +108,7 @@ class GuestCartManagementTest extends WebapiAbstract
             'customerId' => $customerId,
             'storeId' => 1,
         ];
-        // Cart must be anonymous (see fixture)
+        // CartAfter must be anonymous (see fixture)
         $this->assertEmpty($quote->getCustomerId());
 
         $this->assertTrue($this->_webApiCall($serviceInfo, $requestData));
@@ -373,7 +373,7 @@ class GuestCartManagementTest extends WebapiAbstract
             'customerId' => $customerId,
             'storeId' => 1,
         ];
-        // Cart must be anonymous (see fixture)
+        // CartAfter must be anonymous (see fixture)
         $this->assertEmpty($quote->getCustomerId());
 
         $this->_webApiCall($serviceInfo, $requestData);

@@ -91,7 +91,7 @@ abstract class Reorder extends Action\Action implements HttpPostActionInterface
         }
 
         // Set quote id for guest session: \Magento\Quote\Api\CartRepositoryInterface::save doesn't set quote id
-        // to session for guest customer, as it does \Magento\Checkout\Model\Cart::save which is deprecated.
+        // to session for guest customer, as it does \Magento\Checkout\Model\CartAfter::save which is deprecated.
         $this->checkoutSession->setQuoteId($reorderOutput->getCart()->getId());
 
         $errors = $reorderOutput->getErrors();

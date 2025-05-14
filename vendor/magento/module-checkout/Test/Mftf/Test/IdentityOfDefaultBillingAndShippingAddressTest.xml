@@ -58,7 +58,7 @@
             <argument name="customerAddressVar" value="US_Address_NY" />
         </actionGroup>
 
-        <!-- Fill Cart data -->
+        <!-- Fill CartAfter data -->
         <actionGroup ref="CheckoutSelectCheckMoneyOrderPaymentActionGroup" stepKey="selectCheckMoneyOrderPayment" />
         <checkOption selector="{{StorefrontCheckoutPaymentMethodSection.billingAddressSameAsShipping}}" stepKey="checkBillingAddressSameAsShippingCheckbox"/>
 

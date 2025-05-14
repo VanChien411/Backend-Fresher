@@ -22,7 +22,7 @@ interface CartManagementInterface
     /**
      * Creates an empty cart and quote for a guest.
      *
-     * @return int Cart ID.
+     * @return int CartAfter ID.
      * @throws \Magento\Framework\Exception\CouldNotSaveException The empty cart and quote could not be created.
      */
     public function createEmptyCart();
@@ -40,7 +40,7 @@ interface CartManagementInterface
      * Returns information for the cart for a specified customer.
      *
      * @param int $customerId The customer ID.
-     * @return \Magento\Quote\Api\Data\CartInterface Cart object.
+     * @return \Magento\Quote\Api\Data\CartInterface CartAfter object.
      * @throws \Magento\Framework\Exception\NoSuchEntityException The specified customer does not exist.
      */
     public function getCartForCustomer($customerId);

@@ -138,7 +138,7 @@ class GridTest extends TestCase
 
     /**
      * @return void
-     * @cover \Magento\Checkout\Block\Cart\Grid::_prepareLayout
+     * @cover \Magento\Checkout\Block\CartAfter\Grid::_prepareLayout
      */
     public function testSetLayout(): void
     {
@@ -207,7 +207,7 @@ class GridTest extends TestCase
 
     /**
      * @return void
-     * @cover \Magento\Checkout\Block\Cart::prepareItemUrls
+     * @cover \Magento\Checkout\Block\CartAfter::prepareItemUrls
      */
     public function testGetItemsIfCustomItemsExists(): void
     {

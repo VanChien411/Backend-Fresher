@@ -13,7 +13,7 @@ use Magento\CatalogInventory\Model\StockRegistry;
 use Magento\Framework\View\Element\Block\ArgumentInterface;
 
 /**
- * ViewModel for Wishlist Cart Block
+ * ViewModel for Wishlist CartAfter Block
  */
 class AllowedQuantity implements ArgumentInterface
 {

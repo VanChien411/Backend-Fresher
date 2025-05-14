@@ -10,7 +10,7 @@ use Magento\Framework\Api\ExtensionAttributesFactory;
 use Magento\Quote\Model\Quote\Address;
 
 /**
- * Shopping Cart Rule data model
+ * Shopping CartAfter Rule data model
  *
  * @api
  * @method string getName()

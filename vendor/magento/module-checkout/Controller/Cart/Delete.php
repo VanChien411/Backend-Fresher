@@ -29,7 +29,7 @@ class Delete extends \Magento\Checkout\Controller\Cart implements HttpPostAction
         if ($id) {
             try {
                 $this->cart->removeItem($id);
-                // We should set Totals to be recollected once more because of Cart model as usually is loading
+                // We should set Totals to be recollected once more because of CartAfter model as usually is loading
                 // before action executing and in case when triggerRecollect setted as true recollecting will
                 // executed and the flag will be true already.
                 $this->cart->getQuote()->setTotalsCollectedFlag(false);

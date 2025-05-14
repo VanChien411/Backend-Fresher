@@ -88,7 +88,7 @@ class SetInStorePickup implements DataFixtureInterface
      * @param array $data Parameters
      * <pre>
      *    $data = [
-     *      'cart_id' => (int) Cart ID. Required
+     *      'cart_id' => (int) CartAfter ID. Required
      *      'source_code' => (string) Source Code. Required
      *    ]
      * </pre>

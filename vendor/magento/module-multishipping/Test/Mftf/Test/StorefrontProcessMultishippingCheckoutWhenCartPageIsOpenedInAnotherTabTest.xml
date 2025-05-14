@@ -44,7 +44,7 @@
         <actionGroup ref="LoginToStorefrontActionGroup" stepKey="loginAsCustomer">
             <argument name="Customer" value="$$createCustomerWithMultipleAddresses$$"/>
         </actionGroup>
-        <!--  Add two products to the Shopping Cart -->
+        <!--  Add two products to the Shopping CartAfter -->
         <amOnPage url="{{StorefrontProductPage.url($$createFirstProduct.custom_attributes[url_key]$$)}}" stepKey="amOnStorefrontProductFirstPage"/>
         <waitForPageLoad stepKey="waitForTheFirstProduct"/>
         <actionGroup ref="StorefrontAddProductToCartActionGroup" stepKey="cartAddProductToCart">
@@ -66,7 +66,7 @@
             <argument name="secondAddress" value="{{US_Address_NY.street[1]}}"/>
         </actionGroup>
         <waitForPageLoad stepKey="waitPageLoad"/>
-        <!-- Open the Cart page in another browser window and go back -->
+        <!-- Open the CartAfter page in another browser window and go back -->
         <openNewTab stepKey="openNewTab"/>
         <actionGroup ref="StorefrontCartPageOpenActionGroup" stepKey="amOnShoppingCartPageNewTab"/>
         <actionGroup ref="AssertStorefrontCheckoutCartItemsActionGroup" stepKey="assertFirstProductItemInCheckOutCart">

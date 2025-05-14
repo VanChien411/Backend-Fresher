@@ -71,7 +71,7 @@
             <argument name="userInput" value="To $60.00"/>
         </actionGroup>
 
-        <!-- Click on customize And Add To Cart Button -->
+        <!-- Click on customize And Add To CartAfter Button -->
         <actionGroup ref="StorefrontSelectCustomizeAndAddToTheCartButtonActionGroup" stepKey="clickOnCustomizeAndAddtoCartButton"/>
 
         <!-- Select One Product Option from MultiSelect option -->
@@ -82,10 +82,10 @@
             <argument name="quantity" value="1"/>
         </actionGroup>
 
-        <!-- Select Mini Cart and select 'View And Edit Cart' -->
+        <!-- Select Mini CartAfter and select 'View And Edit CartAfter' -->
         <actionGroup ref="ClickViewAndEditCartFromMiniCartActionGroup" stepKey="selectViewAndEditCart"/>
 
-        <!--Assert Shopping Cart Summary-->
+        <!--Assert Shopping CartAfter Summary-->
         <actionGroup ref="StorefrontCheckCartActionGroup" stepKey="AssertCartSummary" >
             <argument name="subtotal" value="$50.00"/>
             <argument name="shipping" value="5.00"/>
@@ -111,7 +111,7 @@
             <argument name="userInput" value="1 x $$simpleProduct2.name$$ $50.00"/>
         </actionGroup>
 
-        <!-- Assert Product in Mini Cart -->
+        <!-- Assert Product in Mini CartAfter -->
         <actionGroup ref="StorefrontClickOnMiniCartActionGroup" stepKey="clickOnMiniCart"/>
         <actionGroup ref="AssertStorefrontMiniCartItemsActionGroup" stepKey="assertSimpleProductInMiniCart">
             <argument name="productName" value="$$createBundleProduct.name$$"/>

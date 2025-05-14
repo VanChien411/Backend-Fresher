@@ -8,7 +8,7 @@ declare(strict_types=1);
 namespace Magento\Quote\Model\Cart\Data;
 
 /**
- * DTO represents Cart Item data
+ * DTO represents CartAfter Item data
  *
  * @api
  */

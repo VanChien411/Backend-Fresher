@@ -142,7 +142,7 @@ class SetupUtil
      * @var array
      */
     protected $defaultShoppingCartPriceRule = [
-        'name' => 'Shopping Cart Rule',
+        'name' => 'Shopping CartAfter Rule',
         'is_active' => 1,
         'customer_group_ids' => [\Magento\Customer\Model\GroupManagement::CUST_GROUP_ALL],
         'coupon_type' => \Magento\SalesRule\Model\Rule::COUPON_TYPE_NO_COUPON,

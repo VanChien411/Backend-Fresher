@@ -84,7 +84,7 @@
             <argument name="productName" value="$$createBundleProduct.name$$"/>
         </actionGroup>
 
-        <!-- Select Mini Cart and select 'View And Edit Cart' -->
+        <!-- Select Mini CartAfter and select 'View And Edit CartAfter' -->
         <actionGroup ref="ClickViewAndEditCartFromMiniCartActionGroup" stepKey="selectViewAndEditCart"/>
 
         <!-- Assert move product to wishlist success message -->

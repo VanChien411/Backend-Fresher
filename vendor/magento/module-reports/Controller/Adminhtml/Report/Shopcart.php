@@ -5,7 +5,7 @@
  */
 
 /**
- * Shopping Cart reports admin controller
+ * Shopping CartAfter reports admin controller
  *
  * @author      Magento Core Team <core@magentocommerce.com>
  */
@@ -52,7 +52,7 @@ abstract class Shopcart extends \Magento\Backend\App\Action
     {
         $this->_view->loadLayout();
         $this->_addBreadcrumb(__('Reports'), __('Reports'));
-        $this->_addBreadcrumb(__('Shopping Cart'), __('Shopping Cart'));
+        $this->_addBreadcrumb(__('Shopping CartAfter'), __('Shopping CartAfter'));
         return $this;
     }
 }

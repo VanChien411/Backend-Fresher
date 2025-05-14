@@ -16,7 +16,7 @@ define([
         var injector = new Squire(),
             Obj;
 
-        describe('Check Cart data preparation process', function () {
+        describe('Check CartAfter data preparation process', function () {
             var customerData = ko.observable({}),
                 mocks = {
                     'Magento_Customer/js/customer-data': {
@@ -45,7 +45,7 @@ define([
                 customerData({});
             });
 
-            it('Prepare Cart data with the same items qty', function () {
+            it('Prepare CartAfter data with the same items qty', function () {
                 summaryCount['summary_count'] = 0;
                 customerData(summaryCount);
                 new Obj({});
@@ -54,7 +54,7 @@ define([
                 expect(mocks['Magento_Customer/js/customer-data'].reload).not.toHaveBeenCalled();
             });
 
-            it('Prepare Cart data with different items qty', function () {
+            it('Prepare CartAfter data with different items qty', function () {
                 summaryCount['summary_count'] = 1;
                 customerData(summaryCount);
                 new Obj({});

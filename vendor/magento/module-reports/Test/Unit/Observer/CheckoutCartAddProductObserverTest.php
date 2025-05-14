@@ -99,7 +99,7 @@ class CheckoutCartAddProductObserverTest extends TestCase
     }
 
     /**
-     * Test the method when 'Product Added To Cart' Report is disabled in configuration
+     * Test the method when 'Product Added To CartAfter' Report is disabled in configuration
      */
     public function testExecuteWhenReportsDisabled()
     {

@@ -8,7 +8,7 @@ namespace Magento\Checkout\Block\Cart;
 use Magento\Store\Model\ScopeInterface;
 
 /**
- * Cart sidebar block
+ * CartAfter sidebar block
  *
  * @api
  * @since 100.0.2
@@ -157,7 +157,7 @@ class Sidebar extends AbstractCart
     }
 
     /**
-     * Define if Mini Shopping Cart Pop-Up Menu enabled
+     * Define if Mini Shopping CartAfter Pop-Up Menu enabled
      *
      * @return bool
      * @codeCoverageIgnore

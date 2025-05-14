@@ -36,7 +36,7 @@
         <!--Go to product page-->
         <amOnPage url="{{StorefrontProductPage.url($$createSimpleProduct.custom_attributes[url_key]$$)}}" stepKey="navigateToSimpleProductPage"/>
 
-        <!--Add Product to Shopping Cart-->
+        <!--Add Product to Shopping CartAfter-->
         <actionGroup ref="AddToCartFromStorefrontProductPageActionGroup" stepKey="addToCartFromStorefrontProductPage">
             <argument name="productName" value="$$createSimpleProduct.name$$"/>
         </actionGroup>

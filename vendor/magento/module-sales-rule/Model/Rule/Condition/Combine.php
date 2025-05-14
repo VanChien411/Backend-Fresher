@@ -73,7 +73,7 @@ class Combine extends \Magento\Rule\Model\Condition\Combine
                     'value' => \Magento\SalesRule\Model\Rule\Condition\Combine::class,
                     'label' => __('Conditions combination')
                 ],
-                ['label' => __('Cart Attribute'), 'value' => $attributes]
+                ['label' => __('CartAfter Attribute'), 'value' => $attributes]
             ]
         );
 

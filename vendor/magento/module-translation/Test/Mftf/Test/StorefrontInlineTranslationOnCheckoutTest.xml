@@ -142,7 +142,7 @@
 
         <actionGroup ref="StorefrontSubmitInlineTranslationFormActionGroup" stepKey="translateProceedToCheckout3"/>
 
-        <!-- Check button "View and Edit Cart". There must be red borders and "book" icons on labels that can be translated. -->
+        <!-- Check button "View and Edit CartAfter". There must be red borders and "book" icons on labels that can be translated. -->
         <actionGroup ref="AssertElementInTranslateInlineModeActionGroup" stepKey="assertViewAndEditCart">
             <argument name="elementSelector" value="{{InlineTranslationModeMiniCartSection.viewAndEditCart}}"/>
         </actionGroup>
@@ -158,7 +158,7 @@
         <actionGroup ref="StorefrontSubmitInlineTranslationFormActionGroup" stepKey="translateViewAndEditCart3"/>
 
         <!-- 4. Click on "book" icon near the all red bordered labels one by one. And change translation for these labels. -->
-        <!-- Check "Item in Cart" -->
+        <!-- Check "Item in CartAfter" -->
         <actionGroup ref="AssertElementInTranslateInlineModeActionGroup" stepKey="assertVisibleItemsCountText">
             <argument name="elementSelector" value="{{InlineTranslationModeMiniCartSection.visibleItemsCountText}}"/>
         </actionGroup>
@@ -173,7 +173,7 @@
 
         <actionGroup ref="StorefrontSubmitInlineTranslationFormActionGroup" stepKey="translateVisibleItemsCountText3"/>
 
-        <!-- Check "Cart Subtotal" -->
+        <!-- Check "CartAfter Subtotal" -->
         <actionGroup ref="AssertElementInTranslateInlineModeActionGroup" stepKey="assertCartSubtotal">
             <argument name="elementSelector" value="{{InlineTranslationModeMiniCartSection.textCartSubtotal}}"/>
         </actionGroup>
@@ -320,7 +320,7 @@
 
         <actionGroup ref="StorefrontSubmitInlineTranslationFormActionGroup" stepKey="translateTitleOrderSummary3"/>
 
-        <!-- Check text "Item in Cart"-->
+        <!-- Check text "Item in CartAfter"-->
         <waitForElementVisible selector="{{InlineTranslationModeCheckoutSection.itemsInCartText}}" stepKey="waitForItemsInCartText"/>
         <actionGroup ref="AssertElementInTranslateInlineModeActionGroup" stepKey="assertItemsInCartText">
             <argument name="elementSelector" value="{{InlineTranslationModeCheckoutSection.itemsInCartText}}"/>
@@ -420,13 +420,13 @@
 
         <actionGroup ref="StorefrontSubmitInlineTranslationFormActionGroup" stepKey="translateApplyDiscountCode3"/>
 
-        <!-- Check text on sidebar "Cart Subtotal" -->
+        <!-- Check text on sidebar "CartAfter Subtotal" -->
         <waitForElementVisible selector="{{InlineTranslationModeCheckoutSection.textCartSubtotal}}" stepKey="waitForCartSubtotalText"/>
         <actionGroup ref="AssertElementInTranslateInlineModeActionGroup" stepKey="assertCartSubtotalText">
             <argument name="elementSelector" value="{{InlineTranslationModeCheckoutSection.textCartSubtotal}}"/>
         </actionGroup>
 
-        <!-- Check translate text on sidebar "Cart Subtotal" as it was translated earlier in step translateCartSubtotal-->
+        <!-- Check translate text on sidebar "CartAfter Subtotal" as it was translated earlier in step translateCartSubtotal-->
         <see userInput="Cart Subtotal Translated" selector="{{InlineTranslationModeCheckoutSection.textCartSubtotal}}" stepKey="seeTranslateCartSubtotalOnCheckoutText"/>
 
         <!-- Check text on sidebar text "Shipping" -->
@@ -528,13 +528,13 @@
         <!-- Check translate "Proceed to Checkout" -->
         <see userInput="Proceed to Checkout Translated" selector="{{StorefrontMinicartSection.goToCheckout}}" stepKey="seeTranslateProceedToCheckout"/>
 
-        <!-- Check translate button "View and Edit Cart". -->
+        <!-- Check translate button "View and Edit CartAfter". -->
         <see userInput="Edit Cart Translated" selector="{{InlineTranslationModeMiniCartSection.viewAndEditCart}}" stepKey="seeTranslateViewAndEditCart"/>
 
-        <!-- Check translate "Item in Cart" -->
+        <!-- Check translate "Item in CartAfter" -->
         <see userInput="Item in Cart Translated" selector="{{InlineTranslationModeMiniCartSection.visibleItemsCountText}}" stepKey="seeTranslateVisibleItemsCountText"/>
 
-        <!-- Check translate "Cart Subtotal" -->
+        <!-- Check translate "CartAfter Subtotal" -->
         <see userInput="Cart Subtotal Translated" selector="{{InlineTranslationModeMiniCartSection.textCartSubtotal}}" stepKey="seeTranslateCartSubtotal"/>
 
         <!-- Check translate label "Qty" -->
@@ -565,7 +565,7 @@
         <!-- Check translate  title "Order Summary"-->
         <see userInput="Order Summary Translated" selector="{{InlineTranslationModeCheckoutSection.titleOrderSummary}}" stepKey="seeTranslateTitleOrderSummary"/>
 
-        <!-- Check translate text "Item in Cart"-->
+        <!-- Check translate text "Item in CartAfter"-->
         <see userInput="Item in Cart Translated" selector="{{InlineTranslationModeCheckoutSection.itemsInCartText}}" stepKey="seeTranslateItemsInCartText"/>
 
         <!-- Go to next step -->
@@ -587,7 +587,7 @@
         <!-- Check translate button "Apply Discount Code" -->
         <see userInput="Apply Discount Code Translated" selector="{{InlineTranslationModeCheckoutSection.textApplyDiscountCode}}" stepKey="seeTranslateApplyDiscountCode"/>
 
-        <!-- Check translate text on sidebar "Cart Subtotal" -->
+        <!-- Check translate text on sidebar "CartAfter Subtotal" -->
         <see userInput="Cart Subtotal Translated" selector="{{InlineTranslationModeCheckoutSection.textCartSubtotal}}" stepKey="seeTranslateCartSubtotalText"/>
 
         <!-- Check translate text on sidebar text "Shipping"-->

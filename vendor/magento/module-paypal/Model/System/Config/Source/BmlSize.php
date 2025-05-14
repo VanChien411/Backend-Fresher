@@ -114,7 +114,7 @@ class BmlSize
     }
 
     /**
-     * Options getter for Checkout Cart Page and position Center
+     * Options getter for Checkout CartAfter Page and position Center
      *
      * @return array
      */
@@ -130,7 +130,7 @@ class BmlSize
     }
 
     /**
-     * Options getter for Checkout Cart Page and position Near Bill Me Later checkout button
+     * Options getter for Checkout CartAfter Page and position Near Bill Me Later checkout button
      *
      * @return array
      */

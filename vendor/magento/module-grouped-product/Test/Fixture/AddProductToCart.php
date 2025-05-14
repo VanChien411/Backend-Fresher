@@ -50,7 +50,7 @@ class AddProductToCart extends \Magento\Quote\Test\Fixture\AddProductToCart
      *      - [{"product_id":"$product1.id$","qty":1}, {"product_id":"$product2.id$","qty":1}]
      * <pre>
      *    $data = [
-     *      'cart_id'           => (int) Cart ID. Required.
+     *      'cart_id'           => (int) CartAfter ID. Required.
      *      'product_id'        => (int) Product ID. Required.
      *      'child_products'    => (array) array of associated products configuration. Required.
      *      'qty'               => (int) Quantity. Optional. Default: 1.

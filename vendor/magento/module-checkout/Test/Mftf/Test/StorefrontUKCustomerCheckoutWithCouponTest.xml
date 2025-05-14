@@ -106,7 +106,7 @@
         <!-- Place the order and Verify Success message -->
         <actionGroup ref="ClickPlaceOrderActionGroup" stepKey="clickOnPlaceOrder"/>
 
-        <!-- Assert empty Mini Cart -->
+        <!-- Assert empty Mini CartAfter -->
         <seeElement selector="{{StorefrontMinicartSection.emptyMiniCart}}"  stepKey="assertEmptyCart" />
         <grabTextFrom selector="{{CheckoutSuccessMainSection.orderLink}}" stepKey="orderId"/>
 

@@ -8,7 +8,7 @@ declare(strict_types=1);
 namespace Magento\CatalogInventory\Block\Adminhtml\Form\Field;
 
 /**
- * Adminhtml catalog inventory "Minimum Qty Allowed in Shopping Cart" field
+ * Adminhtml catalog inventory "Minimum Qty Allowed in Shopping CartAfter" field
  *
  * @api
  * @since 100.0.2

@@ -19,7 +19,7 @@ use Magento\TestFramework\Helper\Bootstrap;
 
 /**
  * Class RendererTest
- * @package Magento\Checkout\Block\Cart\Item
+ * @package Magento\Checkout\Block\CartAfter\Item
  * @magentoAppArea frontend
  */
 class RendererTest extends TestCase

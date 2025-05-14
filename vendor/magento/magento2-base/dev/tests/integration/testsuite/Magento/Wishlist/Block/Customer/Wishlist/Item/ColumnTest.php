@@ -96,7 +96,7 @@ class ColumnTest extends TestCase
     public function testWishListItemButtons(): void
     {
         $buttons = [
-            "Add to Cart button" => "//button[contains(@class, 'tocart')]/span[contains(text(), 'Add to Cart')]",
+            "Add to CartAfter button" => "//button[contains(@class, 'tocart')]/span[contains(text(), 'Add to CartAfter')]",
             "Edit button" => "//a[contains(@class, 'edit')]/span[contains(text(), 'Edit')]",
             "Remove item button" => "//a[contains(@class, 'delete')]/span[contains(text(), 'Remove item')]",
         ];

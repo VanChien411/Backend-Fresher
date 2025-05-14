@@ -29,14 +29,14 @@
                 <li class="product-item">
                     <div class="field item choice">
                         <label class="label" data-bind="attr: {'for': 'reorder-item-' + id}">
-                            <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                            <span><?= $block->escapeHtml(__('Add to CartAfter')) ?></span>
                         </label>
                         <div class="control">
                             <input type="checkbox" name="order_items[]"
                                    data-bind="attr: {
                                         id: 'reorder-item-' + id,
                                         value: id,
-                                        title: is_saleable ? '<?= $block->escapeHtml(__('Add to Cart')) ?>' :
+                                        title: is_saleable ? '<?= $block->escapeHtml(__('Add to CartAfter')) ?>' :
                                          '<?= $block->escapeHtml(__('Product is not salable.')) ?>'
                                    },
                                    disable: !is_saleable"
@@ -54,9 +54,9 @@
             <div class="actions-toolbar">
                 <div class="primary"
                      data-bind="visible: isShowAddToCart">
-                    <button type="submit" title="<?= $block->escapeHtml(__('Add to Cart')) ?>"
+                    <button type="submit" title="<?= $block->escapeHtml(__('Add to CartAfter')) ?>"
                             class="action tocart primary">
-                        <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                        <span><?= $block->escapeHtml(__('Add to CartAfter')) ?></span>
                     </button>
                 </div>
                 <div class="secondary">

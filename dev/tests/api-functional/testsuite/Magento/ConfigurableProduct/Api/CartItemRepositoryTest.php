@@ -110,7 +110,7 @@ class CartItemRepositoryTest extends WebapiAbstract
     public function testUpdateIncorrectItem()
     {
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage('The %1 Cart doesn\'t contain the %2 item.');
+        $this->expectExceptionMessage('The %1 CartAfter doesn\'t contain the %2 item.');
 
         $qty = 1;
         /** @var \Magento\Quote\Model\Quote  $quote */

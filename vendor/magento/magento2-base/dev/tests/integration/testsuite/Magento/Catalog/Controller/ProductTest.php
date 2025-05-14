@@ -103,7 +103,7 @@ class ProductTest extends AbstractController
         /* Stock info */
         $this->assertStringContainsString('$1,234.56', $responseBody);
         $this->assertStringContainsString('In stock', $responseBody);
-        $this->assertStringContainsString((string)__('Add to Cart'), $responseBody);
+        $this->assertStringContainsString((string)__('Add to CartAfter'), $responseBody);
         /* Meta info */
         $this->assertStringContainsString('<title>Simple Product 1 Meta Title</title>', $responseBody);
         $this->assertEquals(

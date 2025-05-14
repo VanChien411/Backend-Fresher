@@ -11,7 +11,7 @@ use Magento\Store\Model\StoreManagerInterface;
 use Magento\Weee\Helper\Data;
 
 /**
- * Add Weee item to Payment Cart amount.
+ * Add Weee item to Payment CartAfter amount.
  */
 class AddPaymentWeeeItem implements ObserverInterface
 {

@@ -61,7 +61,7 @@ class GuestCartItemRepositoryTest extends WebapiAbstract
         $output = [];
         /** @var  \Magento\Quote\Api\Data\CartItemInterface $item */
         foreach ($quote->getAllItems() as $item) {
-            //Set masked Cart ID
+            //Set masked CartAfter ID
             $item->setQuoteId($cartId);
             $data = [
                 'item_id' => $item->getItemId(),

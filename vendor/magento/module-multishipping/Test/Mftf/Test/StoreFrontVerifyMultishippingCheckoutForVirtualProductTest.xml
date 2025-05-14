@@ -51,15 +51,15 @@
         <actionGroup ref="LoginToStorefrontActionGroup" stepKey="storefrontCustomerLogin">
             <argument name="Customer" value="$$createCustomer$$"/>
         </actionGroup>
-        <!-- Customer added Virtual Product to Cart -->
+        <!-- Customer added Virtual Product to CartAfter -->
         <actionGroup ref="AddSimpleProductToCartActionGroup" stepKey="addVirtualProductToCart">
             <argument name="product" value="$$createVirtualProduct$$"/>
         </actionGroup>
-        <!-- Customer added Simple Product to Cart -->
+        <!-- Customer added Simple Product to CartAfter -->
         <actionGroup ref="AddSimpleProductToCartActionGroup" stepKey="addSimpleProductToCart">
             <argument name="product" value="$$createSimpleProduct$$"/>
         </actionGroup>
-        <!-- Go to Shopping Cart page -->
+        <!-- Go to Shopping CartAfter page -->
         <actionGroup ref="ClickViewAndEditCartFromMiniCartActionGroup" stepKey="clickOnViewEditCart"/>
         <!-- Check shopping cart contains both the Product-->
         <seeElement selector="{{StorefrontMinicartSection.productCartName($$createVirtualProduct.name$$)}}" stepKey="AssertVirtualProduct"/>

@@ -54,10 +54,10 @@ class CouponManagement implements CouponManagementInterface
         /** @var  \Magento\Quote\Model\Quote $quote */
         $quote = $this->quoteRepository->getActive($cartId);
         if (!$quote->getItemsCount()) {
-            throw new NoSuchEntityException(__('The "%1" Cart doesn\'t contain products.', $cartId));
+            throw new NoSuchEntityException(__('The "%1" CartAfter doesn\'t contain products.', $cartId));
         }
         if (!$quote->getStoreId()) {
-            throw new NoSuchEntityException(__('Cart isn\'t assigned to correct store'));
+            throw new NoSuchEntityException(__('CartAfter isn\'t assigned to correct store'));
         }
         $quote->getShippingAddress()->setCollectShippingRates(true);
 
@@ -86,7 +86,7 @@ class CouponManagement implements CouponManagementInterface
         /** @var  \Magento\Quote\Model\Quote $quote */
         $quote = $this->quoteRepository->getActive($cartId);
         if (!$quote->getItemsCount()) {
-            throw new NoSuchEntityException(__('The "%1" Cart doesn\'t contain products.', $cartId));
+            throw new NoSuchEntityException(__('The "%1" CartAfter doesn\'t contain products.', $cartId));
         }
         $quote->getShippingAddress()->setCollectShippingRates(true);
         try {

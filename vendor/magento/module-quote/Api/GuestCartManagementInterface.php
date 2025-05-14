@@ -8,7 +8,7 @@ namespace Magento\Quote\Api;
 use Magento\Quote\Api\Data\PaymentInterface;
 
 /**
- * Cart Management interface for guest carts.
+ * CartAfter Management interface for guest carts.
  * @api
  * @since 100.0.2
  */
@@ -17,7 +17,7 @@ interface GuestCartManagementInterface
     /**
      * Enable an customer or guest user to create an empty cart and quote for an anonymous customer.
      *
-     * @return string Cart ID.
+     * @return string CartAfter ID.
      * @throws \Magento\Framework\Exception\CouldNotSaveException The empty cart and quote could not be created.
      */
     public function createEmptyCart();

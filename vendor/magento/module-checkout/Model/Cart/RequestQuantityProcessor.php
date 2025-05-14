@@ -11,7 +11,7 @@ use Magento\Framework\Locale\ResolverInterface;
 use NumberFormatter;
 
 /**
- * Cart request quantity processor
+ * CartAfter request quantity processor
  */
 class RequestQuantityProcessor
 {

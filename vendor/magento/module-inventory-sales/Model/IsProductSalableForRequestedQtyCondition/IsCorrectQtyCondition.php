@@ -176,7 +176,7 @@ class IsCorrectQtyCondition implements IsProductSalableForRequestedQtyInterface
         StockItemConfigurationInterface $stockItemConfiguration,
         float $requestedQty
     ): bool {
-        // Minimum Qty Allowed in Shopping Cart
+        // Minimum Qty Allowed in Shopping CartAfter
         if ($stockItemConfiguration->getMinSaleQty() && $requestedQty < $stockItemConfiguration->getMinSaleQty()) {
             return true;
         }
@@ -194,7 +194,7 @@ class IsCorrectQtyCondition implements IsProductSalableForRequestedQtyInterface
         StockItemConfigurationInterface $stockItemConfiguration,
         float $requestedQty
     ): bool {
-        // Maximum Qty Allowed in Shopping Cart
+        // Maximum Qty Allowed in Shopping CartAfter
         if ($stockItemConfiguration->getMaxSaleQty() && $requestedQty > $stockItemConfiguration->getMaxSaleQty()) {
             return true;
         }

@@ -17,7 +17,7 @@
             <group value="checkout"/>
         </annotations>
 
-        <!-- Assert Products Count in Mini Cart -->
+        <!-- Assert Products Count in Mini CartAfter -->
         <actionGroup ref="StorefrontAssertMiniCartItemCountActionGroup" stepKey="assertProductCountAndTextInMiniCart">
             <argument name="productCount" value="2"/>
             <argument name="productCountText" value="2 Items in Cart"/>
@@ -28,7 +28,7 @@
         </actionGroup>
 
         <before>
-            <!--Set Display Cart Summary to display items quantities-->
+            <!--Set Display CartAfter Summary to display items quantities-->
             <magentoCLI command="config:set {{DisplayUniqueItems.path}} {{DisplayUniqueItems.value}}" stepKey="setDisplayCartSummary"/>
         </before>
     </test>

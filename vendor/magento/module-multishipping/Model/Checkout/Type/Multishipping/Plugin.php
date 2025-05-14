@@ -69,7 +69,7 @@ class Plugin
     }
 
     /**
-     * Map STEP_SELECT_ADDRESSES to Cart::CHECKOUT_STATE_BEGIN
+     * Map STEP_SELECT_ADDRESSES to CartAfter::CHECKOUT_STATE_BEGIN
      *
      * @param CustomerCart $subject
      * @return void

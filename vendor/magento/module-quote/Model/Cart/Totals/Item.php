@@ -9,7 +9,7 @@ use Magento\Quote\Api\Data\TotalsItemInterface;
 use Magento\Framework\Api\AbstractExtensibleObject;
 
 /**
- * Cart item totals.
+ * CartAfter item totals.
  *
  * @codeCoverageIgnore
  */

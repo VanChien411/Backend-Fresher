@@ -134,14 +134,14 @@
         <amOnPage url="$$createBundleProduct.custom_attributes[url_key]$$.html" stepKey="goToProductPage1"/>
         <waitForPageLoad stepKey="waitForProductPageLoad1"/>
 
-        <!--Click "Customize and Add to Cart" button-->
+        <!--Click "Customize and Add to CartAfter" button-->
         <click selector="{{StorefrontBundledSection.addToCart}}" stepKey="clickCustomize"/>
 
         <!-- Select two products -->
         <click stepKey="selectProduct1" selector="{{StorefrontBundledSection.productCheckbox('1','1')}}"/>
         <click stepKey="selectProduct2" selector="{{StorefrontBundledSection.productCheckbox('2','1')}}"/>
 
-        <!--Click "Add to Cart" button-->
+        <!--Click "Add to CartAfter" button-->
         <click selector="{{StorefrontBundleProductActionSection.addToCartButton}}" stepKey="clickAddBundleProductToCart"/>
         <waitForPageLoad time="30" stepKey="waitForAddBundleProductPageLoad"/>
 
@@ -149,7 +149,7 @@
         <actionGroup ref="StorefrontOpenCartFromMinicartActionGroup" stepKey="openCart"/>
         <waitForPageLoad stepKey="waitForDetailsOpen"/>
 
-        <!--Check all products and Cart Subtotal -->
+        <!--Check all products and CartAfter Subtotal -->
         <actionGroup ref="StorefrontCheckCartActionGroup" stepKey="cartAssert" after="waitForDetailsOpen">
             <argument name="subtotal" value="12.00"/>
             <argument name="shipping" value="5.00"/>

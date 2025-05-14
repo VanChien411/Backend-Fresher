@@ -14,7 +14,7 @@ use Magento\Quote\Api\Data\PaymentInterface;
 use Magento\Quote\Api\CartRepositoryInterface;
 
 /**
- * Cart Management class for guest carts.
+ * CartAfter Management class for guest carts.
  *
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  */

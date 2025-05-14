@@ -293,7 +293,7 @@ class Item extends AbstractExtensibleModel implements StockItemInterface
     }
 
     /**
-     * Retrieve Minimum Qty Allowed in Shopping Cart or NULL when there is no limitation
+     * Retrieve Minimum Qty Allowed in Shopping CartAfter or NULL when there is no limitation
      *
      * @return float
      */
@@ -318,7 +318,7 @@ class Item extends AbstractExtensibleModel implements StockItemInterface
     }
 
     /**
-     * Retrieve Maximum Qty Allowed in Shopping Cart data wrapper
+     * Retrieve Maximum Qty Allowed in Shopping CartAfter data wrapper
      *
      * @return float
      */
@@ -663,7 +663,7 @@ class Item extends AbstractExtensibleModel implements StockItemInterface
     }
 
     /**
-     * Set Minimum Qty Allowed in Shopping Cart or NULL when there is no limitation
+     * Set Minimum Qty Allowed in Shopping CartAfter or NULL when there is no limitation
      *
      * @param float $minSaleQty
      * @return $this
@@ -683,7 +683,7 @@ class Item extends AbstractExtensibleModel implements StockItemInterface
     }
 
     /**
-     * Set Maximum Qty Allowed in Shopping Cart data wrapper
+     * Set Maximum Qty Allowed in Shopping CartAfter data wrapper
      *
      * @param float $maxSaleQty
      * @return $this

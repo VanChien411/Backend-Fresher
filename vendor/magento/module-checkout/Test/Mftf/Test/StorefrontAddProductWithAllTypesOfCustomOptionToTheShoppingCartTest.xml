@@ -97,10 +97,10 @@
             <argument name="productCount" value="2"/>
         </actionGroup>
 
-        <!-- Open Mini Cart -->
+        <!-- Open Mini CartAfter -->
         <actionGroup ref="StorefrontOpenMiniCartActionGroup" stepKey="openMiniCart"/>
 
-        <!-- Assert Product Count in Mini Cart -->
+        <!-- Assert Product Count in Mini CartAfter -->
         <actionGroup ref="StorefrontAssertMiniCartItemCountActionGroup" stepKey="assertProductCountAndTextInMiniCart">
             <argument name="productCount" value="2"/>
             <argument name="productCountText" value="2 Items in Cart"/>

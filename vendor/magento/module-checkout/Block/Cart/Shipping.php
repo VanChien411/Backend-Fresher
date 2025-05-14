@@ -16,7 +16,7 @@ use Magento\Checkout\Model\Session as CheckoutSession;
 use Magento\Framework\App\ObjectManager;
 
 /**
- * Cart Shipping Block
+ * CartAfter Shipping Block
  *
  * @api
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)

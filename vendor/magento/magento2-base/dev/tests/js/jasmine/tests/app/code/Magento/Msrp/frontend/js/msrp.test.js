@@ -32,7 +32,7 @@ define([
             expect(wdContainer.addToCart('option', 'cartButtonId')).toBe('FAKE_ID');
         });
 
-        it('widget tries to submit Cart Form on click', function (done) {
+        it('widget tries to submit CartAfter Form on click', function (done) {
             var link = $('<a />');
 
             wdContainer.addToCart({

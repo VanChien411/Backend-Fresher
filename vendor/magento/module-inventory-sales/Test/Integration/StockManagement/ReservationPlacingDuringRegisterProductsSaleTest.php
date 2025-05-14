@@ -230,7 +230,7 @@ class ReservationPlacingDuringRegisterProductsSaleTest extends TestCase
     }
 
     /**
-     * Create Cart Item from Product and Quantity.
+     * Create CartAfter Item from Product and Quantity.
      *
      * @param ProductInterface $product
      * @param float $quoteItemQty

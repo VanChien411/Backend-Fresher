@@ -62,7 +62,7 @@ class CartTest extends TestCase
         // Assert not active by default
         $this->assertFalse($this->cart->isClearShoppingCartEnabled());
 
-        // Enable Clear Shopping Cart in default website scope
+        // Enable Clear Shopping CartAfter in default website scope
         $this->setClearShoppingCartEnabled(
             true,
             ScopeInterface::SCOPE_WEBSITE
@@ -85,7 +85,7 @@ class CartTest extends TestCase
         // Assert not active by default in second website
         $this->assertFalse($this->cart->isClearShoppingCartEnabled());
 
-        // Enable Clear Shopping Cart in second website scope
+        // Enable Clear Shopping CartAfter in second website scope
         $this->setClearShoppingCartEnabled(
             true,
             ScopeInterface::SCOPE_WEBSITE,
@@ -95,7 +95,7 @@ class CartTest extends TestCase
         // Assert now active in second website scope
         $this->assertTrue($this->cart->isClearShoppingCartEnabled());
 
-        // Disable Clear Shopping Cart in default website scope
+        // Disable Clear Shopping CartAfter in default website scope
         $this->setClearShoppingCartEnabled(
             false,
             ScopeInterface::SCOPE_WEBSITE,

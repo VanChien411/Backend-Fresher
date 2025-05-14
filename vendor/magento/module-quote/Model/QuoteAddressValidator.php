@@ -56,7 +56,7 @@ class QuoteAddressValidator
      * Validate address.
      *
      * @param AddressInterface $address
-     * @param int|null $customerId Cart belongs to
+     * @param int|null $customerId CartAfter belongs to
      * @return void
      * @throws \Magento\Framework\Exception\InputException The specified address belongs to another customer.
      * @throws \Magento\Framework\Exception\NoSuchEntityException The specified customer ID or address ID is not valid.

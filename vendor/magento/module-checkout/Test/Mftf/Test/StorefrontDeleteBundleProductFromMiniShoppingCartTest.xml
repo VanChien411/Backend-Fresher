@@ -56,7 +56,7 @@
             <argument name="product" value="$$createBundleProduct$$"/>
         </actionGroup>
 
-        <!-- Click on customize And Add To Cart Button -->
+        <!-- Click on customize And Add To CartAfter Button -->
         <actionGroup ref="StorefrontSelectCustomizeAndAddToTheCartButtonActionGroup" stepKey="clickOnCustomizeAndAddtoCartButton"/>
 
         <!-- Select Product Quantity and add to the cart -->
@@ -66,7 +66,7 @@
         <scrollToTopOfPage stepKey="scrollToTop"/>
         <waitForPageLoad stepKey="waitForMiniCartPanelToAppear"/>
 
-        <!-- Assert Product in Mini Cart -->
+        <!-- Assert Product in Mini CartAfter -->
         <actionGroup ref="StorefrontClickOnMiniCartActionGroup" stepKey="clickOnMiniCart"/>
         <actionGroup ref="AssertStorefrontMiniCartItemsActionGroup" stepKey="assertSimpleProduct3MiniCart">
             <argument name="productName" value="$$createBundleProduct.name$$"/>
@@ -75,7 +75,7 @@
             <argument name="qty" value="1"/>
         </actionGroup>
 
-        <!-- Select Mini Cart and select 'View And Edit Cart' -->
+        <!-- Select Mini CartAfter and select 'View And Edit CartAfter' -->
         <actionGroup ref="AssertOneProductNameInMiniCartActionGroup" stepKey="seeProductInMiniCart">
             <argument name="productName" value="$$createBundleProduct.name$$"/>
         </actionGroup>

@@ -56,7 +56,7 @@
         <amOnPage stepKey="goToCreatedProductPage" url="{{_defaultProduct.urlKey}}.html"/>
         <waitForPageLoad stepKey="waitForProductPageLoad2"/>
 
-        <!-- Add Product to Cart -->
+        <!-- Add Product to CartAfter -->
         <seeElement selector="{{StorefrontProductInfoMainSection.productAttributeOptions1}}"
                     stepKey="checkDropDownProductOption"/>
         <selectOption userInput="{{colorProductAttribute1.name}}"
@@ -73,7 +73,7 @@
         <click selector="{{StorefrontProductInfoMainSection.AddToCart}}" stepKey="clickAddToCart"/>
         <waitForPageLoad stepKey="waitForMiniCart"/>
 
-        <!-- Edit Item in Cart -->
+        <!-- Edit Item in CartAfter -->
         <actionGroup ref="StorefrontClickOnMiniCartActionGroup" stepKey="openMiniCart"/>
         <click selector="{{StorefrontMinicartSection.editMiniCartItem}}" stepKey="clickEditCartItem"/>
 

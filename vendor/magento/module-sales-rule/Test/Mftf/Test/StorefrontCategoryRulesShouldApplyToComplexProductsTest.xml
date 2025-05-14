@@ -70,7 +70,7 @@
             <deleteData createDataKey="createConfigChildProduct1CreateConfigurableProduct2" stepKey="deleteConfigChildProduct3"/>
             <deleteData createDataKey="createConfigChildProduct2CreateConfigurableProduct2" stepKey="deleteConfigChildProduct4"/>
             <deleteData createDataKey="createConfigProductAttributeCreateConfigurableProduct2" stepKey="deleteConfigProductAttribute2"/>
-            <!--Delete Cart Price Rule -->
+            <!--Delete CartAfter Price Rule -->
             <deleteData  createDataKey="createCartPriceRule" stepKey="deleteCartPriceRule"/>
             <actionGroup ref="CliIndexerReindexActionGroup" stepKey="reindex">
                 <argument name="indices" value=""/>

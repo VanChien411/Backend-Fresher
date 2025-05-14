@@ -55,7 +55,7 @@
             <expectedResult type="string">${{ApiProductMsrp.value}}</expectedResult>
         </assertEquals>
 
-        <!-- Open 'Click for price' popup and click 'Add to Cart' button -->
+        <!-- Open 'Click for price' popup and click 'Add to CartAfter' button -->
         <click selector="{{StorefrontCategoryProductSection.clickForPrice($createProduct.name$)}}" stepKey="clickForPrice"/>
         <waitForElementVisible selector="{{StorefrontMsrpPopupSection.addToCartButton}}" stepKey="waitForAddToCartButton"/>
         <click selector="{{StorefrontMsrpPopupSection.addToCartButton}}" stepKey="clickAddToCartButton"/>

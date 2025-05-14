@@ -71,7 +71,7 @@
         <!-- Save the CMS Page -->
         <actionGroup ref="SaveCmsPageActionGroup" stepKey="saveCMSPage"/>
 
-        <!-- Validate Add to Cart on the storefront -->
+        <!-- Validate Add to CartAfter on the storefront -->
         <actionGroup ref="NavigateToStorefrontForCreatedPageActionGroup" stepKey="navigateToCMSPageStorefront">
             <argument name="page" value="$$createCMSPage.identifier$$"/>
         </actionGroup>

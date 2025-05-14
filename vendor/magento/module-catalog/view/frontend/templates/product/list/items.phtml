@@ -241,7 +241,7 @@ $_item = null;
                                                     value="<?= $block->escapeHtmlAttr($_item->getId()) ?>" />
                                                 <label class="label"
                                                        for="related-checkbox<?= $block->escapeHtmlAttr($_item->getId())
-                                                        ?>"><span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                                                        ?>"><span><?= $block->escapeHtml(__('Add to CartAfter')) ?></span>
                                                 </label>
                                             </div>
                                         <?php endif; ?>
@@ -256,8 +256,8 @@ $_item = null;
                                                     <?php if (!$_item->getTypeInstance()->isPossibleBuyFromList($_item)):?>
                                                         <button
                                                                 class="action tocart primary"
-                                                                data-mage-init='{"redirectUrl": {"url": "<?= $block->escapeUrl($block->getAddToCartUrl($_item)) ?>"}}' type="button" title="<?= $block->escapeHtmlAttr(__('Add to Cart')) ?>">
-                                                            <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                                                                data-mage-init='{"redirectUrl": {"url": "<?= $block->escapeUrl($block->getAddToCartUrl($_item)) ?>"}}' type="button" title="<?= $block->escapeHtmlAttr(__('Add to CartAfter')) ?>">
+                                                            <span><?= $block->escapeHtml(__('Add to CartAfter')) ?></span>
                                                         </button>
                                                     <?php else :?>
                                                         <?php
@@ -280,9 +280,9 @@ $_item = null;
                                                                    value="<?= /* @noEscape */ $value ?>">
                                                             <?= $block->getBlockHtml('formkey') ?>
                                                             <button type="submit"
-                                                                    title="<?= $block->escapeHtmlAttr(__('Add to Cart')) ?>"
+                                                                    title="<?= $block->escapeHtmlAttr(__('Add to CartAfter')) ?>"
                                                                     class="action tocart primary">
-                                                                <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                                                                <span><?= $block->escapeHtml(__('Add to CartAfter')) ?></span>
                                                             </button>
                                                         </form>
                                                     <?php endif; ?>

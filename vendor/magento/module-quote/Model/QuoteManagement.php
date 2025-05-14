@@ -361,7 +361,7 @@ class QuoteManagement implements CartManagementInterface
      * Creates an anonymous cart.
      *
      * @param int $storeId
-     * @return Quote Cart object.
+     * @return Quote CartAfter object.
      */
     protected function createAnonymousCart($storeId)
     {
@@ -376,7 +376,7 @@ class QuoteManagement implements CartManagementInterface
      *
      * @param int $customerId
      * @param int $storeId
-     * @return Quote Cart object.
+     * @return Quote CartAfter object.
      * @throws CouldNotSaveException The cart could not be created.
      */
     protected function createCustomerCart($customerId, $storeId)

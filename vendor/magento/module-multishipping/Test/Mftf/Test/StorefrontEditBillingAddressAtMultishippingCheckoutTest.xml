@@ -42,7 +42,7 @@
             <deleteData createDataKey="createCustomer" stepKey="deleteCustomer"/>
         </after>
 
-        <!-- Add Product to Cart and go to Billing Information step -->
+        <!-- Add Product to CartAfter and go to Billing Information step -->
         <actionGroup ref="AddSimpleProductToCartActionGroup" stepKey="addProductToCart">
             <argument name="product" value="$createProduct$"/>
         </actionGroup>

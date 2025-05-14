@@ -242,7 +242,7 @@ class CartTest extends TestCase
      * @param array $transferFlags
      * @param array $salesModelItems
      * @param array $salesModelAmounts
-     * @return array Cart amounts
+     * @return array CartAfter amounts
      */
     protected function _collectItemsAndAmounts($transferFlags, $salesModelItems, $salesModelAmounts)
     {

@@ -12,7 +12,7 @@ use Magento\Framework\Api\ExtensibleDataInterface;
 
 /**
  * Represents Data Object which holds enough information to render product
- * This information is put into part as Add To Cart or Add to Compare Data or Price Data
+ * This information is put into part as Add To CartAfter or Add to Compare Data or Price Data
  *
  * @api
  * @since 102.0.0
@@ -20,7 +20,7 @@ use Magento\Framework\Api\ExtensibleDataInterface;
 interface ProductRenderInterface extends ExtensibleDataInterface
 {
     /**
-     * Provide information needed for render "Add To Cart" button on front
+     * Provide information needed for render "Add To CartAfter" button on front
      *
      * @return \Magento\Catalog\Api\Data\ProductRender\ButtonInterface
      * @since 102.0.0
@@ -28,7 +28,7 @@ interface ProductRenderInterface extends ExtensibleDataInterface
     public function getAddToCartButton();
 
     /**
-     * Set information needed for render "Add To Cart" button on front
+     * Set information needed for render "Add To CartAfter" button on front
      *
      * @param ButtonInterface $cartAddToCartButton
      * @return void

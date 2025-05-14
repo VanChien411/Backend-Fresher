@@ -38,7 +38,7 @@
             <argument name="product" value="$$createVirtualProduct$$"/>
             <argument name="productCount" value="1"/>
         </actionGroup>
-        <!-- Step 3: Go to Shopping Cart -->
+        <!-- Step 3: Go to Shopping CartAfter -->
         <actionGroup ref="ClickViewAndEditCartFromMiniCartActionGroup" stepKey="goToShoppingcart"/>
         <!-- Step 4: Open Estimate Tax section -->
         <click selector="{{CheckoutCartSummarySection.estimateShippingAndTax}}" stepKey="openEstimateTaxSection"/>

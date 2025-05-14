@@ -81,7 +81,7 @@
             <deleteData createDataKey="createCategory" stepKey="deleteCategory"/>
         </after>
 
-        <!-- Login as Customer and add Product to Cart-->
+        <!-- Login as Customer and add Product to CartAfter-->
         <actionGroup ref="LoginToStorefrontActionGroup" stepKey="customerLogin">
             <argument name="Customer" value="$$createCustomer$$"/>
         </actionGroup>

@@ -74,7 +74,7 @@ class QuoteRepositoryTest extends TestCase
             $this->criteriaBuilder->addFilter('reserved_order_id', 'test01')->create()
         )->getItems();
         if (!$carts) {
-            throw new \RuntimeException('Cart from fixture not found');
+            throw new \RuntimeException('CartAfter from fixture not found');
         }
 
         return array_shift($carts);

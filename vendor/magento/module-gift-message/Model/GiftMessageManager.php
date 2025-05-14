@@ -117,7 +117,7 @@ class GiftMessageManager
         try {
             $this->add($message, $quote);
         } catch (\Exception $e) {
-            throw new CouldNotSaveException(__("The gift message couldn't be added to Cart."));
+            throw new CouldNotSaveException(__("The gift message couldn't be added to CartAfter."));
         }
     }
 }

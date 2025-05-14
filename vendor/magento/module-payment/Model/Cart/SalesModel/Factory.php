@@ -24,10 +24,10 @@ class Factory
     }
 
     /**
-     * Wrap sales model with Magento\Payment\Model\Cart\SalesModel\SalesModelInterface
+     * Wrap sales model with Magento\Payment\Model\CartAfter\SalesModel\SalesModelInterface
      *
      * @param \Magento\Quote\Api\Data\CartInterface $salesModel
-     * @return \Magento\Payment\Model\Cart\SalesModel\SalesModelInterface
+     * @return \Magento\Payment\Model\CartAfter\SalesModel\SalesModelInterface
      * @throws \InvalidArgumentException
      */
     public function create($salesModel)

@@ -19,7 +19,7 @@
         </annotations>
 
         <before>
-            <!-- Set Enable Inventory Check On Cart Load = No -->
+            <!-- Set Enable Inventory Check On CartAfter Load = No -->
             <magentoCLI command="config:set {{DisableInventoryCheckOnCartLoad.path}} {{DisableInventoryCheckOnCartLoad.value}}" stepKey="disableCartLoad"/>
             <!-- Create default category with subcategory -->
             <createData entity="ApiCategory" stepKey="createCategory"/>

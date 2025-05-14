@@ -31,7 +31,7 @@
             <actionGroup ref="AdminLogoutActionGroup" stepKey="adminLogout"/>
         </after>
 
-        <!-- Search Cart Price Rule and go to edit Cart Price Rule -->
+        <!-- Search CartAfter Price Rule and go to edit CartAfter Price Rule -->
         <actionGroup ref="AdminOpenCartPriceRulesPageActionGroup" stepKey="amOnCartPriceList"/>
         <fillField selector="{{AdminCartPriceRulesSection.filterByNameInput}}" userInput="$$createSalesRule.name$$"
                    stepKey="fillFieldFilterByName"/>

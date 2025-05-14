@@ -87,7 +87,7 @@ class CouponManagementTest extends TestCase
     public function testSetWhenCartDoesNotContainsProducts()
     {
         $this->expectException('Magento\Framework\Exception\NoSuchEntityException');
-        $this->expectExceptionMessage('The "33" Cart doesn\'t contain products.');
+        $this->expectExceptionMessage('The "33" CartAfter doesn\'t contain products.');
         $cartId = 33;
 
         $this->quoteRepositoryMock->expects($this->once())
@@ -174,7 +174,7 @@ class CouponManagementTest extends TestCase
     public function testDeleteWhenCartDoesNotContainsProducts()
     {
         $this->expectException('Magento\Framework\Exception\NoSuchEntityException');
-        $this->expectExceptionMessage('The "65" Cart doesn\'t contain products.');
+        $this->expectExceptionMessage('The "65" CartAfter doesn\'t contain products.');
         $cartId = 65;
 
         $this->quoteRepositoryMock->expects($this->once())

@@ -35,20 +35,20 @@
                                     <div class="actions-primary">
                                         <?php if ($_product->isSaleable()) :?>
                                             <?php if (!$_product->getTypeInstance()->isPossibleBuyFromList($_product)) :?>
-                                                <button type="button" title="<?= $block->escapeHtmlAttr(__('Add to Cart')) ?>"
+                                                <button type="button" title="<?= $block->escapeHtmlAttr(__('Add to CartAfter')) ?>"
                                                         class="action tocart primary"
                                                         data-mage-init='{"redirectUrl":{"url":"<?= $block->escapeUrl($block->getAddToCartUrl($_product)) ?>"}}'>
-                                                    <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                                                    <span><?= $block->escapeHtml(__('Add to CartAfter')) ?></span>
                                                 </button>
                                             <?php else :?>
                                                 <?php
                                                 $postDataHelper = $this->helper(Magento\Framework\Data\Helper\PostHelper::class);
                                                 $postData = $postDataHelper->getPostData($block->escapeUrl($block->getAddToCartUrl($_product)), ['product' => $_product->getEntityId()]);
                                                 ?>
-                                                <button type="button" title="<?= $block->escapeHtmlAttr(__('Add to Cart')) ?>"
+                                                <button type="button" title="<?= $block->escapeHtmlAttr(__('Add to CartAfter')) ?>"
                                                         class="action tocart primary"
                                                         data-post='<?= /* @noEscape */ $postData ?>'>
-                                                    <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                                                    <span><?= $block->escapeHtml(__('Add to CartAfter')) ?></span>
                                                 </button>
                                             <?php endif; ?>
                                         <?php else :?>

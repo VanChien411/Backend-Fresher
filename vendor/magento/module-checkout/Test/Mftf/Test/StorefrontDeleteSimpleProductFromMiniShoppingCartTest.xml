@@ -35,7 +35,7 @@
             <argument name="product" value="$$simpleProduct$$"/>
         </actionGroup>
 
-        <!-- Assert Product in Mini Cart -->
+        <!-- Assert Product in Mini CartAfter -->
         <actionGroup ref="StorefrontClickOnMiniCartActionGroup" stepKey="clickOnMiniCart"/>
         <actionGroup ref="AssertStorefrontMiniCartItemsActionGroup" stepKey="assertSimpleProduct3MiniCart">
             <argument name="productName" value="$$simpleProduct.name$$"/>
@@ -44,7 +44,7 @@
             <argument name="qty" value="1"/>
         </actionGroup>
 
-        <!-- Select Mini Cart and select 'View And Edit Cart' -->
+        <!-- Select Mini CartAfter and select 'View And Edit CartAfter' -->
         <actionGroup ref="AssertOneProductNameInMiniCartActionGroup" stepKey="seeProductInMiniCart">
             <argument name="productName" value="$$simpleProduct.name$$"/>
         </actionGroup>

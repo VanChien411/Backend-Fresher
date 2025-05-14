@@ -42,8 +42,8 @@ define([
             cartData({});
         });
 
-        describe('Check Cart data preparation process', function () {
-            it('Tests that Cart data is NOT checked before initialization', function () {
+        describe('Check CartAfter data preparation process', function () {
+            it('Tests that CartAfter data is NOT checked before initialization', function () {
                 spyOn(mocks['Magento_Customer/js/customer-data'], 'getInitCustomerData').and.callFake(function () {
                     deferred = $.Deferred();
 
@@ -56,7 +56,7 @@ define([
                 expect(mocks['Magento_Customer/js/customer-data'].reload).not.toHaveBeenCalled();
             });
 
-            it('Tests that Cart data does NOT reload if there are no items in it', function () {
+            it('Tests that CartAfter data does NOT reload if there are no items in it', function () {
                 spyOn(mocks['Magento_Customer/js/customer-data'], 'getInitCustomerData').and.callFake(function () {
                     deferred = $.Deferred();
 
@@ -73,7 +73,7 @@ define([
                 expect(mocks['Magento_Customer/js/customer-data'].reload).not.toHaveBeenCalled();
             });
 
-            it('Tests that Cart data is checked only after initialization', function () {
+            it('Tests that CartAfter data is checked only after initialization', function () {
                 spyOn(mocks['Magento_Customer/js/customer-data'], 'getInitCustomerData').and.callFake(function () {
                     deferred = $.Deferred();
 
@@ -92,7 +92,7 @@ define([
                 expect(mocks['Magento_Customer/js/customer-data'].reload).toHaveBeenCalledWith(['cart'], false);
             });
 
-            it('Tests that Cart data reloads if it has items', function () {
+            it('Tests that CartAfter data reloads if it has items', function () {
                 spyOn(mocks['Magento_Customer/js/customer-data'], 'getInitCustomerData').and.callFake(function () {
                     deferred = $.Deferred();
 

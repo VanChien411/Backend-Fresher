@@ -81,11 +81,11 @@ class CreateEmptyCart implements ResolverInterface
     private function validateMaskedId(string $maskedId): void
     {
         if (mb_strlen($maskedId) != 32) {
-            throw new GraphQlInputException(__('Cart ID length should to be 32 symbols.'));
+            throw new GraphQlInputException(__('CartAfter ID length should to be 32 symbols.'));
         }
 
         if ($this->isQuoteWithSuchMaskedIdAlreadyExists($maskedId)) {
-            throw new GraphQlAlreadyExistsException(__('Cart with ID "%1" already exists.', $maskedId));
+            throw new GraphQlAlreadyExistsException(__('CartAfter with ID "%1" already exists.', $maskedId));
         }
     }
 

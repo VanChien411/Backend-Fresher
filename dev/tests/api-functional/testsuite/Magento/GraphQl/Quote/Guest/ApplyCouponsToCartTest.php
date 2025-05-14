@@ -12,7 +12,7 @@ use Magento\TestFramework\Helper\Bootstrap;
 use Magento\TestFramework\TestCase\GraphQlAbstract;
 
 /**
- * Test Apply Coupons to Cart functionality for guest
+ * Test Apply Coupons to CartAfter functionality for guest
  */
 class ApplyCouponsToCartTest extends GraphQlAbstract
 {
@@ -60,7 +60,7 @@ class ApplyCouponsToCartTest extends GraphQlAbstract
     public function testApplyCouponsToCartWithoutItems()
     {
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage('Cart does not contain products.');
+        $this->expectExceptionMessage('CartAfter does not contain products.');
 
         $couponCode = '2?ds5!2d';
         $maskedQuoteId = $this->getMaskedQuoteIdByReservedOrderId->execute('test_quote');

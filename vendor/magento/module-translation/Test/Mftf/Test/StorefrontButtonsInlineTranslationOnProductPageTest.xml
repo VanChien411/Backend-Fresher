@@ -42,7 +42,7 @@
             <argument name="productName" value="$createProduct.name$"/>
         </actionGroup>
 
-        <!-- Open Mini Cart -->
+        <!-- Open Mini CartAfter -->
         <actionGroup ref="StorefrontOpenMiniCartActionGroup" stepKey="openMiniCart"/>
 
         <!-- Check button "Proceed to Checkout". There must be red borders and "book" icons on labels that can be translated. -->

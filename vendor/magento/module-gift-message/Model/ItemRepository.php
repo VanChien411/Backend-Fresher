@@ -86,7 +86,7 @@ class ItemRepository implements \Magento\GiftMessage\Api\ItemRepositoryInterface
         $quote = $this->quoteRepository->getActive($cartId);
         if (!$item = $quote->getItemById($itemId)) {
             throw new NoSuchEntityException(
-                __('No item with the provided ID was found in the Cart. Verify the ID and try again.')
+                __('No item with the provided ID was found in the CartAfter. Verify the ID and try again.')
             );
         }
         $messageId = $item->getGiftMessageId();
@@ -117,7 +117,7 @@ class ItemRepository implements \Magento\GiftMessage\Api\ItemRepositoryInterface
         if (!$item = $quote->getItemById($itemId)) {
             throw new NoSuchEntityException(
                 __(
-                    'No product with the "%1" itemId exists in the Cart. Verify your information and try again.',
+                    'No product with the "%1" itemId exists in the CartAfter. Verify your information and try again.',
                     $itemId
                 )
             );

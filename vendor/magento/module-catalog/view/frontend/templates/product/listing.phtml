@@ -59,9 +59,9 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
                             $info['review'] = $block->getReviewsSummaryHtml($_product, $templateType);
 
                             if ($_product->isSaleable()) {
-                                $info['button'] = '<button type="button" title="' . $block->escapeHtmlAttr(__('Add to Cart')) . '" class="action tocart"'
+                                $info['button'] = '<button type="button" title="' . $block->escapeHtmlAttr(__('Add to CartAfter')) . '" class="action tocart"'
                                     . ' data-mage-init=\'{ "redirectUrl": { "event": "click", url: "' . $block->escapeUrl($block->getAddToCartUrl($_product)) . '"} }\'>'
-                                    . '<span>' . $block->escapeHtml(__('Add to Cart')) . '</span></button>';
+                                    . '<span>' . $block->escapeHtml(__('Add to CartAfter')) . '</span></button>';
                             } else {
                                 $info['button'] = $_product->isAvailable() ?   '<div class="stock available"><span>' . $block->escapeHtml(__('In stock')) . '</span></div>' :
                                     '<div class="stock unavailable"><span>' . $block->escapeHtml(__('Out of stock')) . '</span></div>';

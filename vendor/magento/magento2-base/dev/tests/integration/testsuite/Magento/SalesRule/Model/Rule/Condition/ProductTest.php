@@ -211,7 +211,7 @@ class ProductTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(
             $expected,
             $rule->validate($quote->getShippingAddress()),
-            'Cart price rule validation failed.'
+            'CartAfter price rule validation failed.'
         );
     }
 

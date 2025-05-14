@@ -102,7 +102,7 @@ class WishlistTest extends TestCase
         $buttonsXpath = [
             "//button[contains(@class, 'update') and @type='submit']/span[contains(text(), 'Update Wish List')]",
             "//button[contains(@class, 'share') and @type='submit']/span[contains(text(), 'Share Wish List')]",
-            "//button[contains(@class, 'tocart') and @type='button']/span[contains(text(), 'Add All to Cart')]",
+            "//button[contains(@class, 'tocart') and @type='button']/span[contains(text(), 'Add All to CartAfter')]",
         ];
         $this->customerSession->setCustomerId(1);
         $blockHtml = $this->getWishListBlock()->toHtml();

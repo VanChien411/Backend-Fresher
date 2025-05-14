@@ -15,7 +15,7 @@ use Magento\Quote\Api\Data\CartInterface;
 use Magento\Quote\Api\Data\CartItemInterface;
 
 /**
- * Cart item save handler
+ * CartAfter item save handler
  */
 class CartItemPersister
 {
@@ -68,7 +68,7 @@ class CartItemPersister
                 $currentItem = $quote->getItemById($itemId);
                 if (!$currentItem) {
                     throw new NoSuchEntityException(
-                        __('The %1 Cart doesn\'t contain the %2 item.', $cartId, $itemId)
+                        __('The %1 CartAfter doesn\'t contain the %2 item.', $cartId, $itemId)
                     );
                 }
                 $productType = $currentItem->getProduct()->getTypeId();

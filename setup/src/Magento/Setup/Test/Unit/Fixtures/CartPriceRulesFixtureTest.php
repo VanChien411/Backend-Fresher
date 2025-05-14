@@ -275,7 +275,7 @@ class CartPriceRulesFixtureTest extends TestCase
     {
         $this->assertSame(
             [
-                'cart_price_rules' => 'Cart Price Rules'
+                'cart_price_rules' => 'CartAfter Price Rules'
             ],
             $this->model->introduceParamLabels()
         );

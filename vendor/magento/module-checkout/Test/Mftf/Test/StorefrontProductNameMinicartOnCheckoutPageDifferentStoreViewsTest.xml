@@ -83,7 +83,7 @@
 			<expectedResult type="string">-new</expectedResult>
         </assertStringContainsString>
 
-        <!--Check product name in Shopping Cart page-->
+        <!--Check product name in Shopping CartAfter page-->
         <comment userInput="BIC workaround" stepKey="clickViewAndEdit"/>
         <actionGroup ref="StorefrontCartPageOpenActionGroup" stepKey="openCart"/>
         <waitForPageLoad stepKey="waitForShoppingCartPageLoad"/>

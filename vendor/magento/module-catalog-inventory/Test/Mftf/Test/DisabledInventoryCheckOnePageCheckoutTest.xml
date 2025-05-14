@@ -31,14 +31,14 @@
                 <requiredEntity createDataKey="testCategory"/>
                 <requiredEntity createDataKey="simpleProductOne"/>
             </createData>
-            <!--Set Enable Inventory Check On Cart Load = No-->
+            <!--Set Enable Inventory Check On CartAfter Load = No-->
                 <magentoCLI command="config:set {{DisableInventoryCheckOnCartLoad.path}} {{DisableInventoryCheckOnCartLoad.value}}" stepKey="disableCartLoad"/>
             <!-- Cache Flush-->
             <actionGroup ref="CliCacheFlushActionGroup" stepKey="flushConfigCache">
                 <argument name="tags" value="config"/>
             </actionGroup>
         </before>
-        <!--Delete Category, Product and Set Enable Inventory Check On Cart Load = Yes-->
+        <!--Delete Category, Product and Set Enable Inventory Check On CartAfter Load = Yes-->
         <after>
             <magentoCLI command="config:set {{EnableInventoryCheckOnCartLoad.path}} {{EnableInventoryCheckOnCartLoad.value}}" stepKey="enableCartLoad"/>
             <actionGroup ref="AdminLogoutActionGroup" stepKey="adminLogout"/>
@@ -50,7 +50,7 @@
         <actionGroup ref="OpenStoreFrontProductPageActionGroup" stepKey="openProductFromCategory">
             <argument name="productUrlKey" value="$simpleProductOne.custom_attributes[url_key]$"/>
         </actionGroup>
-        <!--Add Product to Shopping Cart-->
+        <!--Add Product to Shopping CartAfter-->
         <actionGroup ref="AddToCartFromStorefrontProductPageActionGroup" stepKey="addToCartFromStorefrontProductPage">
             <argument name="productName" value="$simpleProductOne.name$"/>
         </actionGroup>

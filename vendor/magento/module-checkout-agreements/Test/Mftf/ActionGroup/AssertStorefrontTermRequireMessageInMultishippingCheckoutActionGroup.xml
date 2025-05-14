@@ -13,7 +13,7 @@
             <argument name="termCheckboxText" type="string"/>
         </arguments>
 
-        <!--Go to Checkout Cart and proceed with multiple addresses-->
+        <!--Go to Checkout CartAfter and proceed with multiple addresses-->
         <amOnPage url="{{CheckoutCartPage.url}}" stepKey="goToCheckoutCart"/>
         <waitForPageLoad stepKey="waitForCheckoutPageLoad"/>
         <click selector="{{MultishippingSection.checkoutWithMultipleAddresses}}" stepKey="proceedMultishipping"/>

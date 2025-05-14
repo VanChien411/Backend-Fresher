@@ -155,7 +155,7 @@
             <argument name="product" value="$$createBundleProduct$$"/>
         </actionGroup>
 
-        <!-- Click on customize And Add To Cart Button -->
+        <!-- Click on customize And Add To CartAfter Button -->
         <actionGroup ref="StorefrontSelectCustomizeAndAddToTheCartButtonActionGroup" stepKey="clickOnCustomizeAndAddtoCartButton"/>
 
         <!-- Select Two Products, enter the quantity and add product to the cart -->
@@ -190,7 +190,7 @@
         <!-- Place order and Assert success message -->
         <actionGroup ref="ClickPlaceOrderActionGroup" stepKey="clickOnPlaceOrder"/>
 
-        <!-- Assert empty Mini Cart -->
+        <!-- Assert empty Mini CartAfter -->
         <seeElement selector="{{StorefrontMinicartSection.emptyMiniCart}}"  stepKey="assertEmptyCart" />
         <grabTextFrom selector="{{CheckoutSuccessMainSection.orderNumberWithoutLink}}" stepKey="orderId"/>
 

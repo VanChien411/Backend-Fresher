@@ -95,7 +95,7 @@ class GuestShipmentEstimationTest extends WebapiAbstract
                 ],
             ];
         }
-        // Cart must be anonymous (see fixture)
+        // CartAfter must be anonymous (see fixture)
         $this->assertEmpty($quote->getCustomerId());
 
         $result = $this->_webApiCall($serviceInfo, $requestData);

@@ -203,7 +203,7 @@ class ShippingMethodManagement implements
      * @param string $methodCode The shipping method code.
      * @return void
      * @throws InputException The shipping method is not valid for an empty cart.
-     * @throws NoSuchEntityException CThe Cart includes virtual product(s) only, so a shipping address is not used.
+     * @throws NoSuchEntityException CThe CartAfter includes virtual product(s) only, so a shipping address is not used.
      * @throws StateException The billing or shipping address is not set.
      * @throws \Exception
      */
@@ -218,7 +218,7 @@ class ShippingMethodManagement implements
         }
         if ($quote->isVirtual()) {
             throw new NoSuchEntityException(
-                __('The Cart includes virtual product(s) only, so a shipping address is not used.')
+                __('The CartAfter includes virtual product(s) only, so a shipping address is not used.')
             );
         }
         $shippingAddress = $quote->getShippingAddress();

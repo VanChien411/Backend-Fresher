@@ -44,7 +44,7 @@ class RemoveGuestPersistenceOnEmptyCartObserver implements ObserverInterface
     private $persistenceDataHelper;
 
     /**
-     * Cart Repository
+     * CartAfter Repository
      *
      * @var \Magento\Quote\Api\CartRepositoryInterface $cartRepository
      */

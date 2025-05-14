@@ -152,7 +152,7 @@
         <!--Tick in checkbox near 'Product B' in Related products section-->
         <click selector="{{StorefrontProductRelatedProductsSection.relatedProductCheckBoxButton('$$productB.name$$')}}" stepKey="checkProductB"/>
 
-        <!--Click Add to Cart-->
+        <!--Click Add to CartAfter-->
         <actionGroup ref="AddToCartFromStorefrontProductPageActionGroup" stepKey="addToCartFromStorefrontProductPage">
             <argument name="productName" value="$$productA.name$$"/>
         </actionGroup>
@@ -179,7 +179,7 @@
         <seeCheckboxIsChecked selector="{{StorefrontProductRelatedProductsSection.relatedProductCheckBoxButton('$$productU.name$$')}}" stepKey="seeCheckboxUIsTicked"/>
 
 
-        <!--Click Add to Cart-->
+        <!--Click Add to CartAfter-->
         <actionGroup ref="AddToCartFromStorefrontProductPageActionGroup" stepKey="clickAddToCart">
             <argument name="productName" value="$$productA.name$$"/>
         </actionGroup>
@@ -205,7 +205,7 @@
 
         <seeCheckboxIsChecked selector="{{StorefrontProductRelatedProductsSection.relatedProductCheckBoxButton('$$productU.name$$')}}" stepKey="checkUIsTicked"/>
 
-        <!-- Click Add to Cart Again-->
+        <!-- Click Add to CartAfter Again-->
         <actionGroup ref="AddToCartFromStorefrontProductPageActionGroup" stepKey="addToCartFromStorefrontProductPagethree">
             <argument name="productName" value="$$productA.name$$"/>
         </actionGroup>
@@ -225,7 +225,7 @@
         <!-- Step no .22 is left -->
         <comment userInput="No Element Reference for CheckBox could be found to automate" stepKey="noElementFound" />
 
-        <!-- Remove all products and Clear Shopping Cart-->
+        <!-- Remove all products and Clear Shopping CartAfter-->
 
         <actionGroup ref="RemoveProductFromMiniCartActionGroup" stepKey="removeProductAFromCart">
             <argument name="productName" value="$$productA.name$$"/>
@@ -258,7 +258,7 @@
         <!--Tick in checkbox near 'Product B' in Related products section-->
         <click selector="{{StorefrontProductRelatedProductsSection.relatedProductCheckBoxButton('$$productB.name$$')}}" stepKey="tickProductB"/>
 
-        <!--Click Add to Cart-->
+        <!--Click Add to CartAfter-->
         <actionGroup ref="AddToCartFromStorefrontProductPageActionGroup" stepKey="addVProductToCart">
             <argument name="productName" value="$$productV.name$$"/>
         </actionGroup>
@@ -277,7 +277,7 @@
         <waitForElementVisible selector="{{StorefrontProductPageSection.successMsg}}" time="30" stepKey="waitForPageToLoad"/>
         <see selector="{{StorefrontCategoryMainSection.SuccessMsg}}" userInput="You added $$productV.name$$ to your shopping cart." stepKey="seeSuccessMessageForProductV"/>
 
-        <!--Close Mini Cart-->
+        <!--Close Mini CartAfter-->
         <click selector="{{StorefrontMinicartSection.minicartclose}}" stepKey="closeMiniCart"/>
 
 
@@ -289,7 +289,7 @@
         <seeCheckboxIsChecked selector="{{StorefrontProductRelatedProductsSection.relatedProductCheckBoxButton('$$productU.name$$')}}" stepKey="seeCheckboxUIsChecked"/>
 
 
-        <!--Click Add to Cart for Product V-->
+        <!--Click Add to CartAfter for Product V-->
         <actionGroup ref="AddToCartFromStorefrontProductPageActionGroup" stepKey="addProductVToCart">
             <argument name="productName" value="$$productV.name$$"/>
         </actionGroup>
@@ -315,7 +315,7 @@
 
         <checkOption selector="{{StorefrontProductRelatedProductsSection.relatedProductCheckBoxButton('$$productU.name$$')}}" stepKey="seeUIsUnchecked"/>
 
-        <!-- Click Add to Cart for Product V-->
+        <!-- Click Add to CartAfter for Product V-->
         <actionGroup ref="AddToCartFromStorefrontProductPageActionGroup" stepKey="addToCartProductV">
             <argument name="productName" value="$$productV.name$$"/>
         </actionGroup>

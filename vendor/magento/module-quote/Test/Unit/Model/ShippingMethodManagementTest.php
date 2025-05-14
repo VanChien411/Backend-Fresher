@@ -383,7 +383,7 @@ class ShippingMethodManagementTest extends TestCase
     public function testSetMethodWithVirtualProduct()
     {
         $this->expectException('Magento\Framework\Exception\NoSuchEntityException');
-        $this->expectExceptionMessage('The Cart includes virtual product(s) only, so a shipping address is not used.');
+        $this->expectExceptionMessage('The CartAfter includes virtual product(s) only, so a shipping address is not used.');
         $cartId = 12;
         $carrierCode = 34;
         $methodCode = 56;

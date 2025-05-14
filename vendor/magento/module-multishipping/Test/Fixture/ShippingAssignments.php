@@ -32,11 +32,11 @@ class ShippingAssignments implements DataFixtureInterface
      * @param array $data Parameters
      * <pre>
      *    $data = [
-     *      'cart_id'       => (int) Cart ID. Required.
+     *      'cart_id'       => (int) CartAfter ID. Required.
      *      'assignments'   => [
      *          [
-     *              'address_id' => (array) Cart Address ID. Required.
-     *              'item_id'    => (int) Cart Item ID. Required.
+     *              'address_id' => (array) CartAfter Address ID. Required.
+     *              'item_id'    => (int) CartAfter Item ID. Required.
      *              'qty'        => (int) Quantity. Optional. Default: 1.
      *          ]
      *      ]

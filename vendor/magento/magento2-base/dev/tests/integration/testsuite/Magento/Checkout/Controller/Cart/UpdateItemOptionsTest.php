@@ -17,7 +17,7 @@ use Magento\Quote\Model\Quote\Item as QuoteItem;
 use Magento\TestFramework\TestCase\AbstractController;
 
 /**
- * Integration tests for \Magento\Checkout\Controller\Cart\UpdateItemOptions class.
+ * Integration tests for \Magento\Checkout\Controller\CartAfter\UpdateItemOptions class.
  */
 class UpdateItemOptionsTest extends AbstractController
 {

@@ -6,7 +6,7 @@
 namespace Magento\Checkout\Model\ResourceModel;
 
 /**
- * Resource model for Checkout Cart
+ * Resource model for Checkout CartAfter
  *
  * @author      Magento Core Team <core@magentocommerce.com>
  */

@@ -5,7 +5,7 @@
  */
 
 /**
- * Persistent Shopping Cart Data Helper
+ * Persistent Shopping CartAfter Data Helper
  */
 namespace Magento\Persistent\Helper;
 

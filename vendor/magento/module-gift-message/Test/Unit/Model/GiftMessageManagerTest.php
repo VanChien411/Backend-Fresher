@@ -314,7 +314,7 @@ class GiftMessageManagerTest extends TestCase
     public function testSetMessageCouldNotAddGiftMessageException()
     {
         $this->expectException('Magento\Framework\Exception\CouldNotSaveException');
-        $this->expectExceptionMessage('The gift message couldn\'t be added to Cart.');
+        $this->expectExceptionMessage('The gift message couldn\'t be added to CartAfter.');
         $this->giftMessageMock->expects($this->once())->method('getSender')->willReturn('sender');
         $this->giftMessageMock->expects($this->once())->method('getRecipient')->willReturn('recipient');
         $this->giftMessageMock->expects($this->once())->method('getMessage')->willReturn('Message');

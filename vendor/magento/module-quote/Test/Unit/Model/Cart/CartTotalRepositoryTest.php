@@ -26,7 +26,7 @@ use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Test Cart totals object for class \Magento\Quote\Model\Cart\CartTotalRepository
+ * Test CartAfter totals object for class \Magento\Quote\Model\CartAfter\CartTotalRepository
  *
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  */

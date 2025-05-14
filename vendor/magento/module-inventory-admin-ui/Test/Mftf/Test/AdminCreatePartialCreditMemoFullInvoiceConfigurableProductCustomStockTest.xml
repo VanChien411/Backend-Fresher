@@ -77,7 +77,7 @@
             <magentoCron groups="index" stepKey="reindex"/>
         </after>
 
-        <!-- Login as Customer and add Product to Cart-->
+        <!-- Login as Customer and add Product to CartAfter-->
         <actionGroup ref="LoginToStorefrontActionGroup" stepKey="customerLogin">
             <argument name="Customer" value="$$customer$$"/>
         </actionGroup>

@@ -119,7 +119,7 @@ QUERY;
     public function testCreateEmptyCartIfPredefinedCartIdAlreadyExists()
     {
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage('Cart with ID "572cda51902b5b517c0e1a2b2fd004b4" already exists.');
+        $this->expectExceptionMessage('CartAfter with ID "572cda51902b5b517c0e1a2b2fd004b4" already exists.');
 
         $predefinedCartId = '572cda51902b5b517c0e1a2b2fd004b4';
 
@@ -139,7 +139,7 @@ QUERY;
     public function testCreateEmptyCartWithWrongPredefinedCartId()
     {
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage('Cart ID length should to be 32 symbols.');
+        $this->expectExceptionMessage('CartAfter ID length should to be 32 symbols.');
 
         $predefinedCartId = '572';
 

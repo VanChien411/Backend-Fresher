@@ -43,6 +43,12 @@ class Save extends Action
                 // Gán dữ liệu từ form
                 $movie->setData($data['data']);
 
+                // Gán event trước khi lưu
+                $this->_eventManager->dispatch(
+                    'magenest_movie_save',
+                    ['movie' => $movie]
+                );
+
                 // Lưu vào database
                 $movie->save();
 

@@ -43,7 +43,7 @@
         <actionGroup ref="StorefrontOpenProductPageActionGroup" stepKey="goToFirstProductPage">
             <argument name="productUrl" value="$$firstProduct.custom_attributes[url_key]$$"/>
         </actionGroup>
-        <!-- Add the simple product to the Shopping Cart -->
+        <!-- Add the simple product to the Shopping CartAfter -->
         <actionGroup ref="AddProductWithQtyToCartFromStorefrontProductPageActionGroup" stepKey="addFirstProductToCart">
             <argument name="productName" value="$$firstProduct.name$$"/>
             <argument name="productQty" value="1"/>
@@ -52,12 +52,12 @@
         <actionGroup ref="StorefrontOpenProductPageActionGroup" stepKey="goToVirtualProductPage">
             <argument name="productUrl" value="$$virtualProduct.custom_attributes[url_key]$$"/>
         </actionGroup>
-        <!-- Add the virtual product to the Shopping Cart -->
+        <!-- Add the virtual product to the Shopping CartAfter -->
         <actionGroup ref="AddProductWithQtyToCartFromStorefrontProductPageActionGroup" stepKey="addVirtualProductToCart">
             <argument name="productName" value="$$virtualProduct.name$$"/>
             <argument name="productQty" value="1"/>
         </actionGroup>
-        <!-- Go to Cart -->
+        <!-- Go to CartAfter -->
         <actionGroup ref="StorefrontOpenCartFromMinicartActionGroup" stepKey="openCart"/>
         <!-- Check Out with Multiple Addresses -->
         <actionGroup ref="StorefrontCheckoutWithMultipleAddressesActionGroup" stepKey="checkoutWithMultipleAddresses"/>

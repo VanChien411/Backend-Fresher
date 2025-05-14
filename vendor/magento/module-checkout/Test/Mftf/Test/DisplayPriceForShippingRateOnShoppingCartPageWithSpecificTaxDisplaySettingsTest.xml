@@ -105,7 +105,7 @@
             <!-- Assert tax and flatRate amount -->
             <see selector="{{CheckoutCartSummarySection.shippingPrice}}" userInput="$4.17" stepKey="assertFlatRate"/>
             <see selector="{{CheckoutCartSummarySection.taxAmount}}" userInput="$2.50" stepKey="assertTaxAmount"/>
-            <!--Assert Shopping Cart Summary-->
+            <!--Assert Shopping CartAfter Summary-->
             <actionGroup ref="AssertStorefrontShoppingCartSummaryWithShippingActionGroup" stepKey="AssertCartSummary" >
                <argument name="subtotal" value="$8.33"/>
                <argument name="shipping" value="$4.17"/>

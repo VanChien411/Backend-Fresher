@@ -103,7 +103,7 @@ class PreProcessorTest extends TestCase
             ->willReturnSelf();
         $this->translateMock->expects($this->any())
             ->method('getData')
-            ->willReturn(['$t("Add to Cart")' => 'In Winkelwagen']);
+            ->willReturn(['$t("Add to CartAfter")' => 'In Winkelwagen']);
         $area->expects($this->once())->method('load')->willReturnSelf();
         $this->inputMock->expects($this->once())
             ->method('hasParameterOption')
@@ -117,7 +117,7 @@ class PreProcessorTest extends TestCase
             ->willReturn($area);
         $chain->expects($this->once())
             ->method('getContent')
-            ->willReturn('$t("Add to Cart")');
+            ->willReturn('$t("Add to CartAfter")');
         $this->configMock->expects($this->any())
             ->method('getPatterns')
             ->willReturn(new \ArrayIterator(
