@@ -6,8 +6,8 @@
 namespace Magento\Checkout\Block\Cart\Item;
 
 /**
- * Cart Item Configure block
- * Updates templates and blocks to show 'Update Cart' button and set right form submit url
+ * CartAfter Item Configure block
+ * Updates templates and blocks to show 'Update CartAfter' button and set right form submit url
  *
  * @api
  * @module     Checkout

@@ -10,7 +10,7 @@ namespace Magento\QuoteGraphQl\Model\CartItem\DataProvider\Processor;
 use Magento\GraphQl\Model\Query\ContextInterface;
 
 /**
- * Process Cart Item Data
+ * Process CartAfter Item Data
  *
  * @api
  */

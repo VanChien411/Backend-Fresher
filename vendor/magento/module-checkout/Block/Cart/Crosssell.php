@@ -21,7 +21,7 @@ use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Quote\Model\Quote\Item\RelatedProducts;
 
 /**
- * Cart crosssell list
+ * CartAfter crosssell list
  *
  * @api
  * @author      Magento Core Team <core@magentocommerce.com>
@@ -308,7 +308,7 @@ class Crosssell extends AbstractProduct
     }
 
     /**
-     * Retrieve Array of Product instances in Cart
+     * Retrieve Array of Product instances in CartAfter
      *
      * @return array
      */

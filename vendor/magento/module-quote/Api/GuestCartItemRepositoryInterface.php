@@ -6,7 +6,7 @@
 namespace Magento\Quote\Api;
 
 /**
- * Cart Item repository interface for guest carts.
+ * CartAfter Item repository interface for guest carts.
  * @api
  * @since 100.0.2
  */

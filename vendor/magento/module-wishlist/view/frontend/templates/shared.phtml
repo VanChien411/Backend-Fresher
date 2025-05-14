@@ -18,7 +18,7 @@
                 <tr>
                     <th class="col product" scope="col"><?= $block->escapeHtml(__('Product')) ?></th>
                     <th class="col comment" scope="col"><?= $block->escapeHtml(__('Comment')) ?></th>
-                    <th class="col actions" scope="col"><?= $block->escapeHtml(__('Add to Cart')) ?></th>
+                    <th class="col actions" scope="col"><?= $block->escapeHtml(__('Add to CartAfter')) ?></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -51,15 +51,15 @@
                         <td data-th="<?= $block->escapeHtmlAttr(__('Comment')) ?>"
                             class="col comment"><?= /* @noEscape */ $block->getEscapedDescription($item) ?>
                         </td>
-                        <td data-th="<?= $block->escapeHtmlAttr(__('Add to Cart')) ?>" class="col actions"
+                        <td data-th="<?= $block->escapeHtmlAttr(__('Add to CartAfter')) ?>" class="col actions"
                             data-role="add-to-links">
                             <?php if ($product->isSaleable()): ?>
                                 <?php if ($isVisibleProduct): ?>
                                     <button type="button"
-                                            title="<?= $block->escapeHtmlAttr(__('Add to Cart')) ?>"
+                                            title="<?= $block->escapeHtmlAttr(__('Add to CartAfter')) ?>"
                                             data-post='<?= /* @noEscape */ $block->getSharedItemAddToCartUrl($item) ?>'
                                             class="action tocart">
-                                        <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                                        <span><?= $block->escapeHtml(__('Add to CartAfter')) ?></span>
                                     </button>
                                 <?php endif ?>
                             <?php endif; ?>
@@ -84,10 +84,10 @@
             <?php if ($block->isSaleable()): ?>
                 <div class="primary">
                     <button type="button"
-                            title="<?= $block->escapeHtmlAttr(__('Add All to Cart')) ?>"
+                            title="<?= $block->escapeHtmlAttr(__('Add All to CartAfter')) ?>"
                             data-post='<?= $block->escapeUrl($block->getSharedAddAllToCartUrl()) ?>'
                             class="action tocart primary">
-                        <span><?= $block->escapeHtml(__('Add All to Cart')) ?></span>
+                        <span><?= $block->escapeHtml(__('Add All to CartAfter')) ?></span>
                     </button>
                 </div>
             <?php endif;?>

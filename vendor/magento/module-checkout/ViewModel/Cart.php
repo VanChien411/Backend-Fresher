@@ -12,7 +12,7 @@ use Magento\Framework\View\Element\Context;
 use Magento\Store\Model\ScopeInterface;
 
 /**
- * Cart form view model.
+ * CartAfter form view model.
  */
 class Cart implements ArgumentInterface
 {

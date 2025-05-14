@@ -12,7 +12,7 @@ use Magento\Quote\Model\QuoteIdMask;
 use Magento\Quote\Model\QuoteIdMaskFactory;
 
 /**
- * Cart totals repository class for guest carts.
+ * CartAfter totals repository class for guest carts.
  */
 class GuestCartTotalRepository implements GuestCartTotalRepositoryInterface
 {

@@ -61,7 +61,7 @@ define([
                 expect(sidebar._removeItemAfter).toBeDefined();
             });
 
-            it('Cart item is exists', function () {
+            it('CartAfter item is exists', function () {
                 var elem = $('<input>').data('cart-item', 5);
 
                 sidebar._removeItemAfter(elem);
@@ -73,7 +73,7 @@ define([
                 });
             });
 
-            it('Cart item doesn\'t exists', function () {
+            it('CartAfter item doesn\'t exists', function () {
                 var elem = $('<input>').data('cart-item', 100);
 
                 sidebar._removeItemAfter(elem);
@@ -91,7 +91,7 @@ define([
                 expect(sidebar._updateItemQtyAfter).toBeDefined();
             });
 
-            it('Cart item is exists', function () {
+            it('CartAfter item is exists', function () {
                 var elem = $('<input>').data('cart-item', 5);
 
                 spyOn(sidebar, '_hideItemButton');
@@ -102,7 +102,7 @@ define([
                 expect(sidebar._hideItemButton).toHaveBeenCalledWith(elem);
             });
 
-            it('Cart item doesn\'t exists', function () {
+            it('CartAfter item doesn\'t exists', function () {
                 var elem = $('<input>').data('cart-item', 100);
 
                 spyOn(sidebar, '_hideItemButton');

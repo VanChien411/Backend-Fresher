@@ -196,7 +196,7 @@ class CreditMemoUpdateReservationsTest extends TestCase
     }
 
     /**
-     * Get Cart item
+     * Get CartAfter item
      *
      * @param ProductInterface $product
      * @param float $quoteItemQty

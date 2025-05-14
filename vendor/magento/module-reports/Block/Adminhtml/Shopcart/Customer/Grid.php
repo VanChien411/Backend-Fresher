@@ -84,7 +84,7 @@ class Grid extends \Magento\Reports\Block\Adminhtml\Grid\Shopcart
         $this->addColumn(
             'items',
             [
-                'header' => __('Items in Cart'),
+                'header' => __('Items in CartAfter'),
                 'width' => '70px',
                 'sortable' => false,
                 'align' => 'right',

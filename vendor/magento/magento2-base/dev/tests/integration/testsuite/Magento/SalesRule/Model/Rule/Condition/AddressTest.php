@@ -44,7 +44,7 @@ class AddressTest extends TestCase
 
         $this->assertTrue(
             $rule->validate($quote->getBillingAddress()),
-            'Cart price rule validation failed.'
+            'CartAfter price rule validation failed.'
         );
     }
 }

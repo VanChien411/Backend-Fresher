@@ -179,14 +179,14 @@ interface StockItemInterface extends ExtensibleDataInterface
     public function setUseConfigMinSaleQty($useConfigMinSaleQty);
 
     /**
-     * Retrieve Minimum Qty Allowed in Shopping Cart or NULL when there is no limitation
+     * Retrieve Minimum Qty Allowed in Shopping CartAfter or NULL when there is no limitation
      *
      * @return float
      */
     public function getMinSaleQty();
 
     /**
-     * Set Minimum Qty Allowed in Shopping Cart or NULL when there is no limitation
+     * Set Minimum Qty Allowed in Shopping CartAfter or NULL when there is no limitation
      *
      * @param float $minSaleQty
      * @return $this
@@ -206,14 +206,14 @@ interface StockItemInterface extends ExtensibleDataInterface
     public function setUseConfigMaxSaleQty($useConfigMaxSaleQty);
 
     /**
-     * Retrieve Maximum Qty Allowed in Shopping Cart data wrapper
+     * Retrieve Maximum Qty Allowed in Shopping CartAfter data wrapper
      *
      * @return float
      */
     public function getMaxSaleQty();
 
     /**
-     * Set Maximum Qty Allowed in Shopping Cart data wrapper
+     * Set Maximum Qty Allowed in Shopping CartAfter data wrapper
      *
      * @param float $maxSaleQty
      * @return $this

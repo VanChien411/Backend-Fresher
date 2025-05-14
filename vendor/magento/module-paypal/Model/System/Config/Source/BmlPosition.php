@@ -48,7 +48,7 @@ class BmlPosition
     }
 
     /**
-     * Bml positions source getter for Checkout Cart Page
+     * Bml positions source getter for Checkout CartAfter Page
      *
      * @return array
      */

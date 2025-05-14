@@ -67,8 +67,8 @@ if ($exist = ($block->getRecentlyViewedProducts() && $block->getRecentlyViewedPr
                                     <?php if ($_product->getTypeInstance()->hasRequiredOptions($_product)) : ?>
                                         <button class="action tocart primary"
                                                 data-mage-init='{"redirectUrl": {"url": "<?= $block->escapeUrl($block->getAddToCartUrl($_product)) ?>"}}'
-                                                type="button" title="<?= $block->escapeHtmlAttr(__('Add to Cart')) ?>">
-                                            <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                                                type="button" title="<?= $block->escapeHtmlAttr(__('Add to CartAfter')) ?>">
+                                            <span><?= $block->escapeHtml(__('Add to CartAfter')) ?></span>
                                         </button>
                                     <?php else : ?>
                                         <?php
@@ -76,7 +76,7 @@ if ($exist = ($block->getRecentlyViewedProducts() && $block->getRecentlyViewedPr
                                             $postData = $postDataHelper->getPostData($block->getAddToCartUrl($_product), ['product' => $_product->getEntityId()]);
                                         ?>
                                         <button type="button" class="action tocart primary" data-post='<?= /* @noEscape */ $postData ?>'>
-                                            <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                                            <span><?= $block->escapeHtml(__('Add to CartAfter')) ?></span>
                                         </button>
                                     <?php endif; ?>
                                 </div>

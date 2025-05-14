@@ -62,7 +62,7 @@
             <argument name="qty" value="1"/>
         </actionGroup>
 
-        <!-- Select mini Cart and verify Simple and Virtual products names in cart-->
+        <!-- Select mini CartAfter and verify Simple and Virtual products names in cart-->
         <actionGroup ref="AssertOneProductNameInMiniCartActionGroup" stepKey="seeSimpleProductInMiniCart">
             <argument name="productName" value="$$simpleProduct.name$$"/>
         </actionGroup>

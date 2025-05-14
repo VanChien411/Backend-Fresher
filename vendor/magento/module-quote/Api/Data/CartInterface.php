@@ -64,7 +64,7 @@ interface CartInterface extends \Magento\Framework\Api\ExtensibleDataInterface
     /**
      * Returns the cart/quote ID.
      *
-     * @return int Cart/quote ID.
+     * @return int CartAfter/quote ID.
      */
     public function getId();
 
@@ -79,7 +79,7 @@ interface CartInterface extends \Magento\Framework\Api\ExtensibleDataInterface
     /**
      * Returns the cart creation date and time.
      *
-     * @return string|null Cart creation date and time. Otherwise, null.
+     * @return string|null CartAfter creation date and time. Otherwise, null.
      */
     public function getCreatedAt();
 
@@ -94,7 +94,7 @@ interface CartInterface extends \Magento\Framework\Api\ExtensibleDataInterface
     /**
      * Returns the cart last update date and time.
      *
-     * @return string|null Cart last update date and time. Otherwise, null.
+     * @return string|null CartAfter last update date and time. Otherwise, null.
      */
     public function getUpdatedAt();
 
@@ -109,7 +109,7 @@ interface CartInterface extends \Magento\Framework\Api\ExtensibleDataInterface
     /**
      * Returns the cart conversion date and time.
      *
-     * @return string|null Cart conversion date and time. Otherwise, null.
+     * @return string|null CartAfter conversion date and time. Otherwise, null.
      */
     public function getConvertedAt();
 
@@ -208,7 +208,7 @@ interface CartInterface extends \Magento\Framework\Api\ExtensibleDataInterface
     /**
      * Returns the cart billing address.
      *
-     * @return \Magento\Quote\Api\Data\AddressInterface|null Cart billing address. Otherwise, null.
+     * @return \Magento\Quote\Api\Data\AddressInterface|null CartAfter billing address. Otherwise, null.
      */
     public function getBillingAddress();
 

@@ -260,7 +260,7 @@ class UpdateTest extends AbstractBackendController
     public function bundleOptionQuantityProvider(): array
     {
         return [
-            'Quantity, less than allowed in the Shopping Cart' => [
+            'Quantity, less than allowed in the Shopping CartAfter' => [
                 '0.1',
                 'The fewest you may purchase is 1.',
             ],
@@ -272,7 +272,7 @@ class UpdateTest extends AbstractBackendController
                 '1000',
                 'The requested qty is not available',
             ],
-            'Quantity, greater than allowed in the Shopping Cart' => [
+            'Quantity, greater than allowed in the Shopping CartAfter' => [
                 '100000',
                 'The requested qty exceeds the maximum qty allowed in shopping cart',
             ],

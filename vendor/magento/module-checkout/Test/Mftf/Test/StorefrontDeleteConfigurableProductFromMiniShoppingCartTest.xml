@@ -85,7 +85,7 @@
             <argument name="qty" value="1"/>
         </actionGroup>
 
-        <!-- Select Mini Cart and select 'View And Edit Cart' -->
+        <!-- Select Mini CartAfter and select 'View And Edit CartAfter' -->
         <actionGroup ref="AssertOneProductNameInMiniCartActionGroup" stepKey="seeProductInMiniCart">
             <argument name="productName" value="$$createConfigProduct.name$$"/>
         </actionGroup>

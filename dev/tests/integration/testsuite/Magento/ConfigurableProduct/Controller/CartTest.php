@@ -5,7 +5,7 @@
  */
 
 /**
- * Test class for \Magento\Checkout\Controller\Cart
+ * Test class for \Magento\Checkout\Controller\CartAfter
  */
 namespace Magento\ConfigurableProduct\Controller;
 
@@ -14,7 +14,7 @@ use Magento\Framework\App\Request\Http as HttpRequest;
 class CartTest extends \Magento\TestFramework\TestCase\AbstractController
 {
     /**
-     * Test for \Magento\Checkout\Controller\Cart::configureAction() with configurable product
+     * Test for \Magento\Checkout\Controller\CartAfter::configureAction() with configurable product
      *
      * @magentoDataFixture Magento/ConfigurableProduct/_files/quote_with_configurable_product.php
      */
@@ -36,10 +36,10 @@ class CartTest extends \Magento\TestFramework\TestCase\AbstractController
         $this->assertEquals(
             1,
             \Magento\TestFramework\Helper\Xpath::getElementsCountForXpath(
-                '//button[@type="submit" and @title="Update Cart"]',
+                '//button[@type="submit" and @title="Update CartAfter"]',
                 $response->getBody()
             ),
-            'Response for configurable product doesn\'t contain "Update Cart" button'
+            'Response for configurable product doesn\'t contain "Update CartAfter" button'
         );
 
         $this->assertEquals(
@@ -72,7 +72,7 @@ class CartTest extends \Magento\TestFramework\TestCase\AbstractController
     }
 
     /**
-     * Test for \Magento\Checkout\Controller\Cart\CouponPost::execute() with configurable product with last option
+     * Test for \Magento\Checkout\Controller\CartAfter\CouponPost::execute() with configurable product with last option
      * Covers MAGETWO-60352
      *
      * @magentoDataFixture Magento/ConfigurableProduct/_files/quote_with_configurable_product_last_variation.php

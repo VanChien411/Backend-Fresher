@@ -46,7 +46,7 @@ class SetBillingAddress implements DataFixtureInterface
      * @param array $data Parameters
      * <pre>
      *    $data = [
-     *      'cart_id' => (int) Cart ID. Required.
+     *      'cart_id' => (int) CartAfter ID. Required.
      *      'address' => (array) Address Data. Optional. Default: SetBillingAddress::DEFAULT_DATA
      *    ]
      * </pre>

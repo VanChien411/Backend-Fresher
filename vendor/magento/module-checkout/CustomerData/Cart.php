@@ -9,7 +9,7 @@ namespace Magento\Checkout\CustomerData;
 use Magento\Customer\CustomerData\SectionSourceInterface;
 
 /**
- * Cart source
+ * CartAfter source
  *
  * @SuppressWarnings(PHPMD.CookieAndSessionMisuse)
  */
@@ -66,14 +66,15 @@ class Cart extends \Magento\Framework\DataObject implements SectionSourceInterfa
      * @codeCoverageIgnore
      */
     public function __construct(
-        \Magento\Checkout\Model\Session $checkoutSession,
+        \Magento\Checkout\Model\Session          $checkoutSession,
         \Magento\Catalog\Model\ResourceModel\Url $catalogUrl,
-        \Magento\Checkout\Model\Cart $checkoutCart,
-        \Magento\Checkout\Helper\Data $checkoutHelper,
-        ItemPoolInterface $itemPoolInterface,
-        \Magento\Framework\View\LayoutInterface $layout,
-        array $data = []
-    ) {
+        \Magento\Checkout\Model\Cart             $checkoutCart,
+        \Magento\Checkout\Helper\Data            $checkoutHelper,
+        ItemPoolInterface                        $itemPoolInterface,
+        \Magento\Framework\View\LayoutInterface  $layout,
+        array                                    $data = []
+    )
+    {
         parent::__construct($data);
         $this->checkoutSession = $checkoutSession;
         $this->catalogUrl = $catalogUrl;
@@ -152,11 +153,11 @@ class Cart extends \Magento\Framework\DataObject implements SectionSourceInterfa
         if (!$this->getSummaryCount()) {
             return $items;
         }
-
+        array_reverse($this->getAllQuoteItems());
         foreach (array_reverse($this->getAllQuoteItems()) as $item) {
             /* @var $item \Magento\Quote\Model\Quote\Item */
             if (!$item->getProduct()->isVisibleInSiteVisibility()) {
-                $product =  $item->getOptionByCode('product_type') !== null
+                $product = $item->getOptionByCode('product_type') !== null
                     ? $item->getOptionByCode('product_type')->getProduct()
                     : $item->getProduct();
 

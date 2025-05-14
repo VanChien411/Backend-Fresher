@@ -10,13 +10,13 @@ namespace Magento\InventoryInStorePickupShippingApi\Model;
 use Magento\Quote\Api\Data\CartInterface;
 
 /**
- * Sugar service to check if Cart has In-Store Pickup Delivery Method.
+ * Sugar service to check if CartAfter has In-Store Pickup Delivery Method.
  * @api
  */
 interface IsInStorePickupDeliveryCartInterface
 {
     /**
-     * Check whether Cart has In-Store Pickup Delivery Method.
+     * Check whether CartAfter has In-Store Pickup Delivery Method.
      *
      * @param CartInterface $cart
      *

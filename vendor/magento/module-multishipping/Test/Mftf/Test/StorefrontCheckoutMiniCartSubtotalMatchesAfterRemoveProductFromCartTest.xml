@@ -42,14 +42,14 @@
         <actionGroup ref="StorefrontOpenProductEntityPageActionGroup" stepKey="goToProductPage">
             <argument name="product" value="$$createdSimpleProduct$$"/>
         </actionGroup>
-        <!-- Add to Cart three times of the product -->
+        <!-- Add to CartAfter three times of the product -->
         <waitForPageLoad stepKey="waitForProductPageLoad"/>
         <actionGroup ref="AddProductWithQtyToCartFromStorefrontProductPageActionGroup" stepKey="addProductToCart">
             <argument name="productName" value="$$createdSimpleProduct.name$$"/>
             <argument name="productQty" value="3"/>
         </actionGroup>
         <waitForPageLoad time="120"  stepKey="waitForAddToCart"/>
-        <!-- Go to Cart Summary Section -->
+        <!-- Go to CartAfter Summary Section -->
         <actionGroup ref="StorefrontOpenCartFromMinicartActionGroup" stepKey="openCart"/>
         <!-- Check Out with Multiple Addresses -->
         <actionGroup ref="StorefrontCheckoutWithMultipleAddressesActionGroup" stepKey="checkoutWithMultipleAddresses"/>

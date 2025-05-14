@@ -5,7 +5,7 @@
  */
 
 /**
- * Test class for \Magento\Checkout\Controller\Cart
+ * Test class for \Magento\Checkout\Controller\CartAfter
  */
 namespace Magento\Checkout\Controller;
 
@@ -53,7 +53,7 @@ class CartTest extends \Magento\TestFramework\TestCase\AbstractController
     }
 
     /**
-     * Test for \Magento\Checkout\Controller\Cart::configureAction() with simple product
+     * Test for \Magento\Checkout\Controller\CartAfter::configureAction() with simple product
      *
      * @magentoDataFixture Magento/Checkout/_files/quote_with_simple_product.php
      */
@@ -80,15 +80,15 @@ class CartTest extends \Magento\TestFramework\TestCase\AbstractController
         $this->assertEquals(
             1,
             \Magento\TestFramework\Helper\Xpath::getElementsCountForXpath(
-                '//button[@type="submit" and @title="Update Cart"]',
+                '//button[@type="submit" and @title="Update CartAfter"]',
                 $response->getBody()
             ),
-            'Response for simple product doesn\'t contain "Update Cart" button'
+            'Response for simple product doesn\'t contain "Update CartAfter" button'
         );
     }
 
     /**
-     * Test for \Magento\Checkout\Controller\Cart::configureAction() with simple product and custom option
+     * Test for \Magento\Checkout\Controller\CartAfter::configureAction() with simple product and custom option
      *
      * @magentoDataFixture Magento/Checkout/_files/cart_with_simple_product_and_custom_options.php
      */
@@ -116,10 +116,10 @@ class CartTest extends \Magento\TestFramework\TestCase\AbstractController
         $this->assertEquals(
             1,
             \Magento\TestFramework\Helper\Xpath::getElementsCountForXpath(
-                '//button[@type="submit" and @title="Update Cart"]',
+                '//button[@type="submit" and @title="Update CartAfter"]',
                 $response->getBody()
             ),
-            'Response for simple product with custom option doesn\'t contain "Update Cart" button'
+            'Response for simple product with custom option doesn\'t contain "Update CartAfter" button'
         );
 
         $this->assertEquals(
@@ -133,7 +133,7 @@ class CartTest extends \Magento\TestFramework\TestCase\AbstractController
     }
 
     /**
-     * Test for \Magento\Checkout\Controller\Cart::configureAction() with bundle product
+     * Test for \Magento\Checkout\Controller\CartAfter::configureAction() with bundle product
      *
      * @magentoDataFixture Magento/Checkout/_files/quote_with_bundle_product.php
      * @magentoDbIsolation disabled
@@ -161,15 +161,15 @@ class CartTest extends \Magento\TestFramework\TestCase\AbstractController
         $this->assertEquals(
             1,
             \Magento\TestFramework\Helper\Xpath::getElementsCountForXpath(
-                '//button[@type="submit" and @title="Update Cart"]',
+                '//button[@type="submit" and @title="Update CartAfter"]',
                 $response->getBody()
             ),
-            'Response for bundle product doesn\'t contain "Update Cart" button'
+            'Response for bundle product doesn\'t contain "Update CartAfter" button'
         );
     }
 
     /**
-     * Test for \Magento\Checkout\Controller\Cart::configureAction() with downloadable product
+     * Test for \Magento\Checkout\Controller\CartAfter::configureAction() with downloadable product
      *
      * @magentoDataFixture Magento/Checkout/_files/quote_with_downloadable_product.php
      */
@@ -196,10 +196,10 @@ class CartTest extends \Magento\TestFramework\TestCase\AbstractController
         $this->assertEquals(
             1,
             \Magento\TestFramework\Helper\Xpath::getElementsCountForXpath(
-                '//button[@type="submit" and @title="Update Cart"]',
+                '//button[@type="submit" and @title="Update CartAfter"]',
                 $response->getBody()
             ),
-            'Response for downloadable product doesn\'t contain "Update Cart" button'
+            'Response for downloadable product doesn\'t contain "Update CartAfter" button'
         );
 
         $this->assertEquals(
@@ -305,7 +305,7 @@ class CartTest extends \Magento\TestFramework\TestCase\AbstractController
     }
 
     /**
-     * Test for \Magento\Checkout\Controller\Cart::execute() with simple product
+     * Test for \Magento\Checkout\Controller\CartAfter::execute() with simple product
      *
      * @param string $area
      * @param string $expectedPrice

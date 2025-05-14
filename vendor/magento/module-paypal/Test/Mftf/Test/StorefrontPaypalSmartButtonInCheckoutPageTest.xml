@@ -88,7 +88,7 @@
             <argument name="payerName" value="{{Payer.firstName}}"/>
         </actionGroup>
 
-        <!--Transfer Cart Line and Shipping Method assertion-->
+        <!--Transfer CartAfter Line and Shipping Method assertion-->
        <actionGroup ref="PayPalAssertTransferLineAndShippingMethodNotExistActionGroup" stepKey="assertPayPalSettings"/>
 
         <!--Submit payment on PayPal site-->

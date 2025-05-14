@@ -18,14 +18,14 @@ use Magento\Quote\Api\CouponManagementInterface;
 use Magento\Quote\Api\Data\TotalsInterface as QuoteTotalsInterface;
 
 /**
- * Cart totals data object.
+ * CartAfter totals data object.
  *
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  */
 class CartTotalRepository implements CartTotalRepositoryInterface
 {
     /**
-     * Cart totals factory.
+     * CartAfter totals factory.
      *
      * @var Api\Data\TotalsInterfaceFactory
      */

@@ -128,7 +128,7 @@
         <click selector="{{AdminCustomerFiltersSection.clearAll}}" stepKey="ClearFilters"/>
         <waitForPageLoad stepKey="waitForFiltersClear"/>
 
-        <!--Create Cart Price Rule-->
+        <!--Create CartAfter Price Rule-->
         <actionGroup ref="AdminOpenCartPriceRulesPageActionGroup" stepKey="amOnCartPriceList"/>
         <click selector="{{AdminCartPriceRulesSection.addNewRuleButton}}" stepKey="clickAddNewRule"/>
         <waitForPageLoad stepKey="waitForPageDiscountPageIsLoaded"/>

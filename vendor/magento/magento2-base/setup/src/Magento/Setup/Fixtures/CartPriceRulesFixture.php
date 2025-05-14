@@ -171,7 +171,7 @@ class CartPriceRulesFixture extends Fixture
     public function generateRules($ruleFactory, $categoriesArray)
     {
         for ($i = 0; $i < $this->cartPriceRulesCount; $i++) {
-            $ruleName = sprintf('Cart Price Rule %1$d', $i);
+            $ruleName = sprintf('CartAfter Price Rule %1$d', $i);
             $data = [
                 'rule_id'               => null,
                 'product_ids'           => '',
@@ -362,9 +362,9 @@ class CartPriceRulesFixture extends Fixture
         $j = 0;
         for ($i = 0; $i < $this->cartPriceRulesCount; $i++) {
             if ($i < ($this->cartPriceRulesCount - 200)) {
-                $ruleName = sprintf('Cart Price Advanced Catalog Rule %1$d', $j);
+                $ruleName = sprintf('CartAfter Price Advanced Catalog Rule %1$d', $j);
             } else {
-                $ruleName = sprintf('Cart Price Advanced Region Rule %1$d', $j);
+                $ruleName = sprintf('CartAfter Price Advanced Region Rule %1$d', $j);
             }
             $j++;
             $data = [
@@ -457,7 +457,7 @@ class CartPriceRulesFixture extends Fixture
     public function introduceParamLabels()
     {
         return [
-            'cart_price_rules' => 'Cart Price Rules'
+            'cart_price_rules' => 'CartAfter Price Rules'
         ];
     }
 }

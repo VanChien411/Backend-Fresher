@@ -23,7 +23,7 @@ use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 /**
- *  Unit Test for Magento\Checkout\Block\Cart\Shipping
+ *  Unit Test for Magento\Checkout\Block\CartAfter\Shipping
  */
 class ShippingTest extends TestCase
 {

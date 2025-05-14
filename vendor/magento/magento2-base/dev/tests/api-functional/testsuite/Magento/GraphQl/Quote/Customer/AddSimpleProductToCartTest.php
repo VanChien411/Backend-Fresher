@@ -15,7 +15,7 @@ use Magento\TestFramework\Helper\Bootstrap;
 use Magento\TestFramework\TestCase\GraphQlAbstract;
 
 /**
- * Test adding simple product to Cart
+ * Test adding simple product to CartAfter
  */
 class AddSimpleProductToCartTest extends GraphQlAbstract
 {
@@ -225,14 +225,14 @@ QUERY;
         return <<<QUERY
 mutation {
   addSimpleProductsToCart(input: {
-    cart_id: "{$maskedQuoteId}", 
+    cart_id: "{$maskedQuoteId}",
     cart_items: [
       {
         data: {
           quantity: {$quantity}
           sku: "{$sku}"
         }
-      }                
+      }
     ]
   }) {
     cart {

@@ -89,7 +89,7 @@
         <!--Place order and Assert success message -->
         <actionGroup ref="ClickPlaceOrderActionGroup" stepKey="clickOnPlaceOrder"/>
 
-        <!-- Assert Empty Mini Cart -->
+        <!-- Assert Empty Mini CartAfter -->
         <seeElement selector="{{StorefrontMinicartSection.emptyMiniCart}}"  stepKey="assertEmptyCart" />
         <grabTextFrom selector="{{CheckoutSuccessMainSection.orderNumberWithoutLink}}" stepKey="orderId"/>
 

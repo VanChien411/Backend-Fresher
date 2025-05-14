@@ -76,7 +76,7 @@
 
         <waitForPageLoad stepKey="waitForLoading"/>
 
-        <!--Click "Add All to Cart" button-->
+        <!--Click "Add All to CartAfter" button-->
         <click selector="{{StorefrontCustomerWishlistProductSection.ProductAddAllToCart}}" stepKey="addAllToCart"/>
         <waitForElementVisible stepKey="waitForErrorAppears" selector="{{StorefrontMessagesSection.error}}"/>
 

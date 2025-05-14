@@ -39,12 +39,12 @@
         <actionGroup ref="StorefrontOpenProductPageActionGroup" stepKey="goToCreatedSimpleProductPage">
             <argument name="productUrl" value="$$createdSimpleProduct.custom_attributes[url_key]$$"/>
         </actionGroup>
-        <!-- Add the simple product to the Shopping Cart -->
+        <!-- Add the simple product to the Shopping CartAfter -->
         <actionGroup ref="AddProductWithQtyToCartFromStorefrontProductPageActionGroup" stepKey="addCreatedSimpleProductToCart">
             <argument name="productName" value="$$createdSimpleProduct.name$$"/>
             <argument name="productQty" value="1"/>
         </actionGroup>
-        <!-- Go to Cart -->
+        <!-- Go to CartAfter -->
         <actionGroup ref="StorefrontOpenCartFromMinicartActionGroup" stepKey="openCart"/>
         <!-- Check Out with Multiple Addresses -->
         <actionGroup ref="StorefrontCheckoutWithMultipleAddressesActionGroup" stepKey="checkoutWithMultipleAddresses"/>

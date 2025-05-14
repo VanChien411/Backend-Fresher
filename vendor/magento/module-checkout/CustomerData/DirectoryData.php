@@ -9,7 +9,7 @@ namespace Magento\Checkout\CustomerData;
 use Magento\Customer\CustomerData\SectionSourceInterface;
 
 /**
- * Cart source
+ * CartAfter source
  */
 class DirectoryData implements SectionSourceInterface
 {

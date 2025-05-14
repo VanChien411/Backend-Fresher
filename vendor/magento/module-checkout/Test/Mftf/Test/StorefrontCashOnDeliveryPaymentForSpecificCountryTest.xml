@@ -53,7 +53,7 @@
             <argument name="Customer" value="$$createCustomer$$"/>
         </actionGroup>
 
-        <!--Add Simple Product to Shopping Cart and Proceed to checkout-->
+        <!--Add Simple Product to Shopping CartAfter and Proceed to checkout-->
         <amOnPage url="{{StorefrontProductPage.url($$simpleProduct.custom_attributes[url_key]$$)}}" stepKey="amOnSimpleProductPage"/>
         <actionGroup ref="StorefrontAddProductToCartActionGroup" stepKey="addProductToCart">
             <argument name="product" value="$$simpleProduct$$"/>

@@ -595,7 +595,7 @@ class Cart extends DataObject implements CartInterface
         $this->quoteRepository->save($this->getQuote());
         $this->_checkoutSession->setQuoteId($this->getQuote()->getId());
         /**
-         * Cart save usually called after changes with cart items.
+         * CartAfter save usually called after changes with cart items.
          */
         $this->_eventManager->dispatch('checkout_cart_save_after', ['cart' => $this]);
         $this->reinitializeState();

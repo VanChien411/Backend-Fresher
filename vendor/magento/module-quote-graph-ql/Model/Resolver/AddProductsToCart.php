@@ -106,7 +106,7 @@ class AddProductsToCart implements ResolverInterface
         $cartItemsData = $args['cartItems'];
         $storeId = (int)$context->getExtensionAttributes()->getStore()->getId();
 
-        // Shopping Cart validation
+        // Shopping CartAfter validation
         $this->getCartForUser->execute($maskedCartId, $context->getUserId(), $storeId);
         $cartItemsData = $this->cartItemPrecursor->process($cartItemsData, $context);
         $cartItems = [];

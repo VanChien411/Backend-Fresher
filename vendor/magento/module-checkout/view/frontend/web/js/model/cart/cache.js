@@ -4,7 +4,7 @@
  */
 
 /**
- * Cart adapter for customer data storage.
+ * CartAfter adapter for customer data storage.
  * It stores cart data in customer data(localStorage) without saving on server.
  * Adapter is created for shipping rates and totals data caching. It eliminates unneeded calculations requests.
  */

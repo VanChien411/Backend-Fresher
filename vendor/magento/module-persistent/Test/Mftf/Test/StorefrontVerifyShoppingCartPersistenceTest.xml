@@ -93,7 +93,7 @@
         <waitForElementVisible selector="{{StorefrontMinicartSection.productCount}}" stepKey="waitForCartCounterVisible"/>
         <see selector="{{StorefrontMinicartSection.productCount}}" userInput="1" stepKey="miniCartContainsOneProductForGuest"/>
 
-        <!-- 8. Go to Shopping Cart and verify Simple Product 1 is present there  -->
+        <!-- 8. Go to Shopping CartAfter and verify Simple Product 1 is present there  -->
         <actionGroup ref="ClickViewAndEditCartFromMiniCartActionGroup" stepKey="goToShoppingCart" />
         <see selector="{{CheckoutCartProductSection.productName}}" userInput="$$createSimple1.name$$" stepKey="checkSimple1InShoppingCart"/>
 

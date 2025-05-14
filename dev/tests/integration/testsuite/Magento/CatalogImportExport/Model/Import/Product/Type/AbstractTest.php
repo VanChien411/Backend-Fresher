@@ -136,7 +136,7 @@ class AbstractTest extends \PHPUnit\Framework\TestCase
                     'description' => 'a',
                     'short_description' => 'a',
                     'visibility' => 'catalog',
-                    'msrp_display_actual_price_type' => 'In Cart',
+                    'msrp_display_actual_price_type' => 'In CartAfter',
                 ],
                 true,
                 [

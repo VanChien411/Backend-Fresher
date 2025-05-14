@@ -13,7 +13,7 @@ use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductColl
 use Magento\Quote\Model\Quote\Config;
 
 /**
- * Cart reader product loader.
+ * CartAfter reader product loader.
  */
 class ProductReader implements ProductReaderInterface
 {

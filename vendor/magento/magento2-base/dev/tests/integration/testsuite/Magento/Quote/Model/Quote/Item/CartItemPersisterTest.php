@@ -145,7 +145,7 @@ class CartItemPersisterTest extends TestCase
         $item->setItemId(989)->setQty(1);
         $this->expectExceptionObject(
             new NoSuchEntityException(
-                __('The %1 Cart doesn\'t contain the %2 item.', null, 989)
+                __('The %1 CartAfter doesn\'t contain the %2 item.', null, 989)
             )
         );
         $this->model->save($quote, $item);

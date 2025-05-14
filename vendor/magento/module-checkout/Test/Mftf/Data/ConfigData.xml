@@ -96,7 +96,7 @@
         <data key="value">0</data>
     </entity>
 
-    <!-- Checkout Config: Display Cart Summary -->
+    <!-- Checkout Config: Display CartAfter Summary -->
     <entity name="DisplayItemsQuantities">
         <data key="path">checkout/cart_link/use_qty</data>
         <data key="label">Display items quantities</data>

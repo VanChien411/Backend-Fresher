@@ -34,7 +34,7 @@ class ReorderOutput
     }
 
     /**
-     * Get Shopping Cart
+     * Get Shopping CartAfter
      *
      * @return CartInterface
      */

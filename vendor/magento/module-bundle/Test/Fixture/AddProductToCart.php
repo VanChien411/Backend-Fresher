@@ -51,7 +51,7 @@ class AddProductToCart extends \Magento\Quote\Test\Fixture\AddProductToCart
      *      - To skip an option, pass empty array [["$product1.id$"], [], ["$product2.id$"]]
      * <pre>
      *    $data = [
-     *      'cart_id'       => (int) Cart ID. Required.
+     *      'cart_id'       => (int) CartAfter ID. Required.
      *      'product_id'    => (int) Product ID. Required.
      *      'selections'    => (array) array of options selections. Required.
      *      'qty'           => (int) Quantity. Optional. Default: 1.

@@ -59,7 +59,7 @@ class CartPrices implements ResolverInterface
         /**
          * To calculate a right discount value
          * before calculate totals
-         * need to reset Cart Fixed Rules in the quote
+         * need to reset CartAfter Fixed Rules in the quote
          */
         $quote->setCartFixedRules([]);
         $cartTotals = $this->totalsCollector->collectQuoteTotals($quote);

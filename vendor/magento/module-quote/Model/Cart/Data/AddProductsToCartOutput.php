@@ -10,7 +10,7 @@ namespace Magento\Quote\Model\Cart\Data;
 use Magento\Quote\Api\Data\CartInterface;
 
 /**
- * DTO represents output for \Magento\Quote\Model\Cart\AddProductsToCart
+ * DTO represents output for \Magento\Quote\Model\CartAfter\AddProductsToCart
  */
 class AddProductsToCartOutput
 {
@@ -35,7 +35,7 @@ class AddProductsToCartOutput
     }
 
     /**
-     * Get Shopping Cart
+     * Get Shopping CartAfter
      *
      * @return CartInterface
      */

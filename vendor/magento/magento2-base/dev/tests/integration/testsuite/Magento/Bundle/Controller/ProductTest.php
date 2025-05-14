@@ -28,8 +28,8 @@ class ProductTest extends \Magento\TestFramework\TestCase\AbstractController
             $responseBody,
             'Bundle Product Detailed Page does not contain In Stock field'
         );
-        $addToCartCount = substr_count($responseBody, '<span>Add to Cart</span>');
-        $this->assertEquals(1, $addToCartCount, '"Add to Cart" button should appear on the page exactly once.');
+        $addToCartCount = substr_count($responseBody, '<span>Add to CartAfter</span>');
+        $this->assertEquals(1, $addToCartCount, '"Add to CartAfter" button should appear on the page exactly once.');
         $actualLinkCount = substr_count($responseBody, '>Bundle Product Items<');
         $this->assertEquals(1, $actualLinkCount, 'Bundle product options should appear on the page exactly once.');
         $this->assertStringNotContainsString('class="options-container-big"', $responseBody);

@@ -16,7 +16,7 @@ use Magento\Quote\Model\Quote;
 use Magento\Framework\Message\MessageInterface;
 
 /**
- * Unified approach to add products to the Shopping Cart.
+ * Unified approach to add products to the Shopping CartAfter.
  * Client code must validate, that customer is eligible to call service with provided {cartId} and {cartItems}
  */
 class AddProductsToCart
@@ -73,7 +73,7 @@ class AddProductsToCart
      * @param string $maskedCartId
      * @param Data\CartItem[] $cartItems
      * @return AddProductsToCartOutput
-     * @throws NoSuchEntityException Could not find a Cart with provided $maskedCartId
+     * @throws NoSuchEntityException Could not find a CartAfter with provided $maskedCartId
      */
     public function execute(string $maskedCartId, array $cartItems): AddProductsToCartOutput
     {

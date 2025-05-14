@@ -80,7 +80,7 @@ class Edit extends \Magento\SalesRule\Controller\Adminhtml\Promo\Quote implement
         $this->_addBreadcrumb($id ? __('Edit Rule') : __('New Rule'), $id ? __('Edit Rule') : __('New Rule'));
 
         $this->_view->getPage()->getConfig()->getTitle()->prepend(
-            $model->getRuleId() ? $model->getName() : __('New Cart Price Rule')
+            $model->getRuleId() ? $model->getName() : __('New CartAfter Price Rule')
         );
         $this->_view->renderLayout();
     }

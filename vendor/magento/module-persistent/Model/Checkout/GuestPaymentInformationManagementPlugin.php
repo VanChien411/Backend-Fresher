@@ -52,7 +52,7 @@ class GuestPaymentInformationManagementPlugin
     private $quoteManager;
 
     /**
-     * Cart Repository
+     * CartAfter Repository
      *
      * @var \Magento\Quote\Api\CartRepositoryInterface
      */

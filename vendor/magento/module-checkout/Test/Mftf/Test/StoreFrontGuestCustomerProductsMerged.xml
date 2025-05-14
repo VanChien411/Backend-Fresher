@@ -108,7 +108,7 @@
         <!--Go To ShoppingCart-->
         <click selector="{{StorefrontMinicartSection.viewAndEditCart}}" stepKey="viewAndEditCart"/>
         <waitForPageLoad stepKey="waitForPageToLoad"/>
-       <!--Check Simple1 and Simple2 product are presented on the Shopping Cart page -->
+       <!--Check Simple1 and Simple2 product are presented on the Shopping CartAfter page -->
         <seeElement selector="{{StorefrontMinicartSection.productCartName($$simpleProductOne.name$$)}}" stepKey="AssertSimpleProductOnenn"/>
         <seeElement selector="{{StorefrontMinicartSection.productCartName($$simpleProductTwo.name$$)}}" stepKey="AssertSimpleProductTwbbo"/>
     </test>

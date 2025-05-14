@@ -48,7 +48,7 @@
             <argument name="product" value="$$initialSimpleProduct$$"/>
         </actionGroup>
 
-        <!--Click on Add To Cart button-->
+        <!--Click on Add To CartAfter button-->
         <actionGroup ref="StorefrontAddToTheCartActionGroup" stepKey="clickOnAddToCartButton"/>
 
         <!--Click on mini cart-->

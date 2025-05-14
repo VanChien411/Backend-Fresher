@@ -33,7 +33,7 @@ class ShowUpdateResult extends \Magento\Catalog\Controller\Adminhtml\Product
 
     /**
      * Show item update result from updateAction
-     * in Wishlist and Cart controllers.
+     * in Wishlist and CartAfter controllers.
      *
      * @return \Magento\Framework\View\Result\Layout
      */

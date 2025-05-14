@@ -5,7 +5,7 @@
  */
 
 /**
- * Shopping Cart Rule data model
+ * Shopping CartAfter Rule data model
  *
  * @author      Magento Core Team <core@magentocommerce.com>
  */

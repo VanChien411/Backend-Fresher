@@ -66,7 +66,7 @@ class Carts extends \Magento\Backend\Block\Template
             );
             if ($isShared) {
                 $websiteName = $this->_storeManager->getWebsite($websiteId)->getName();
-                $block->setCartHeader(__('Shopping Cart from %1', $websiteName));
+                $block->setCartHeader(__('Shopping CartAfter from %1', $websiteName));
             }
             $this->setChild($blockName, $block);
         }

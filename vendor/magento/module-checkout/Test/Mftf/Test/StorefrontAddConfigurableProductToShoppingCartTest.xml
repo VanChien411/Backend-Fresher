@@ -133,10 +133,10 @@
             <argument name="qty" value="2"/>
         </actionGroup>
 
-        <!-- Select Mini Cart and select 'View And Edit Cart' -->
+        <!-- Select Mini CartAfter and select 'View And Edit CartAfter' -->
         <actionGroup ref="ClickViewAndEditCartFromMiniCartActionGroup" stepKey="selectViewAndEditCart"/>
 
-        <!--Assert Shopping Cart Summary -->
+        <!--Assert Shopping CartAfter Summary -->
         <actionGroup ref="AssertStorefrontShoppingCartSummaryWithShippingActionGroup" stepKey="AssertCartSummary" >
             <argument name="subtotal" value="$40.00"/>
             <argument name="shipping" value="10.00"/>
@@ -156,7 +156,7 @@
             <argument name="userInput" value="$$getConfigAttributeOption2.label$$"/>
         </actionGroup>
 
-        <!-- Assert product details in Mini Cart -->
+        <!-- Assert product details in Mini CartAfter -->
         <actionGroup ref="StorefrontClickOnMiniCartActionGroup" stepKey="clickOnMiniCart"/>
         <actionGroup ref="AssertStorefrontMiniCartItemsActionGroup" stepKey="assertMiniCart">
             <argument name="productName" value="$$createConfigProduct.name$$"/>

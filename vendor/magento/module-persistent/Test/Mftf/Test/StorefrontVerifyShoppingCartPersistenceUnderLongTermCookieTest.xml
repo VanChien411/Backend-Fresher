@@ -63,7 +63,7 @@
             <argument name="customerFullName" value="{{John_Smith_Customer.fullname}}"/>
         </actionGroup>
 
-        <!-- 3. Put Simple Product 1 into Shopping Cart -->
+        <!-- 3. Put Simple Product 1 into Shopping CartAfter -->
         <actionGroup ref="AddSimpleProductToCartActionGroup" stepKey="addSimple1ProductToCartForJohnSmithCustomer">
             <argument name="product" value="$$createSimple1$$"/>
         </actionGroup>
@@ -91,7 +91,7 @@
         <actionGroup ref="AssertCustomerWelcomeMessageActionGroup" stepKey="seeWelcomeMessageForJohnDoeCustomer">
             <argument name="customerFullName" value="{{Simple_Customer_Without_Address.fullname}}"/>
         </actionGroup>
-        <!-- 6. Add Simple Product 1 to Shopping Cart  -->
+        <!-- 6. Add Simple Product 1 to Shopping CartAfter  -->
         <actionGroup ref="AddSimpleProductToCartActionGroup" stepKey="addSimple1ProductToCartForJohnDoeCustomer">
             <argument name="product" value="$$createSimple1$$"/>
         </actionGroup>
@@ -114,11 +114,11 @@
             <argument name="productName" value="$$createSimple1.name$$"/>
         </actionGroup>
 
-        <!-- 8. Go to Shopping Cart and verify Simple Product 1 is present there  -->
+        <!-- 8. Go to Shopping CartAfter and verify Simple Product 1 is present there  -->
         <actionGroup ref="ClickViewAndEditCartFromMiniCartActionGroup" stepKey="goToShoppingCart" />
         <see selector="{{CheckoutCartProductSection.productName}}" userInput="$$createSimple1.name$$" stepKey="checkSimple1InShoppingCart"/>
 
-        <!-- 9. Add Simple Product 2 to Shopping Cart  -->
+        <!-- 9. Add Simple Product 2 to Shopping CartAfter  -->
         <actionGroup ref="AddSimpleProductToCartActionGroup" stepKey="addSimple2ProductToCartForGuest">
             <argument name="product" value="$$createSimple2$$"/>
         </actionGroup>

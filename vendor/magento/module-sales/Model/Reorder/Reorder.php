@@ -25,7 +25,7 @@ use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductColl
 use Psr\Log\LoggerInterface;
 
 /**
- * Allows customer quickly to reorder previously added products and put them to the Cart
+ * Allows customer quickly to reorder previously added products and put them to the CartAfter
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  */
 class Reorder
@@ -129,14 +129,14 @@ class Reorder
     }
 
     /**
-     * Allows customer quickly to reorder previously added products and put them to the Cart
+     * Allows customer quickly to reorder previously added products and put them to the CartAfter
      *
      * @param string $orderNumber
      * @param string $storeId
      * @return Data\ReorderOutput
      * @throws InputException Order is not found
      * @throws NoSuchEntityException The specified customer does not exist.
-     * @throws \Magento\Framework\Exception\CouldNotSaveException Could not create customer Cart
+     * @throws \Magento\Framework\Exception\CouldNotSaveException Could not create customer CartAfter
      */
     public function execute(string $orderNumber, string $storeId): Data\ReorderOutput
     {

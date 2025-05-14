@@ -86,7 +86,7 @@ class ShippingAddressManagement implements \Magento\Quote\Model\ShippingAddressM
         $quote = $this->quoteRepository->getActive($cartId);
         if ($quote->isVirtual()) {
             throw new NoSuchEntityException(
-                __('The Cart includes virtual product(s) only, so a shipping address is not used.')
+                __('The CartAfter includes virtual product(s) only, so a shipping address is not used.')
             );
         }
 
@@ -133,7 +133,7 @@ class ShippingAddressManagement implements \Magento\Quote\Model\ShippingAddressM
         $quote = $this->quoteRepository->getActive($cartId);
         if ($quote->isVirtual()) {
             throw new NoSuchEntityException(
-                __('The Cart includes virtual product(s) only, so a shipping address is not used.')
+                __('The CartAfter includes virtual product(s) only, so a shipping address is not used.')
             );
         }
         /** @var \Magento\Quote\Model\Quote\Address $address */

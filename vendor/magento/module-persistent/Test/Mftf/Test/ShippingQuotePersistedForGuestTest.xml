@@ -19,7 +19,7 @@
             <group value="persistent"/>
         </annotations>
         <before>
-            <!--Enabled The Persistent Shopping Cart feature -->
+            <!--Enabled The Persistent Shopping CartAfter feature -->
             <createData entity="PersistentConfigEnabled" stepKey="enablePersistent"/>
             <createData entity="PersistentLogoutClearDisable" stepKey="persistentLogoutClearDisable"/>
             <!--Create simple product-->

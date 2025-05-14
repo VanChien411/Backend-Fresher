@@ -81,7 +81,7 @@
             <argument name="quantity" value="2"/>
         </actionGroup>
 
-        <!-- Select Mini Cart, verify it doen't open  -->
+        <!-- Select Mini CartAfter, verify it doen't open  -->
         <actionGroup ref="StorefrontClickOnMiniCartActionGroup" stepKey="clickOnMiniCart"/>
         <dontSeeElement selector="{{StorefrontMinicartSection.viewAndEditCart}}" stepKey="dontSeeViewAndEditCart"/>
 
@@ -104,14 +104,14 @@
             <argument name="userInput" value="1 x $$simpleProduct2.name$$ $50.00"/>
         </actionGroup>
 
-        <!--Assert Shopping Cart Summary-->
+        <!--Assert Shopping CartAfter Summary-->
         <actionGroup ref="AssertStorefrontShoppingCartSummaryWithShippingActionGroup" stepKey="AssertCartSummary" >
             <argument name="subtotal" value="$100.00"/>
             <argument name="shipping" value="10.00"/>
             <argument name="total" value="110.00"/>
         </actionGroup>
 
-        <!--Enabled Mini Cart -->
+        <!--Enabled Mini CartAfter -->
         <magentoCLI stepKey="enableShoppingCartSidebar" command="config:set checkout/sidebar/display 1"/>
         <comment userInput="Adding the comment to replace CliCacheFlushActionGroup action group ('cache:flush' command) for preserving Backward Compatibility" stepKey="flushCache"/>
         <reloadPage stepKey="reloadThePage"/>

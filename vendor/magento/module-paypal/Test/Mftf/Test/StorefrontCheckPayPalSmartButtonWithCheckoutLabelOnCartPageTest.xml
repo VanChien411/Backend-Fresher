@@ -33,7 +33,7 @@
         <after>
             <magentoCLI command="config:set {{StorefrontPaypalCartPageDisableCustomizeButtonConfigData.path}} {{StorefrontPaypalCartPageDisableCustomizeButtonConfigData.value}}" stepKey="disableCustomizeButton"/>
         </after>
-        <!-- Add Product to Cart -->
+        <!-- Add Product to CartAfter -->
         <actionGroup ref="StorefrontAddSimpleProductToShoppingCartActionGroup" before="goToPayPalSmartButtonPage" stepKey="addProductToCart">
             <argument name="product" value="$createProduct$"/>
         </actionGroup>

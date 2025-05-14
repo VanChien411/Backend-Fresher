@@ -88,7 +88,7 @@
             <argument name="product" value="$$initialSimpleProduct$$"/>
         </actionGroup>
         <fillField selector="{{StorefrontProductInfoMainSection.qty}}" userInput="2" stepKey="fillProductQuantity"/>
-        <!--Click on Add To Cart button-->
+        <!--Click on Add To CartAfter button-->
         <actionGroup ref="StorefrontAddToTheCartActionGroup" stepKey="clickOnAddToCartButton"/>
         <!--Click on mini cart-->
         <actionGroup ref="StorefrontClickOnMiniCartActionGroup" stepKey="clickOnMiniCart"/>

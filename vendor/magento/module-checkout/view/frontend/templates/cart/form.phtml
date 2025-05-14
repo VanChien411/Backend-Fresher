@@ -29,7 +29,7 @@
                class="cart items data table"
                data-mage-init='{"shoppingCart":{"emptyCartButton": ".action.clear",
                "updateCartActionContainer": "#update_cart_action_container"}}'>
-            <caption class="table-caption"><?= $block->escapeHtml(__('Shopping Cart Items')) ?></caption>
+            <caption class="table-caption"><?= $block->escapeHtml(__('Shopping CartAfter Items')) ?></caption>
             <thead>
                 <tr>
                     <th class="col item" scope="col"><span><?= $block->escapeHtml(__('Item')) ?></span></th>
@@ -61,18 +61,18 @@
                     name="update_cart_action"
                     data-cart-empty=""
                     value="empty_cart"
-                    title="<?= $block->escapeHtml(__('Clear Shopping Cart')) ?>"
+                    title="<?= $block->escapeHtml(__('Clear Shopping CartAfter')) ?>"
                     class="action clear" id="empty_cart_button">
-                <span><?= $block->escapeHtml(__('Clear Shopping Cart')) ?></span>
+                <span><?= $block->escapeHtml(__('Clear Shopping CartAfter')) ?></span>
             </button>
         <?php endif ?>
         <button type="submit"
                 name="update_cart_action"
                 data-cart-item-update=""
                 value="update_qty"
-                title="<?= $block->escapeHtml(__('Update Shopping Cart')) ?>"
+                title="<?= $block->escapeHtml(__('Update Shopping CartAfter')) ?>"
                 class="action update">
-            <span><?= $block->escapeHtml(__('Update Shopping Cart')) ?></span>
+            <span><?= $block->escapeHtml(__('Update Shopping CartAfter')) ?></span>
         </button>
         <input type="hidden" value="" id="update_cart_action_container" data-cart-item-update=""/>
     </div>

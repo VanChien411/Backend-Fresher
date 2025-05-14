@@ -47,7 +47,7 @@ class SetGuestEmail implements DataFixtureInterface
      * @param array $data Parameters
      * <pre>
      *    $data = [
-     *      'cart_id' => (int) Cart ID. Required
+     *      'cart_id' => (int) CartAfter ID. Required
      *      'email' => (string) Guest Email. Optional
      *    ]
      * </pre>

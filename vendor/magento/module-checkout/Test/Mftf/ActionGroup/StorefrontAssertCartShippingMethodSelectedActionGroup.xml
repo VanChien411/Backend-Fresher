@@ -8,7 +8,7 @@
 
 <actionGroups xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:noNamespaceSchemaLocation="urn:magento:mftf:Test/etc/actionGroupSchema.xsd">
-    <!-- Assert Shipping Method Is Checked on Cart -->
+    <!-- Assert Shipping Method Is Checked on CartAfter -->
     <actionGroup name="StorefrontAssertCartShippingMethodSelectedActionGroup">
         <annotations>
             <description>Validates that the provided Shipping Method Carrier/Method Code is checked on the Storefront Shopping Cart page.</description>

@@ -15,7 +15,7 @@ use Magento\TestFramework\Helper\Bootstrap;
 use Magento\TestFramework\TestCase\GraphQlAbstract;
 
 /**
- * Test adding virtual product to Cart
+ * Test adding virtual product to CartAfter
  */
 class AddVirtualProductToCartTest extends GraphQlAbstract
 {

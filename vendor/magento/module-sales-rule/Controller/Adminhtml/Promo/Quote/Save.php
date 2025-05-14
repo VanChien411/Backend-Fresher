@@ -161,7 +161,7 @@ class Save extends \Magento\SalesRule\Controller\Adminhtml\Promo\Quote implement
     }
 
     /**
-     * Check if Cart Price Rule with provided id exists.
+     * Check if CartAfter Price Rule with provided id exists.
      *
      * @param \Magento\SalesRule\Model\Rule $model
      * @return bool

@@ -102,7 +102,7 @@
         <amOnPage url="{{BundleProduct.sku}}.html" stepKey="goToStorefront"/>
         <waitForPageLoad stepKey="waitForStorefront"/>
 
-        <!--Click "Customize and Add to Cart" button-->
+        <!--Click "Customize and Add to CartAfter" button-->
         <click selector="{{StorefrontBundledSection.addToCart}}" stepKey="clickCustomize"/>
 
         <!--Assert Bundle Product Price-->
@@ -123,7 +123,7 @@
         <click stepKey="selectProduct9" selector="{{StorefrontBundledSection.productCheckbox('3','5')}}"/>
         <click stepKey="selectProduct10" selector="{{StorefrontBundledSection.productCheckbox('3','6')}}"/>
 
-        <!--Click "Add to Cart" button-->
+        <!--Click "Add to CartAfter" button-->
         <click selector="{{StorefrontBundleProductActionSection.addToCartButton}}" stepKey="clickAddBundleProductToCart"/>
         <waitForPageLoad time="30" stepKey="waitForAddBundleProductPageLoad"/>
 
@@ -131,7 +131,7 @@
         <actionGroup ref="StorefrontOpenCartFromMinicartActionGroup" stepKey="openCart"/>
         <waitForPageLoad stepKey="waitForDetailsOpen"/>
 
-        <!--Check all products and Cart Subtotal -->
+        <!--Check all products and CartAfter Subtotal -->
         <actionGroup ref="StorefrontCheckCartActionGroup" stepKey="cartAssert" after="waitForDetailsOpen">
             <argument name="subtotal" value="1,968.00"/>
             <argument name="shipping" value="5.00"/>

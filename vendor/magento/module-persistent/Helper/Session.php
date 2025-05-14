@@ -6,7 +6,7 @@
 namespace Magento\Persistent\Helper;
 
 /**
- * Persistent Shopping Cart Data Helper
+ * Persistent Shopping CartAfter Data Helper
  *
  * @api
  * @since 100.0.2

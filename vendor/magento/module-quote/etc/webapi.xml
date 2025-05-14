@@ -8,7 +8,7 @@
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
 
-    <!-- Managing Cart -->
+    <!-- Managing CartAfter -->
     <route url="/V1/carts/:cartId" method="GET">
         <service class="Magento\Quote\Api\CartRepositoryInterface" method="get"/>
         <resources>
@@ -40,7 +40,7 @@
         </resources>
     </route>
 
-    <!-- Managing my Cart -->
+    <!-- Managing my CartAfter -->
     <route url="/V1/carts/mine" method="POST">
         <service class="Magento\Quote\Api\CartManagementInterface" method="createEmptyCartForCustomer"/>
         <resources>
@@ -106,7 +106,7 @@
         </resources>
     </route>
 
-    <!-- Managing Cart Shipment Method -->
+    <!-- Managing CartAfter Shipment Method -->
     <route url="/V1/carts/:cartId/shipping-methods" method="GET">
         <service class="Magento\Quote\Api\ShippingMethodManagementInterface" method="getList"/>
         <resources>
@@ -126,7 +126,7 @@
         </resources>
     </route>
 
-    <!-- Managing My Cart Shipment Method -->
+    <!-- Managing My CartAfter Shipment Method -->
     <route url="/V1/carts/mine/shipping-methods" method="GET">
         <service class="Magento\Quote\Api\ShippingMethodManagementInterface" method="getList"/>
         <resources>
@@ -155,7 +155,7 @@
         </data>
     </route>
 
-    <!-- Managing Guest Cart Shipment Method -->
+    <!-- Managing Guest CartAfter Shipment Method -->
     <route url="/V1/guest-carts/:cartId/shipping-methods" method="GET">
         <service class="Magento\Quote\Api\GuestShippingMethodManagementInterface" method="getList"/>
         <resources>
@@ -169,7 +169,7 @@
         </resources>
     </route>
 
-    <!-- Managing Cart Items -->
+    <!-- Managing CartAfter Items -->
     <route url="/V1/carts/:cartId/items" method="GET">
         <service class="Magento\Quote\Api\CartItemRepositoryInterface" method="getList"/>
         <resources>
@@ -195,7 +195,7 @@
         </resources>
     </route>
 
-    <!-- Managing Guest Cart Items -->
+    <!-- Managing Guest CartAfter Items -->
     <route url="/V1/guest-carts/:cartId/items" method="GET">
         <service class="Magento\Quote\Api\GuestCartItemRepositoryInterface" method="getList"/>
         <resources>
@@ -221,7 +221,7 @@
         </resources>
     </route>
 
-    <!-- Managing my Cart Items -->
+    <!-- Managing my CartAfter Items -->
     <route url="/V1/carts/mine/items" method="GET">
         <service class="Magento\Quote\Api\CartItemRepositoryInterface" method="getList"/>
         <resources>
@@ -259,7 +259,7 @@
         </data>
     </route>
 
-    <!-- Managing Cart Payment -->
+    <!-- Managing CartAfter Payment -->
     <route url="/V1/carts/:cartId/selected-payment-method" method="GET">
         <service class="Magento\Quote\Api\PaymentMethodManagementInterface" method="get"/>
         <resources>
@@ -279,7 +279,7 @@
         </resources>
     </route>
 
-    <!-- Managing Guest Cart Payment -->
+    <!-- Managing Guest CartAfter Payment -->
     <route url="/V1/guest-carts/:cartId/selected-payment-method" method="GET">
         <service class="Magento\Quote\Api\GuestPaymentMethodManagementInterface" method="get"/>
         <resources>
@@ -299,7 +299,7 @@
         </resources>
     </route>
 
-    <!-- Managing my Cart Payment -->
+    <!-- Managing my CartAfter Payment -->
     <route url="/V1/carts/mine/selected-payment-method" method="GET">
         <service class="Magento\Quote\Api\PaymentMethodManagementInterface" method="get"/>
         <resources>
@@ -328,7 +328,7 @@
         </data>
     </route>
 
-    <!-- Managing Cart Billing address -->
+    <!-- Managing CartAfter Billing address -->
     <route url="/V1/carts/:cartId/billing-address" method="GET">
         <service class="Magento\Quote\Api\BillingAddressManagementInterface" method="get"/>
         <resources>
@@ -342,7 +342,7 @@
         </resources>
     </route>
 
-    <!-- Managing Guest Cart Billing address -->
+    <!-- Managing Guest CartAfter Billing address -->
     <route url="/V1/guest-carts/:cartId/billing-address" method="GET">
         <service class="Magento\Quote\Api\GuestBillingAddressManagementInterface" method="get"/>
         <resources>
@@ -356,7 +356,7 @@
         </resources>
     </route>
 
-    <!-- Managing My Cart Billing address -->
+    <!-- Managing My CartAfter Billing address -->
     <route url="/V1/carts/mine/billing-address" method="GET">
         <service class="Magento\Quote\Api\BillingAddressManagementInterface" method="get"/>
         <resources>
@@ -376,7 +376,7 @@
         </data>
     </route>
 
-    <!-- Managing Cart Coupons -->
+    <!-- Managing CartAfter Coupons -->
     <route url="/V1/carts/:cartId/coupons" method="GET">
         <service class="Magento\Quote\Api\CouponManagementInterface" method="get"/>
         <resources>
@@ -396,7 +396,7 @@
         </resources>
     </route>
 
-    <!-- Managing Guest Cart Coupons -->
+    <!-- Managing Guest CartAfter Coupons -->
     <route url="/V1/guest-carts/:cartId/coupons" method="GET">
         <service class="Magento\Quote\Api\GuestCouponManagementInterface" method="get"/>
         <resources>
@@ -416,7 +416,7 @@
         </resources>
     </route>
 
-    <!-- Managing mine Cart Coupons -->
+    <!-- Managing mine CartAfter Coupons -->
     <route url="/V1/carts/mine/coupons" method="GET">
         <service class="Magento\Quote\Api\CouponManagementInterface" method="get"/>
         <resources>
@@ -445,7 +445,7 @@
         </data>
     </route>
 
-    <!-- Managing Cart Order -->
+    <!-- Managing CartAfter Order -->
     <route url="/V1/carts/:cartId/order" method="PUT">
         <service class="Magento\Quote\Api\CartManagementInterface" method="placeOrder"/>
         <resources>
@@ -453,7 +453,7 @@
         </resources>
     </route>
 
-    <!-- Managing Cart Total -->
+    <!-- Managing CartAfter Total -->
     <route url="/V1/carts/:cartId/totals" method="GET">
         <service class="Magento\Quote\Api\CartTotalRepositoryInterface" method="get"/>
         <resources>
@@ -467,7 +467,7 @@
         </resources>
     </route>
 
-    <!-- Managing Guest Cart Total -->
+    <!-- Managing Guest CartAfter Total -->
     <route url="/V1/guest-carts/:cartId/totals" method="GET">
         <service class="Magento\Quote\Api\GuestCartTotalRepositoryInterface" method="get"/>
         <resources>
@@ -475,7 +475,7 @@
         </resources>
     </route>
 
-    <!-- Managing My Cart Total -->
+    <!-- Managing My CartAfter Total -->
     <route url="/V1/carts/mine/totals" method="GET">
         <service class="Magento\Quote\Api\CartTotalRepositoryInterface" method="get"/>
         <resources>

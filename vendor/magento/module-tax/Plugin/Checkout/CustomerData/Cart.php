@@ -125,7 +125,7 @@ class Cart
      */
     public function getTotals()
     {
-        // TODO: TODO: MAGETWO-34824 duplicate \Magento\Checkout\CustomerData\Cart::getSectionData
+        // TODO: TODO: MAGETWO-34824 duplicate \Magento\Checkout\CustomerData\CartAfter::getSectionData
         if (empty($this->totals)) {
             $this->totals = $this->getQuote()->getTotals();
         }

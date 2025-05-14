@@ -23,7 +23,7 @@ use Magento\Wishlist\Model\ItemFactory;
 use Magento\Wishlist\Model\ResourceModel\Item\Option\Collection as OptionCollection;
 
 /**
- * Wishlist Cart Controller
+ * Wishlist CartAfter Controller
  *
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  */

@@ -8,7 +8,7 @@
 
 <actionGroups xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:noNamespaceSchemaLocation="urn:magento:mftf:Test/etc/actionGroupSchema.xsd">
-    <!--Click Add to Cart button in storefront product page-->
+    <!--Click Add to CartAfter button in storefront product page-->
     <actionGroup name="StorefrontAddToCartCustomOptionsProductPageActionGroup">
         <annotations>
             <description>Add a Product to the Cart. Validate that the Success Message is present.</description>

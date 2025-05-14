@@ -9,7 +9,7 @@ namespace Magento\Checkout\Block\Cart;
 /**
  * Block on checkout/cart/index page to display a pager on the  cart items grid
  * The pager will be displayed if items quantity in the shopping cart > than number from
- * Store->Configuration->Sales->Checkout->Shopping Cart->Number of items to display pager and
+ * Store->Configuration->Sales->Checkout->Shopping CartAfter->Number of items to display pager and
  * custom_items weren't set to cart block
  *
  * @api
@@ -85,7 +85,7 @@ class Grid extends \Magento\Checkout\Block\Cart
      * Prepare Quote Item Product URLs
      * When we don't have custom_items, items URLs will be collected for Collection limited by pager
      * Pager limit on checkout/cart/index is determined by configuration
-     * Configuration path is Store->Configuration->Sales->Checkout->Shopping Cart->Number of items to display pager
+     * Configuration path is Store->Configuration->Sales->Checkout->Shopping CartAfter->Number of items to display pager
      *
      * @return void
      * @since 100.1.7

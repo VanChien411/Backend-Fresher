@@ -46,10 +46,10 @@
             <argument name="productName" value="$$createDownloadableProduct.name$$" />
         </actionGroup>
 
-        <!-- Select Mini Cart and select 'View And Edit Cart' -->
+        <!-- Select Mini CartAfter and select 'View And Edit CartAfter' -->
         <actionGroup ref="ClickViewAndEditCartFromMiniCartActionGroup" stepKey="selectViewAndEditCart"/>
 
-        <!--Assert Shopping Cart Summary-->
+        <!--Assert Shopping CartAfter Summary-->
         <actionGroup ref="AssertStorefrontShoppingCartSummaryItemsActionGroup" stepKey="AssertCartSummary" >
             <argument name="subtotal" value="$123.00"/>
             <argument name="total" value="123.00"/>
@@ -76,7 +76,7 @@
             <argument name="userInput" value="{{downloadableLink2.title}}"/>
         </actionGroup>
 
-        <!-- Assert product details in Mini Cart -->
+        <!-- Assert product details in Mini CartAfter -->
         <actionGroup ref="StorefrontClickOnMiniCartActionGroup" stepKey="clickOnMiniCart"/>
         <actionGroup ref="AssertStorefrontMiniCartItemsActionGroup" stepKey="assertMiniCart">
             <argument name="productName" value="$$createDownloadableProduct.name$$"/>

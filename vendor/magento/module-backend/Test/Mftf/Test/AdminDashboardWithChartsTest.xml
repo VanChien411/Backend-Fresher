@@ -54,7 +54,7 @@
         <actionGroup ref="LoginToStorefrontActionGroup" stepKey="customerLogin">
             <argument name="Customer" value="$$createCustomer$$"/>
         </actionGroup>
-        <!-- Add Product to Shopping Cart-->
+        <!-- Add Product to Shopping CartAfter-->
         <comment userInput="Add product to the shopping cart" stepKey="addProductToCart"/>
         <amOnPage url="{{StorefrontProductPage.url($$createProduct.custom_attributes[url_key]$$)}}" stepKey="navigateToSimpleProductPage"/>
         <waitForPageLoad stepKey="waitForProductPageLoad"/>

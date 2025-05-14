@@ -50,7 +50,7 @@ class IndexTest extends AbstractController
      * - \Magento\Wishlist\Block\Customer\Wishlist
      * - \Magento\Wishlist\Block\Customer\Wishlist\Items
      * - \Magento\Wishlist\Block\Customer\Wishlist\Item\Column
-     * - \Magento\Wishlist\Block\Customer\Wishlist\Item\Column\Cart
+     * - \Magento\Wishlist\Block\Customer\Wishlist\Item\Column\CartAfter
      * - \Magento\Wishlist\Block\Customer\Wishlist\Item\Column\Comment
      * - \Magento\Wishlist\Block\Customer\Wishlist\Button
      * - that \Magento\Wishlist\Block\Customer\Wishlist\Item\Options doesn't throw a fatal error

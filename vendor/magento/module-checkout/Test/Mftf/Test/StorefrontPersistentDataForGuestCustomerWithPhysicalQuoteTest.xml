@@ -34,7 +34,7 @@
         <actionGroup ref="AddSimpleProductToCartActionGroup" stepKey="addSimpleProductToCart">
             <argument name="product" value="$$createProduct$$"/>
         </actionGroup>
-        <!-- 2. Go to Shopping Cart -->
+        <!-- 2. Go to Shopping CartAfter -->
         <actionGroup ref="StorefrontCartPageOpenActionGroup" stepKey="goToCheckoutCartIndexPage"/>
         <!-- 3. Open "Estimate Shipping and Tax" section and input data -->
         <actionGroup ref="StorefrontCartEstimateShippingAndTaxActionGroup" stepKey="fillEstimateShippingAndTaxSection"/>

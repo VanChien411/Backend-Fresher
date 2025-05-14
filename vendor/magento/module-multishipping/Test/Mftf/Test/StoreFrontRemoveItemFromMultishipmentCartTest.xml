@@ -44,12 +44,12 @@
         <actionGroup ref="StorefrontOpenProductPageActionGroup" stepKey="goToProductPage">
             <argument name="productUrl" value="$$firstProduct.custom_attributes[url_key]$$"/>
         </actionGroup>
-        <!-- Add to Cart three times of the product -->
+        <!-- Add to CartAfter three times of the product -->
         <actionGroup ref="AddProductWithQtyToCartFromStorefrontProductPageActionGroup" stepKey="addProductToCart">
             <argument name="productName" value="$$firstProduct.name$$"/>
             <argument name="productQty" value="3"/>
         </actionGroup>
-        <!--Go to Cart -->
+        <!--Go to CartAfter -->
         <actionGroup ref="StorefrontOpenCartFromMinicartActionGroup" stepKey="openCartWithIdenticalProducts"/>
         <!--Check Out with Multiple Addresses -->
         <actionGroup ref="StorefrontCheckoutWithMultipleAddressesActionGroup" stepKey="checkoutWithThreeDifferentAddresses"/>

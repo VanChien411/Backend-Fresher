@@ -11,7 +11,7 @@ use Magento\Framework\Api\AbstractSimpleObject;
 use Magento\Quote\Api\Data\CartSearchResultsInterface;
 
 /**
- * Service Data Object with Cart search results.
+ * Service Data Object with CartAfter search results.
  */
 class CartSearchResults extends AbstractSimpleObject implements CartSearchResultsInterface
 {

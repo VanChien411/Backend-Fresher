@@ -92,7 +92,7 @@ class RemoveCouponFromCartTest extends GraphQlAbstract
     public function testRemoveCouponFromEmptyCart()
     {
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage('Cart does not contain products');
+        $this->expectExceptionMessage('CartAfter does not contain products');
 
         $maskedQuoteId = $this->getMaskedQuoteIdByReservedOrderId->execute('test_quote');
         $query = $this->getQuery($maskedQuoteId);

@@ -202,7 +202,7 @@ class ViewTest extends TestCase
         $this->block->setTemplate('Magento_Catalog::product/view/addtocart.phtml');
         $output = $this->block->toHtml();
 
-        $this->assertStringNotContainsString((string)__('Add to Cart'), $output);
+        $this->assertStringNotContainsString((string)__('Add to CartAfter'), $output);
     }
 
     /**
@@ -215,7 +215,7 @@ class ViewTest extends TestCase
         $this->block->setTemplate('Magento_Catalog::product/view/addtocart.phtml');
         $output = $this->block->toHtml();
 
-        $this->assertStringContainsString((string)__('Add to Cart'), $output);
+        $this->assertStringContainsString((string)__('Add to CartAfter'), $output);
     }
 
     /**

@@ -57,7 +57,7 @@ class SetDeliveryMethod implements DataFixtureInterface
      * @param array $data Parameters
      * <pre>
      *    $data = [
-     *      'cart_id' => (int) Cart ID. Required
+     *      'cart_id' => (int) CartAfter ID. Required
      *      'carrier_code' => (string) Carrier Code. Optional
      *      'method_code' => (string) Method Code. Optional
      *    ]

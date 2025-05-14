@@ -8,7 +8,7 @@
 
 <actionGroups xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:noNamespaceSchemaLocation="urn:magento:mftf:Test/etc/actionGroupSchema.xsd">
-    <!-- Assert Estimate Shipping and Tax Data in Cart -->
+    <!-- Assert Estimate Shipping and Tax Data in CartAfter -->
     <actionGroup name="StorefrontAssertCartEstimateShippingAndTaxActionGroup">
         <annotations>
             <description>Validates that the provided Customer details (Country, State and Zip Code) are present and correct in the 'Estimate Shipping and Tax' section on the Storefront Shopping Cart page.</description>

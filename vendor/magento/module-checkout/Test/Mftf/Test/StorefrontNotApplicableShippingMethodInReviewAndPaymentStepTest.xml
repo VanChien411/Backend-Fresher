@@ -49,9 +49,9 @@
             <createData entity="defaultSimpleProduct" stepKey="createSimpleProduct">
                 <field key="price">100</field>
             </createData>
-            <!-- Create Cart Price Rule with 10% discount -->
+            <!-- Create CartAfter Price Rule with 10% discount -->
             <createData entity="ApiSalesRule" stepKey="createCartPriceRule"/>
-            <!-- Create Coupon code for the Cart Price Rule -->
+            <!-- Create Coupon code for the CartAfter Price Rule -->
             <createData entity="ApiSalesRuleCoupon" stepKey="createCartPriceRuleCoupon">
                 <requiredEntity createDataKey="createCartPriceRule"/>
             </createData>
@@ -87,7 +87,7 @@
         </after>
 
         <!-- Guest Customer Test Scenario -->
-        <!-- Add Simple Product to Cart -->
+        <!-- Add Simple Product to CartAfter -->
         <actionGroup ref="StorefrontAddSimpleProductToShoppingCartActionGroup" stepKey="addProductToCart">
             <argument name="product" value="$$createSimpleProduct$$"/>
         </actionGroup>
@@ -148,7 +148,7 @@
             <argument name="Customer" value="$$createCustomer$$"/>
         </actionGroup>
 
-        <!-- Add Simple Product to Cart -->
+        <!-- Add Simple Product to CartAfter -->
         <actionGroup ref="StorefrontAddSimpleProductToShoppingCartActionGroup" stepKey="addSimpleProductToCart">
             <argument name="product" value="$$createSimpleProduct$$"/>
         </actionGroup>

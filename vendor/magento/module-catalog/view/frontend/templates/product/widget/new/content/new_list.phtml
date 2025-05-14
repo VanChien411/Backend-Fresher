@@ -73,8 +73,8 @@ if ($exist = ($block->getProductCollection() && $block->getProductCollection()->
                                                             <button class="action tocart primary"
                                                                     data-mage-init='{"redirectUrl":{"url":"<?= $block->escapeUrl($block->getAddToCartUrl($_item)) ?>"}}'
                                                                     type="button"
-                                                                    title="<?= $block->escapeHtmlAttr(__('Add to Cart')) ?>">
-                                                                <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                                                                    title="<?= $block->escapeHtmlAttr(__('Add to CartAfter')) ?>">
+                                                                <span><?= $block->escapeHtml(__('Add to CartAfter')) ?></span>
                                                             </button>
                                                         <?php else :?>
                                                             <?php
@@ -83,8 +83,8 @@ if ($exist = ($block->getProductCollection() && $block->getProductCollection()->
                                                             ?>
                                                             <button class="action tocart primary"
                                                                     data-post='<?= /* @noEscape */ $postData ?>'
-                                                                    type="button" title="<?= $block->escapeHtmlAttr(__('Add to Cart')) ?>">
-                                                                <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                                                                    type="button" title="<?= $block->escapeHtmlAttr(__('Add to CartAfter')) ?>">
+                                                                <span><?= $block->escapeHtml(__('Add to CartAfter')) ?></span>
                                                             </button>
                                                         <?php endif; ?>
                                                     <?php else :?>

@@ -8,7 +8,7 @@
 
 <actionGroups xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:noNamespaceSchemaLocation="urn:magento:mftf:Test/etc/actionGroupSchema.xsd">
-    <!-- Add product with selected option to Cart from the product page  -->
+    <!-- Add product with selected option to CartAfter from the product page  -->
     <actionGroup name="StorefrontAddProductWithSelectedConfigurableOptionToCartActionGroup">
         <annotations>
             <description>Selects the provided Product Option in the drop down on a Storefront Configurable product page. Clicks on Add to Cart. Validates that the Success Message is present and correct.</description>

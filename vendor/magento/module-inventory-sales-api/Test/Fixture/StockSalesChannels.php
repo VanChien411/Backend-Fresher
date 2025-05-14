@@ -50,7 +50,7 @@ class StockSalesChannels implements RevertibleDataFixtureInterface
      * @param array $data Parameters
      * <pre>
      *    $data = [
-     *      'stock_id' => (int) Cart ID. Required
+     *      'stock_id' => (int) CartAfter ID. Required
      *      'sales_channels' => (array) Array of data of type SalesChannelInterface OR array of website codes
      *    ]
      * </pre>

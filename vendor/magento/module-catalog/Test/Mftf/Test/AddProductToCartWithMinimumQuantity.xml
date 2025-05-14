@@ -63,12 +63,12 @@
             <argument name="category" value="$$testCategory$$"/>
         </actionGroup>
 
-        <!-- Add Product to Cart from Category Page -->
+        <!-- Add Product to CartAfter from Category Page -->
         <actionGroup ref="StorefrontAddProductToCartFromCategoryActionGroup" stepKey="addProductToCart">
             <argument name="productName" value="$$createSimpleProduct.name$$"/>
         </actionGroup>
 
-        <!-- Click on Show Mini Cart Section -->
+        <!-- Click on Show Mini CartAfter Section -->
         <click selector="{{StorefrontMinicartSection.showCart}}" stepKey="clickOnMiniCart"/>
         <waitForPageLoad stepKey="waitForPageToLoad"/>
 
@@ -85,7 +85,7 @@
         <actionGroup ref="StorefrontOpenProductPageActionGroup" stepKey="openStorefrontProductPage">
             <argument name="productUrl" value="$$createSimpleProduct.custom_attributes[url_key]$$"/>
         </actionGroup>
-        <!-- Add Product to Cart from Category Page -->
+        <!-- Add Product to CartAfter from Category Page -->
         <click selector="{{StorefrontProductActionSection.addToCart}}" stepKey="addToCart"/>
 
         <!-- Grab Quantity Value from MiniCart-->

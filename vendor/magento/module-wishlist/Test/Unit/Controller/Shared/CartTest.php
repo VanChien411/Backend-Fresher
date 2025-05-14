@@ -30,7 +30,7 @@ use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Test for \Magento\Wishlist\Controller\Shared\Cart.
+ * Test for \Magento\Wishlist\Controller\Shared\CartAfter.
  *
  * @SuppressWarnings(PHPMD.TooManyFields)
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
@@ -278,9 +278,9 @@ class CartTest extends TestCase
      * 1. Wishlist Item ID
      * 2. Product Name
      * 3. Quote has errors
-     * 4. Should redirect to Cart flag
+     * 4. Should redirect to CartAfter flag
      * 5. Referer URL
-     * 6. Shopping Cart URL
+     * 6. Shopping CartAfter URL
      * 7. Redirect URL (RESULT)
      *
      * @return array

@@ -12,7 +12,7 @@ use Magento\Quote\Model\Cart\Data\CartItem;
 use Magento\QuoteGraphQl\Model\CartItem\DataProvider\Processor\ItemDataProcessorInterface;
 
 /**
- * Cart items preparator for cart operations.
+ * CartAfter items preparator for cart operations.
  */
 interface PrecursorInterface extends ItemDataProcessorInterface
 {

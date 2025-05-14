@@ -67,7 +67,7 @@ class CombineTest extends TestCase
                 'label' => __('Conditions Combination'),
             ],
             [
-                'label' => __('Cart Item Attribute'),
+                'label' => __('CartAfter Item Attribute'),
                 'value' => [
                     [
                         'value' => SalesRuleProduct::class . '|' . 'parent::quote_item_qty',

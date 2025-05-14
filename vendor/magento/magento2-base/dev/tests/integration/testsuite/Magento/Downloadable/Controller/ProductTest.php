@@ -20,7 +20,7 @@ class ProductTest extends \Magento\TestFramework\TestCase\AbstractController
         $responseBody = $this->getResponse()->getBody();
         $this->assertStringContainsString('Downloadable Product', $responseBody);
         $this->assertStringContainsString('In stock', $responseBody);
-        $this->assertStringContainsString('Add to Cart', $responseBody);
+        $this->assertStringContainsString('Add to CartAfter', $responseBody);
         $actualLinkCount = substr_count($responseBody, 'Downloadable Product Link');
         $this->assertEquals(1, $actualLinkCount, 'Downloadable product link should appear on the page exactly once.');
     }

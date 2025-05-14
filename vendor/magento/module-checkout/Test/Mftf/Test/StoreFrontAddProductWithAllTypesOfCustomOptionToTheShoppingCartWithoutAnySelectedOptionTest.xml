@@ -35,7 +35,7 @@
             <argument name="product" value="$$createProduct$$"/>
         </actionGroup>
 
-        <!--Click on Add To Cart button-->
+        <!--Click on Add To CartAfter button-->
         <waitForElementClickable selector="{{StorefrontProductActionSection.addToCart}}" stepKey="waitForAddToCartButton"/>
         <click selector="{{StorefrontProductActionSection.addToCart}}" stepKey="addToCart"/>
         <waitForPageLoad stepKey="waitForPageToLoad"/>

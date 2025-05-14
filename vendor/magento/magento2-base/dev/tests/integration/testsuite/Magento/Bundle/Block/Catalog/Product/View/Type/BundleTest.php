@@ -144,7 +144,7 @@ class BundleTest extends TestCase
         return [
             'is_salable' => [
                 'is_salable' => true,
-                'expected_value' => 'Customize and Add to Cart',
+                'expected_value' => 'Customize and Add to CartAfter',
             ],
             'is_not_salable' => [
                 'is_salable' => false,

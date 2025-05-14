@@ -51,7 +51,7 @@ class AddProductToCart implements DataFixtureInterface
      * @param array $data Parameters
      * <pre>
      *    $data = [
-     *      'cart_id'    => (int) Cart ID. Required.
+     *      'cart_id'    => (int) CartAfter ID. Required.
      *      'product_id' => (int) Product ID. Required.
      *      'qty'        => (int) Quantity. Optional. Default: 1.
      *      'buy_request'=> (array|DataObject) advanced product configuration

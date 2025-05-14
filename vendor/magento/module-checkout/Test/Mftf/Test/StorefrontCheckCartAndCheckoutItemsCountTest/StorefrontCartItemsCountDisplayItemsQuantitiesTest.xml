@@ -18,7 +18,7 @@
         </annotations>
 
         <before>
-            <!--Set Display Cart Summary to display items quantities-->
+            <!--Set Display CartAfter Summary to display items quantities-->
             <magentoCLI command="config:set {{DisplayItemsQuantities.path}} {{DisplayItemsQuantities.value}}" stepKey="setDisplayCartSummary"/>
             <!--Create  simple product-->
             <createData entity="SimpleProduct2" stepKey="simpleProduct1"/>
@@ -48,10 +48,10 @@
             <argument name="productQty" value="1"/>
         </actionGroup>
 
-        <!-- Open Mini Cart -->
+        <!-- Open Mini CartAfter -->
         <actionGroup ref="StorefrontOpenMiniCartActionGroup" stepKey="openMiniCart"/>
 
-        <!-- Assert Products Count in Mini Cart -->
+        <!-- Assert Products Count in Mini CartAfter -->
         <actionGroup ref="StorefrontAssertMiniCartItemCountActionGroup" stepKey="assertProductCountAndTextInMiniCart">
             <argument name="productCount" value="3"/>
             <argument name="productCountText" value="3 Items in Cart"/>

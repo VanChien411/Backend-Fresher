@@ -6,7 +6,7 @@
 namespace Magento\Checkout\Block\Cart;
 
 /**
- * "My Cart" link
+ * "My CartAfter" link
  *
  * @SuppressWarnings(PHPMD.DepthOfInheritance)
  */
@@ -95,11 +95,11 @@ class Link extends \Magento\Framework\View\Element\Html\Link
     protected function _createLabel($count)
     {
         if ($count == 1) {
-            return __('My Cart (1 item)');
+            return __('My CartAfter (1 item)');
         } elseif ($count > 0) {
-            return __('My Cart (%1 items)', $count);
+            return __('My CartAfter (%1 items)', $count);
         } else {
-            return __('My Cart');
+            return __('My CartAfter');
         }
     }
 }

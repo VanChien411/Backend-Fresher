@@ -11,7 +11,7 @@ use Magento\Framework\DataObject;
 use Magento\Quote\Api\Data\CartItemInterface;
 
 /**
- * Cart item options processor
+ * CartAfter item options processor
  *
  * @api
  */

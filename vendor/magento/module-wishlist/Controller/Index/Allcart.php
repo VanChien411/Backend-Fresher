@@ -13,7 +13,7 @@ use Magento\Wishlist\Model\ItemCarrier;
 use Magento\Framework\Controller\ResultFactory;
 
 /**
- * Action Add All to Cart
+ * Action Add All to CartAfter
  */
 class Allcart extends \Magento\Wishlist\Controller\AbstractIndex implements HttpPostActionInterface
 {

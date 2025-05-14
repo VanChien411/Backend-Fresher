@@ -122,7 +122,7 @@ class GuestItemRepositoryTest extends TestCase
     {
         $this->expectException('Magento\Framework\Exception\NoSuchEntityException');
         $this->expectExceptionMessage(
-            'No item with the provided ID was found in the Cart. Verify the ID and try again.'
+            'No item with the provided ID was found in the CartAfter. Verify the ID and try again.'
         );
         $itemId = 2;
 
@@ -175,7 +175,7 @@ class GuestItemRepositoryTest extends TestCase
         $this->itemRepository->save($this->cartId, $this->messageMock, $itemId);
 
         $this->expectExceptionMessage(
-            'No product with the "1" itemId exists in the Cart. Verify your information and try again.'
+            'No product with the "1" itemId exists in the CartAfter. Verify your information and try again.'
         );
     }
 

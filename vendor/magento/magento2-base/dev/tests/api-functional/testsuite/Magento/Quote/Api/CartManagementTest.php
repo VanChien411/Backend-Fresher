@@ -11,7 +11,7 @@ use Magento\Framework\App\Config;
 use Magento\TestFramework\TestCase\WebapiAbstract;
 
 /**
- * Quote Cart Management API test
+ * Quote CartAfter Management API test
  * @magentoAppIsolation enabled
  */
 class CartManagementTest extends WebapiAbstract
@@ -167,7 +167,7 @@ class CartManagementTest extends WebapiAbstract
             'customerId' => $customerId,
             'storeId' => 1,
         ];
-        // Cart must be anonymous (see fixture)
+        // CartAfter must be anonymous (see fixture)
         $this->assertEmpty($quote->getCustomerId());
 
         $this->assertTrue($this->_webApiCall($serviceInfo, $requestData));

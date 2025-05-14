@@ -155,7 +155,7 @@ class RepositoryTest extends TestCase
     public function testDeleteWithInvalidQuoteItem()
     {
         $this->expectException('Magento\Framework\Exception\NoSuchEntityException');
-        $this->expectExceptionMessage('The 11 Cart doesn\'t contain the 5 item.');
+        $this->expectExceptionMessage('The 11 CartAfter doesn\'t contain the 5 item.');
         $cartId = 11;
         $itemId = 5;
         $this->quoteRepositoryMock->expects($this->once())

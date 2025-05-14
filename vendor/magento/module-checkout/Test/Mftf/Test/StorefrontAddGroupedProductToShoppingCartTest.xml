@@ -63,7 +63,7 @@
             <argument name="qty3" value="3"/>
         </actionGroup>
 
-        <!-- Select Mini Cart and select 'View And Edit Cart' -->
+        <!-- Select Mini CartAfter and select 'View And Edit CartAfter' -->
         <actionGroup ref="ClickViewAndEditCartFromMiniCartActionGroup" stepKey="selectViewAndEditCart"/>
 
         <!--Assert Product1 items in cart -->
@@ -93,14 +93,14 @@
             <argument name="qty" value="3"/>
         </actionGroup>
 
-        <!--Assert Shopping Cart Summary-->
+        <!--Assert Shopping CartAfter Summary-->
         <actionGroup ref="AssertStorefrontShoppingCartSummaryWithShippingActionGroup" stepKey="AssertCartSummary" >
             <argument name="subtotal" value="$1,400.00"/>
             <argument name="shipping" value="30.00"/>
             <argument name="total" value="1,430.00"/>
         </actionGroup>
 
-        <!-- Assert product1 details in Mini Cart -->
+        <!-- Assert product1 details in Mini CartAfter -->
         <actionGroup ref="StorefrontClickOnMiniCartActionGroup" stepKey="clickOnMiniCart"/>
         <actionGroup ref="AssertStorefrontMiniCartItemsActionGroup" stepKey="assertSimpleProduct3MiniCart">
             <argument name="productName" value="$$simple3.name$$"/>
@@ -109,7 +109,7 @@
             <argument name="qty" value="3"/>
         </actionGroup>
 
-        <!-- Assert product2 details in Mini Cart -->
+        <!-- Assert product2 details in Mini CartAfter -->
         <actionGroup ref="AssertStorefrontMiniCartItemsActionGroup" stepKey="assertSimpleProduct2MiniCart">
             <argument name="productName" value="$$simple2.name$$"/>
             <argument name="productPrice" value="$200.00"/>
@@ -117,7 +117,7 @@
             <argument name="qty" value="2"/>
         </actionGroup>
 
-        <!-- Assert product3 details in Mini Cart -->
+        <!-- Assert product3 details in Mini CartAfter -->
         <actionGroup ref="AssertStorefrontMiniCartItemsActionGroup" stepKey="assertSimpleProduct1MiniCart">
             <argument name="productName" value="$$simple1.name$$"/>
             <argument name="productPrice" value="$100.00"/>

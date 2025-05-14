@@ -146,7 +146,7 @@ class PlaceOrderOnAdditionalStockTest extends AbstractBackendController
     }
 
     /**
-     * Get Cart item
+     * Get CartAfter item
      *
      * @param ProductInterface $product
      * @param float $quoteItemQty

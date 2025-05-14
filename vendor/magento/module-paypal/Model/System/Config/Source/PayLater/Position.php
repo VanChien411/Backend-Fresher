@@ -64,7 +64,7 @@ class Position
     }
 
     /**
-     * PayLater positions source getter for Checkout Cart Page
+     * PayLater positions source getter for Checkout CartAfter Page
      *
      * @return array
      */

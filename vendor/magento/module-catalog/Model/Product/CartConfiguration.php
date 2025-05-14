@@ -5,7 +5,7 @@
  */
 
 /**
- * Cart product configuration model
+ * CartAfter product configuration model
  */
 namespace Magento\Catalog\Model\Product;
 

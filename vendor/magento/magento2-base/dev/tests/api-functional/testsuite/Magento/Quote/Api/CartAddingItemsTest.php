@@ -357,7 +357,7 @@ class CartAddingItemsTest extends WebapiAbstract
         ];
         $this->_webApiCall($this->getServiceInfoAddToCart($token), $requestData);
 
-        // Fetch Cart info
+        // Fetch CartAfter info
         $serviceInfo = [
             'rest' => [
                 'resourcePath' => '/V1/carts/mine',

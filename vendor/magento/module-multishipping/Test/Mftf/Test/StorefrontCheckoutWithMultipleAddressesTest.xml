@@ -48,7 +48,7 @@
         <actionGroup ref="StorefrontOpenProductPageActionGroup" stepKey="goToFirstProductPage">
             <argument name="productUrl" value="$$firstProduct.custom_attributes[url_key]$$"/>
         </actionGroup>
-        <!--  Add the first product to the Shopping Cart -->
+        <!--  Add the first product to the Shopping CartAfter -->
         <actionGroup ref="AddProductWithQtyToCartFromStorefrontProductPageActionGroup" stepKey="addFirstProductToCart">
             <argument name="productName" value="$$firstProduct.name$$"/>
             <argument name="productQty" value="1"/>
@@ -57,12 +57,12 @@
         <actionGroup ref="StorefrontOpenProductPageActionGroup" stepKey="goToSecondProductPage">
             <argument name="productUrl" value="$$secondProduct.custom_attributes[url_key]$$"/>
         </actionGroup>
-        <!--  Add the second product to the Shopping Cart -->
+        <!--  Add the second product to the Shopping CartAfter -->
         <actionGroup ref="AddProductWithQtyToCartFromStorefrontProductPageActionGroup" stepKey="addSecondProductToCart">
             <argument name="productName" value="$$secondProduct.name$$"/>
             <argument name="productQty" value="1"/>
         </actionGroup>
-        <!--Go to Cart -->
+        <!--Go to CartAfter -->
         <actionGroup ref="StorefrontOpenCartFromMinicartActionGroup" stepKey="openCart"/>
         <!--Check Out with Multiple Addresses -->
         <actionGroup ref="StorefrontCheckoutWithMultipleAddressesActionGroup" stepKey="checkoutWithMultipleAddresses"/>
@@ -86,12 +86,12 @@
         <actionGroup ref="StorefrontOpenProductPageActionGroup" stepKey="goToFirstProductPageSecondTime">
             <argument name="productUrl" value="$$firstProduct.custom_attributes[url_key]$$"/>
         </actionGroup>
-        <!--  Add three identical products to the Shopping Cart -->
+        <!--  Add three identical products to the Shopping CartAfter -->
         <actionGroup ref="AddProductWithQtyToCartFromStorefrontProductPageActionGroup" stepKey="addIdenticalProductsToCart">
             <argument name="productName" value="$$firstProduct.name$$"/>
             <argument name="productQty" value="3"/>
         </actionGroup>
-        <!--Go to Cart -->
+        <!--Go to CartAfter -->
         <actionGroup ref="StorefrontOpenCartFromMinicartActionGroup" stepKey="openCartWithIdenticalProducts"/>
         <!--Check Out with Multiple Addresses -->
         <actionGroup ref="StorefrontCheckoutWithMultipleAddressesActionGroup" stepKey="checkoutWithThreeDifferentAddresses"/>

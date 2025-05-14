@@ -9,7 +9,7 @@ use Magento\Quote\Api\Data\TotalSegmentInterface;
 use Magento\Quote\Api\Data\TotalSegmentInterfaceFactory;
 
 /**
- * Cart totals data objects converter.
+ * CartAfter totals data objects converter.
  */
 class TotalsConverter
 {

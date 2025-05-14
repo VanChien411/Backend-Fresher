@@ -14,7 +14,7 @@ use Magento\TestFramework\Helper\Bootstrap;
 use Magento\TestFramework\TestCase\GraphQlAbstract;
 
 /**
- * Test Apply Coupon to Cart functionality for customer
+ * Test Apply Coupon to CartAfter functionality for customer
  */
 class ApplyCouponToCartTest extends GraphQlAbstract
 {
@@ -85,7 +85,7 @@ class ApplyCouponToCartTest extends GraphQlAbstract
     public function testApplyCouponToCartWithoutItems()
     {
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage('Cart does not contain products.');
+        $this->expectExceptionMessage('CartAfter does not contain products.');
 
         $couponCode = '2?ds5!2d';
         $maskedQuoteId = $this->getMaskedQuoteIdByReservedOrderId->execute('test_quote');

@@ -24,7 +24,7 @@ class RelatedProducts
     }
 
     /**
-     * Retrieve Array of product ids which have special relation with products in Cart
+     * Retrieve Array of product ids which have special relation with products in CartAfter
      *
      * @param \Magento\Quote\Model\Quote\Item[] $quoteItems
      * @return int[]

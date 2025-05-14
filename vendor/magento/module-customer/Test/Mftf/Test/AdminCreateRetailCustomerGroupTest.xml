@@ -62,8 +62,8 @@
             <argument name="customerGroupName" value="{{CustomCustomerGroup.code}}"/>
         </actionGroup>
 
-        <!-- 9. Go to Marketing - Cart Price Rule - click  "Add New Rule" button -->
-        <!--   Assert   created  Customer Group  displayed On Cart Price Rule Form -->
+        <!-- 9. Go to Marketing - CartAfter Price Rule - click  "Add New Rule" button -->
+        <!--   Assert   created  Customer Group  displayed On CartAfter Price Rule Form -->
         <actionGroup ref="AdminAssertCustomerGroupOnCartPriceRuleForm" stepKey="assertCustomerGroupDisplayedOnCartPriceRuleForm">
             <argument name="customerGroupName" value="{{CustomCustomerGroup.code}}"/>
         </actionGroup>

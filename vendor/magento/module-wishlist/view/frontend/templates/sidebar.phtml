@@ -42,14 +42,14 @@ $wishlstViewModel = $block->getData('wishlistDataViewModel');
                                         <a href="#"
                                            data-bind="attr: {'data-post': add_to_cart_params}"
                                            class="action tocart primary">
-                                            <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                                            <span><?= $block->escapeHtml(__('Add to CartAfter')) ?></span>
                                         </a>
                                         <!-- /ko -->
                                         <!-- ko ifnot: product_has_required_options -->
                                             <button type="button"
                                                     class="action tocart primary"
                                                     data-bind="attr: {'data-post': add_to_cart_params}">
-                                                <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                                                <span><?= $block->escapeHtml(__('Add to CartAfter')) ?></span>
                                             </button>
                                         <!-- /ko -->
                                     </div>

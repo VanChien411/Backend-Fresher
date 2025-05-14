@@ -220,7 +220,7 @@ class CartFixedTest extends TestCase
         $carts = $this->quoteRepository->getList($searchCriteria)
             ->getItems();
         if (!$carts) {
-            throw new \RuntimeException('Cart from fixture not found');
+            throw new \RuntimeException('CartAfter from fixture not found');
         }
 
         return array_shift($carts);

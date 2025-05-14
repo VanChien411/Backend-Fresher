@@ -162,7 +162,7 @@
             <expectedResult type="string">$1,640.00</expectedResult>
             <actualResult type="variable">grabTextFromSubtotalField3</actualResult>
         </assertEquals>
-        <!--Tier Price is changed in Shopping Cart and is changed on Product page if Tier Price parameters are changed in Admin-->
+        <!--Tier Price is changed in Shopping CartAfter and is changed on Product page if Tier Price parameters are changed in Admin-->
         <actionGroup ref="AdminOpenProductIndexPageActionGroup" stepKey="navigateToProductIndex4"/>
         <actionGroup ref="FilterProductGridBySkuActionGroup" stepKey="filterProduct4">
             <argument name="product" value="$$createSimpleProduct$$"/>

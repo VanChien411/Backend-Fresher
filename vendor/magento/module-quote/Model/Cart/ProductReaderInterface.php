@@ -10,7 +10,7 @@ namespace Magento\Quote\Model\Cart;
 use Magento\Catalog\Api\Data\ProductInterface;
 
 /**
- * Cart layer product loader.
+ * CartAfter layer product loader.
  */
 interface ProductReaderInterface
 {

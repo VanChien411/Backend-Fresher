@@ -102,7 +102,7 @@
             <magentoCron groups="index" stepKey="reindex"/>
         </after>
 
-        <!-- add Product to Cart-->
+        <!-- add Product to CartAfter-->
         <amOnPage url="{{StorefrontCategoryPage.url($$createCategory.custom_attributes[url_key]$$)}}" stepKey="navigateToCategory"/>
         <waitForPageLoad time="30" stepKey="waitForCategoryPageLoad"/>
         <click selector="{{StorefrontCategoryMainSection.specifiedProductItemInfo(VirtualMsiProduct.name)}}" stepKey="openProductPage"/>

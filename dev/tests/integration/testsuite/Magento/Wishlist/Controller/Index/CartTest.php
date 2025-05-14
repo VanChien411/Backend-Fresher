@@ -122,7 +122,7 @@ class CartTest extends AbstractController
     }
 
     /**
-     * Add wishlist item with related Products to Cart.
+     * Add wishlist item with related Products to CartAfter.
      *
      * @return void
      * @magentoDataFixture Magento/Wishlist/_files/wishlist_with_simple_product.php
