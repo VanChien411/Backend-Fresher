@@ -1,12 +1,1 @@
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
-define([
-    "jquery",
-    "jquery/bootstrap/tab",
-    "jquery/bootstrap/collapse",
-], function () {
-
-});
+/var/www/html/Backend-Fresher/lib/web/jquery/jquery.tabs.js

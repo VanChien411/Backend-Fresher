@@ -1,8 +1,1 @@
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
-require([
-    'Magento_Customer/edit/post-wrapper'
-]);
+/var/www/html/Backend-Fresher/vendor/magento/module-customer/view/adminhtml/web/js/bootstrap/customer-post-action.js

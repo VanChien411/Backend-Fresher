@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
             <item name="provider" xsi:type="string">movie_actor_form.movie_actor_form_data_source</item>
@@ -30,7 +31,7 @@
     </settings>
     <dataSource name="movie_actor_form_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">
-            <argument name="class" xsi:type="string">Magenest\Movie\Ui\DataProvider\Actor\FormDataProvider</argument>
+            <argument name="class" xsi:type="string">Magenest\Movie\Model\DataProvider\Actor\FormDataProvider</argument>
             <argument name="name" xsi:type="string">movie_actor_form_data_source</argument>
             <argument name="primaryFieldName" xsi:type="string">actor_id</argument>
             <argument name="requestFieldName" xsi:type="string">id</argument>
