@@ -1,1 +1,0 @@
-/var/www/html/Backend-Fresher/vendor/magento/module-login-as-customer-frontend-ui/view/frontend/web/js/view/loginAsCustomer.js
