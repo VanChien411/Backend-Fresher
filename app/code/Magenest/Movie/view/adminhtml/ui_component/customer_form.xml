@@ -10,7 +10,6 @@
                     <item name="uploaderConfig" xsi:type="array">
                         <item name="url" xsi:type="string">customer/file/customer_upload</item>
                     </item>
-                    <item name="previewTmpl" xsi:type="string">Magento_Customer/image-preview</item>
                     <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
                     <item name="dataScope" xsi:type="string">avatar</item>
                     <item name="required" xsi:type="boolean">false</item>
