@@ -8,7 +8,7 @@
                     <item name="label" xsi:type="string">Avatar</item>
                     <item name="formElement" xsi:type="string">fileUploader</item>
                     <item name="uploaderConfig" xsi:type="array">
-                        <item name="url" xsi:type="string">customer/avatar/upload</item>
+                        <item name="url" xsi:type="string">customer/file/customer_upload</item>
                     </item>
                     <item name="previewTmpl" xsi:type="string">Magento_Customer/image-preview</item>
                     <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>

@@ -1,0 +1,1 @@
+/var/www/html/Backend-Fresher/lib/web/jquery/fileUploader/vendor/blueimp-canvas-to-blob/js/canvas-to-blob.js
