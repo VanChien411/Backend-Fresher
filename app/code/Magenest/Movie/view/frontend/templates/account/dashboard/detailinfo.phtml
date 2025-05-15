@@ -1,0 +1,21 @@
+<?php
+/** @var Magenest\Movie\Block\Account\Dashboard\DetailInfo $block */
+$customer = $block->getCustomer();
+$imageUrl = $block->getCustomerImageUrl();
+?>
+
+<?php if ($customer): ?>
+    <?php if ($imageUrl): ?>
+        <div>
+            <img src="<?= $block->escapeUrl($imageUrl) ?>" alt="Ảnh đại diện" style="max-width: 150px;"/>
+        </div>
+    <?php else: ?>
+        <p>Chưa có ảnh đại diện.</p>
+    <?php endif; ?>
+    <p><strong>Họ và tên:</strong> <?= $block->escapeHtml($customer->getName()) ?></p>
+    <p><strong>Email:</strong> <?= $block->escapeHtml($customer->getEmail()) ?></p>
+    <p><strong>ID khách hàng:</strong> <?= $block->escapeHtml($customer->getId()) ?></p>
+
+<?php else: ?>
+    <p>Vui lòng đăng nhập để xem thông tin.</p>
+<?php endif; ?>

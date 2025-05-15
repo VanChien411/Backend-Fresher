@@ -16,7 +16,7 @@ use Magento\Customer\Block\Account\SortLinkInterface;
  * @api
  * @since 101.0.0
  */
-class Navigation extends Links
+class   Navigation extends Links
 {
     /**
      * @inheritdoc

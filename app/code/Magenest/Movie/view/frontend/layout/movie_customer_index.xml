@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="customer_account"/>
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Account dashboard</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Magenest\Movie\Block\Account\Dashboard\DetailInfo"
+                   name="customer_account_dashboard_detailinfo" as="detailinfo"
+                   template="Magenest_Movie::account/dashboard/detailinfo.phtml" cacheable="false"/>
+            <block class="Magento\Customer\Block\Account\Dashboard\Info" name="customer_account_dashboard_info"
+                   as="info" template="Magento_Customer::account/dashboard/info.phtml" cacheable="false">
+                <container name="customer.account.dashboard.info.blocks" as="additional_blocks"/>
+            </block>
+            <block class="Magento\Customer\Block\Account\Dashboard\Address" name="customer_account_dashboard_address"
+                   as="address" template="Magento_Customer::account/dashboard/address.phtml" cacheable="false"/>
+        </referenceContainer>
+        <referenceBlock name="customer_account_navigation">
+            <block class="Magento\Customer\Block\Account\SortLinkInterface"
+                   name="customer-account-navigation-custom-dashboard">
+                <arguments>
+                    <argument name="path" xsi:type="string">movie/customer/index</argument>
+                    <argument name="label" xsi:type="string" translate="true">Account Dashboard</argument>
+                    <argument name="sortOrder" xsi:type="number">290</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>
