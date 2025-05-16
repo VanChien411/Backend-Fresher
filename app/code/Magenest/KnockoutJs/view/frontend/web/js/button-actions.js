@@ -7,8 +7,16 @@ define([
     'use strict';
 
     return Component.extend({
+
+        userName: ko.observable(''),
+        password: ko.observable(''),
+
         initialize: function () {
             this._super();
+
+            // Áp dụng binding vào login modal khi component đã sẵn sàng
+            ko.applyBindings(this, document.getElementById('login-modal'));
+
             return this;
         },
         showAlert: function () {
@@ -30,6 +38,12 @@ define([
             };
             var popup = modal(options, $('#login-modal')); // Store the modal instance
             $('#login-modal').modal('openModal');
+
+
+        },
+        loginUser: function () {
+            alert("Logging in as: " + this.userName() + " " + this.password());
+            return false; // tránh reload trang
         }
     });
 });

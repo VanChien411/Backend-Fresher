@@ -9,10 +9,12 @@
         <div>Hello World Content</div>
     </div>
     <div id="login-modal" style="display:none;">
-        <form>
-            <label>Username: <input type="text"></label>
-            <label>Password: <input type="password"></label>
+        <form data-bind="submit: loginUser">
+            <label>Username: <input data-bind="value: userName" type="text"></label>
+            <label>Password: <input data-bind="value: password" type="password"></label>
             <button type="submit">Login</button>
+            <h2 data-bind="text: 'User: ' + userName() + ' | Pass: ' + password()"></h2>
+
         </form>
     </div>
 </div>
