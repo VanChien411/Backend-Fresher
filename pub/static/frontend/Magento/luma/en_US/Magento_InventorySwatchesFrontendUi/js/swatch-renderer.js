@@ -1,0 +1,1 @@
+/var/www/html/Backend-Fresher/vendor/magento/module-inventory-swatches-frontend-ui/view/frontend/web/js/swatch-renderer.js

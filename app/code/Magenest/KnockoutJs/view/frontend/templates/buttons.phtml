@@ -1,4 +1,23 @@
-<div class="movie-list">
+<div class="movie-list" data-bind="scope: 'buttonActions'">
     <h2>Buttons List</h2>
-
+    <p>
+        <button data-bind="click: showAlert">Open Model</button>
+        <button>Open Magento Login Model</button>
+        <button>Open Customer Login Model</button>
+    </p>
 </div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "buttonActions": {
+                        "component": "Magenest_KnockoutJs/js/button-actions",
+                        "template": "Magenest_KnockoutJs/button-actions"
+                    }
+                }
+            }
+        }
+    }
+</script>

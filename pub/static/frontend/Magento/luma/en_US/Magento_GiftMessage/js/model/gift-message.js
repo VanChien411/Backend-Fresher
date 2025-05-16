@@ -1,0 +1,1 @@
+/var/www/html/Backend-Fresher/vendor/magento/module-gift-message/view/frontend/web/js/model/gift-message.js
