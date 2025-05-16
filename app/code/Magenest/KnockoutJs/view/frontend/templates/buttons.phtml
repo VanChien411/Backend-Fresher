@@ -1,4 +1,32 @@
-<div class="movie-list">
-    <h2>Buttons List</h2>
-
+<div data-bind="scope: 'buttonActions'">
+    <h2>Modal test page</h2>
+    <p class="buttons">
+        <button data-bind="click: showAlert">Open Model</button>
+        <button data-bind="click: showLoginModal">Open Magento Login Model</button>
+        <button>Open Customer Login Model</button>
+    </p>
+    <div id="hello-modal" style="display:none;">
+        <div>Hello World Content</div>
+    </div>
+    <div id="login-modal" style="display:none;">
+        <form>
+            <label>Username: <input type="text"></label>
+            <label>Password: <input type="password"></label>
+            <button type="submit">Login</button>
+        </form>
+    </div>
 </div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "buttonActions": {
+                        "component": "Magenest_KnockoutJs/js/button-actions"
+                    }
+                }
+            }
+        }
+    }
+</script>
