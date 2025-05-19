@@ -8,6 +8,6 @@ class Movie extends AbstractModel
 {
     protected function _construct()
     {
-        $this->_init(\Magenest\Movie\Model\ResourceModel\Movie::class);
+        $this->_init(resourceModel: \Magenest\Movie\Model\ResourceModel\Movie::class);
     }
 }
