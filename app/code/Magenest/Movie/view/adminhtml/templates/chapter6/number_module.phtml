@@ -1,0 +1,25 @@
+<?php
+/** @var $block Magenest\Movie\Controller\Adminhtml\Chapter6\NumberModule */
+$modules = $block->getModuleStats();
+$entities = $block->getEntityCounts();
+?>
+
+<div class="admin__page-section">
+    <div class="admin__page-section-title"><span>Modules Summary</span></div>
+    <div class="admin__page-section-content">
+        <div>Total Modules: <strong><?= $modules['total'] ?></strong></div>
+        <div>Magento Modules: <strong><?= $modules['magento'] ?></strong></div>
+        <div>Other Vendor Modules: <strong><?= $modules['others'] ?></strong></div>
+    </div>
+</div>
+
+<div class="admin__page-section">
+    <div class="admin__page-section-title"><span>Magento Data Summary</span></div>
+    <div class="admin__page-section-content">
+        <div>Customers: <strong><?= $entities['customers'] ?></strong></div>
+        <div>Products: <strong><?= $entities['products'] ?></strong></div>
+        <div>Orders: <strong><?= $entities['orders'] ?></strong></div>
+        <div>Invoices: <strong><?= $entities['invoices'] ?></strong></div>
+        <div>Creditmemos: <strong><?= $entities['creditmemos'] ?></strong></div>
+    </div>
+</div>

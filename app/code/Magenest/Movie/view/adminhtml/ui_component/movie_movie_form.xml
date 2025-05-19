@@ -80,68 +80,20 @@
                 <dataScope>data.description</dataScope>
             </settings>
         </field>
-        <field name="rating" formElement="select">
-            <settings>
-                <dataType>text</dataType>
-                <label translate="true">Rating</label>
-                <dataScope>data.rating</dataScope>
-            </settings>
-            <formElements>
-                <select>
-                    <settings>
-                        <options>
-                            <option name="null" xsi:type="array">
-                                <item name="value" xsi:type="string"></item>
-                                <item name="label" xsi:type="string">Select Rating</item>
-                            </option>
-                            <option name="0" xsi:type="array">
-                                <item name="value" xsi:type="string">0</item>
-                                <item name="label" xsi:type="string">0 Rating</item>
-                            </option>
-                            <option name="1" xsi:type="array">
-                                <item name="value" xsi:type="string">1</item>
-                                <item name="label" xsi:type="string">1 Rating</item>
-                            </option>
-                            <option name="2" xsi:type="array">
-                                <item name="value" xsi:type="string">2</item>
-                                <item name="label" xsi:type="string">2 Ratings</item>
-                            </option>
-                            <option name="3" xsi:type="array">
-                                <item name="value" xsi:type="string">3</item>
-                                <item name="label" xsi:type="string">3 Ratings</item>
-                            </option>
-                            <option name="4" xsi:type="array">
-                                <item name="value" xsi:type="string">4</item>
-                                <item name="label" xsi:type="string">4 Ratings</item>
-                            </option>
-                            <option name="5" xsi:type="array">
-                                <item name="value" xsi:type="string">5</item>
-                                <item name="label" xsi:type="string">5 Ratings</item>
-                            </option>
-                            <option name="6" xsi:type="array">
-                                <item name="value" xsi:type="string">6</item>
-                                <item name="label" xsi:type="string">6 Ratings</item>
-                            </option>
-                            <option name="7" xsi:type="array">
-                                <item name="value" xsi:type="string">7</item>
-                                <item name="label" xsi:type="string">7 Ratings</item>
-                            </option>
-                            <option name="8" xsi:type="array">
-                                <item name="value" xsi:type="string">8</item>
-                                <item name="label" xsi:type="string">8 Ratings</item>
-                            </option>
-                            <option name="9" xsi:type="array">
-                                <item name="value" xsi:type="string">9</item>
-                                <item name="label" xsi:type="string">9 Ratings</item>
-                            </option>
-                            <option name="10" xsi:type="array">
-                                <item name="value" xsi:type="string">10</item>
-                                <item name="label" xsi:type="string">10 Ratings</item>
-                            </option>
-                        </options>
-                    </settings>
-                </select>
-            </formElements>
+        <field name="rating">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">number</item>
+                    <item name="label" xsi:type="string" translate="true">Rating</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="inputType" xsi:type="string">number</item>
+                    <item name="dataScope" xsi:type="string">data.rating</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="validate-digits" xsi:type="boolean">true</item>
+                        <item name="validate-digits-range" xsi:type="string">1-10</item>
+                    </item>
+                </item>
+            </argument>
         </field>
         <field name="director_id" formElement="select">
             <settings>

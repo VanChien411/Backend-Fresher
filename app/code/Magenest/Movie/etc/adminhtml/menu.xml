@@ -1,16 +1,36 @@
 <?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/menu.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/menu.xsd">
     <menu>
         <!-- Main menu -->
-        <add id="Magenest_Movie::movie" title="Movie" module="Magenest_Movie" sortOrder="100" resource="Magenest_Movie::movie"/>
+        <add id="Magenest_Movie::movie" title="Movie" module="Magenest_Movie" sortOrder="100"
+             resource="Magenest_Movie::movie"/>
 
         <!-- Submenu: Director -->
-        <add id="Magenest_Movie::director" title="Director" module="Magenest_Movie" sortOrder="10" parent="Magenest_Movie::movie" action="movie/director/index" resource="Magenest_Movie::director"/>
+        <add id="Magenest_Movie::director" title="Director" module="Magenest_Movie" sortOrder="10"
+             parent="Magenest_Movie::movie" action="movie/director/index" resource="Magenest_Movie::director"/>
 
         <!-- Submenu: Actor -->
-        <add id="Magenest_Movie::actor" title="Actor" module="Magenest_Movie" sortOrder="20" parent="Magenest_Movie::movie" action="movie/actor/index" resource="Magenest_Movie::actor"/>
+        <add id="Magenest_Movie::actor" title="Actor" module="Magenest_Movie" sortOrder="20"
+             parent="Magenest_Movie::movie" action="movie/actor/index" resource="Magenest_Movie::actor"/>
 
         <!-- Submenu: Movie -->
-        <add id="Magenest_Movie::movie_list" title="Movie" module="Magenest_Movie" sortOrder="30" parent="Magenest_Movie::movie" action="movie/movie/index" resource="Magenest_Movie::movie_list"/>
+        <add id="Magenest_Movie::movie_list" title="Movie" module="Magenest_Movie" sortOrder="30"
+             parent="Magenest_Movie::movie" action="movie/movie/index" resource="Magenest_Movie::movie_list"/>
+
+        <!-- Submenu: Integration (đã thêm parent) -->
+        <add id="Magenest_Movie::integration" title="Integration" module="Magenest_Movie" sortOrder="40"
+             parent="Magenest_Movie::movie" resource="Magenest_Movie::movie"/>
+
+        <!-- Sub-submenu: Section 1-3 + Blank Page -->
+        <add id="Magenest_Movie::section_1" title="Section #1" module="Magenest_Movie" sortOrder="10"
+             parent="Magenest_Movie::integration" resource="Magenest_Movie::section_1"/>
+        <add id="Magenest_Movie::section_2" title="Section #2" module="Magenest_Movie" sortOrder="20"
+             parent="Magenest_Movie::integration" resource="Magenest_Movie::section_2"/>
+        <add id="Magenest_Movie::section_3" title="Section #3" module="Magenest_Movie" sortOrder="30"
+             parent="Magenest_Movie::integration" resource="Magenest_Movie::section_3"/>
+        <add id="Magenest_Movie::blank_page" title="Blank Page" module="Magenest_Movie" sortOrder="40"
+             parent="Magenest_Movie::integration" action="movie/blank/index"
+             resource="Magenest_Movie::blank_page"/>
     </menu>
 </config>
