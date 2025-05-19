@@ -1,1 +1,87 @@
-/var/www/html/Backend-Fresher/app/code/Magenest/KnockoutJs/view/frontend/web/css/login.css
+/* Vùng chứa toàn bộ component */
+[data-bind="scope: 'buttonActions'"] {
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+    max-width: 500px;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Tiêu đề */
+[data-bind="scope: 'buttonActions'"] h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: #333;
+}
+
+/* Vùng chứa các nút */
+[data-bind="scope: 'buttonActions'"] .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+}
+
+/* Các nút */
+[data-bind="scope: 'buttonActions'"] .buttons button {
+    padding: 12px 20px;
+    background-color: #007bdb;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+[data-bind="scope: 'buttonActions'"] .buttons button:hover {
+    background-color: #005fa3;
+}
+
+/* Modal nội dung chung */
+#hello-modal,
+#login-modal {
+    padding: 24px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Form trong modal login */
+#login-modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#login-modal label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #333;
+}
+
+#login-modal input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 4px;
+}
+
+#login-modal button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#login-modal button[type="submit"]:hover {
+    background-color: #218838;
+}

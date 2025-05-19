@@ -2,7 +2,22 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <type name="Magento\Checkout\CustomerData\Cart">
-        <plugin name="custom_cart_image"
-                type="Magenest\Movie\Plugin\Checkout\CustomerData\CartAfter"/>
+        <plugin name="custom_cart_image" type="Magenest\Movie\Plugin\Checkout\CustomerData\CartAfter"/>
+    </type>
+    <!-- Cấu hình virtualType cho Grid Collection -->
+    <virtualType name="Magenest\Movie\Grid\Collection"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">magenest_movie</argument>
+            <argument name="resourceModel" xsi:type="string">Magenest\Movie\Model\ResourceModel\Movie</argument>
+        </arguments>
+    </virtualType>
+    <!-- Liên kết DataProvider với Collection -->
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="movie_grid_data_source" xsi:type="string">Magenest\Movie\Grid\Collection</item>
+            </argument>
+        </arguments>
     </type>
 </config>
