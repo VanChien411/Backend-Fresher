@@ -82,6 +82,8 @@ return array(
     'OpenSearch\\' => array($vendorDir . '/opensearch-project/opensearch-php/src/OpenSearch'),
     'OTPHP\\' => array($vendorDir . '/spomky-labs/otphp/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
+    'Mageplaza\\Smtp\\' => array($vendorDir . '/mageplaza/module-smtp'),
+    'Mageplaza\\Core\\' => array($vendorDir . '/mageplaza/module-core'),
     'Magento\\Wishlist\\' => array($vendorDir . '/magento/module-wishlist'),
     'Magento\\WishlistGraphQl\\' => array($vendorDir . '/magento/module-wishlist-graph-ql'),
     'Magento\\WishlistAnalytics\\' => array($vendorDir . '/magento/module-wishlist-analytics'),

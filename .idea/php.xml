@@ -590,6 +590,9 @@
       <path value="$PROJECT_DIR$/vendor/magento/module-cardinal-commerce" />
       <path value="$PROJECT_DIR$/vendor/magento/module-offline-shipping" />
       <path value="$PROJECT_DIR$/vendor/magento/magento2-base" />
+      <path value="$PROJECT_DIR$/vendor/mageplaza/module-smtp" />
+      <path value="$PROJECT_DIR$/vendor/mageplaza/module-core" />
+      <path value="$PROJECT_DIR$/vendor/mageplaza/magento-2-vietnamese-language-pack" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.3">
