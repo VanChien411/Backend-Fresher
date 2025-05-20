@@ -1,1 +1,0 @@
-/var/www/html/Backend-Fresher/vendor/mageplaza/module-core/view/base/web/lib/fileUploader/vendor/blueimp-load-image/js/load-image-scale.js
