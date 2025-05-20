@@ -1,0 +1,1 @@
+/var/www/html/Backend-Fresher/vendor/magento/module-page-builder/view/adminhtml/web/js/utils/directives.js

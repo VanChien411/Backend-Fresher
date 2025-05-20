@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="online_course_section" sortOrder="5">
+        <settings>
+            <label translate="true">Online Course Info</label>
+            <collapsible>true</collapsible>
+            <opened>true</opened>
+        </settings>
+        <field name="online_course_start">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">date</item>
+                    <item name="formElement" xsi:type="string">date</item>
+                    <item name="componentType" xsi:type="string">field</item>
+                    <item name="label" xsi:type="string">Start Time</item>
+                    <item name="dataScope" xsi:type="string">online_course_start</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="component" xsi:type="string">Magenest_Movie/js/custom_datepicker</item>
+
+                </item>
+            </argument>
+        </field>
+        <field name="online_course_end">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">date</item>
+                    <item name="component" xsi:type="string">Magenest_Movie/js/custom_datepicker</item>
+                    <item name="template" xsi:type="string">ui/form/field</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/date</item>
+                    <item name="label" xsi:type="string">End Time</item>
+                    <item name="dataScope" xsi:type="string">online_course_end</item>
+
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+</form>

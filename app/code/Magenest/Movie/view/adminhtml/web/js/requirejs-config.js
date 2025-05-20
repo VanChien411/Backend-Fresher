@@ -6,5 +6,10 @@ var config = {
         'fa': {
             deps: ['jquery']
         }
+    },
+    map: {
+        '*': {
+            'Magenest_Movie/js/custom_datepicker': 'Magenest_Movie/js/custom_datepicker'
+        }
     }
 };
