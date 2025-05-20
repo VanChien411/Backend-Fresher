@@ -329,6 +329,8 @@ return [
         'Magento_WishlistGraphQl' => 1,
         'Magenest_KnockoutJs' => 1,
         'Magenest_Movie' => 1,
+        'Mageplaza_Core' => 1,
+        'Mageplaza_Smtp' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Temando_ShippingRemover' => 1

@@ -318,6 +318,9 @@
       <excludeFolder url="file://$MODULE_DIR$/pub" />
       <excludeFolder url="file://$MODULE_DIR$/setup" />
       <excludeFolder url="file://$MODULE_DIR$/var" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/mageplaza/magento-2-vietnamese-language-pack" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/mageplaza/module-core" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/mageplaza/module-smtp" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
