@@ -1,1 +1,0 @@
-/var/www/html/Backend-Fresher/app/code/Magenest/Movie/view/adminhtml/web/js/custom_datepicker.js

@@ -14,21 +14,16 @@
         </column>
     </columns>
     <listingToolbar name="listing_top">
-        <exportButton name="export_button">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="selectProvider" xsi:type="string">
-                        sales_order_grid.sales_order_grid.sales_order_columns.ids
+        <massaction name="listing_massaction">
+            <action name="export_selected_orders">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="type" xsi:type="string">export_selected_orders</item>
+                        <item name="label" xsi:type="string" translate="true">Export Selected Orders</item>
+                        <item name="url" xsi:type="url" path="movie/order/export"/>
                     </item>
-                    <item name="options" xsi:type="array">
-                        <item name="csv" xsi:type="array">
-                            <item name="value" xsi:type="string">csv</item>
-                            <item name="label" xsi:type="string" translate="true">CSV</item>
-                            <item name="url" xsi:type="string">export/index</item>
-                        </item>
-                    </item>
-                </item>
-            </argument>
-        </exportButton>
+                </argument>
+            </action>
+        </massaction>
     </listingToolbar>
 </listing>

@@ -1,1 +1,0 @@
-/var/www/html/Backend-Fresher/vendor/magento/module-inventory-configurable-product-admin-ui/view/adminhtml/web/js/form/element/quantity-per-source.js
