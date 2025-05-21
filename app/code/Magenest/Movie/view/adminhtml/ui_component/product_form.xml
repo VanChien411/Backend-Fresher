@@ -1,36 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
-    <fieldset name="online_course_section" sortOrder="5">
-        <settings>
-            <label translate="true">Online Course Info</label>
-            <collapsible>true</collapsible>
-            <opened>true</opened>
-        </settings>
-        <field name="online_course_start">
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="online-course-info">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true">Online Course Info</item>
+                <item name="collapsible" xsi:type="boolean">true</item>
+                <item name="sortOrder" xsi:type="number">5</item>
+            </item>
+        </argument>
+        <field name="online_course_start" formElement="date">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="dataType" xsi:type="string">date</item>
-                    <item name="formElement" xsi:type="string">date</item>
-                    <item name="componentType" xsi:type="string">field</item>
-                    <item name="label" xsi:type="string">Start Time</item>
-                    <item name="dataScope" xsi:type="string">online_course_start</item>
+                    <item name="source" xsi:type="string">product</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="label" xsi:type="string" translate="true">Course Start Date</item>
                     <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataScope" xsi:type="string">online_course_start</item>
                     <item name="component" xsi:type="string">Magenest_Movie/js/custom_datepicker</item>
-
+                    <item name="inputDateFormat" xsi:type="string">yyyy-MM-dd</item>
+                    <item name="outputDateFormat" xsi:type="string">yyyy-MM-dd</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">false</item>
+                    </item>
+                    <item name="options" xsi:type="array">
+                        <item name="dateFormat" xsi:type="string">yyyy-MM-dd</item>
+                        <item name="timeFormat" xsi:type="string">HH:mm:ss</item>
+                        <item name="showsTime" xsi:type="boolean">true</item>
+                    </item>
+                    <item name="sortOrder" xsi:type="number">10</item>
                 </item>
             </argument>
         </field>
-        <field name="online_course_end">
+        <field name="online_course_end" formElement="date">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">product</item>
                     <item name="dataType" xsi:type="string">string</item>
-                    <item name="formElement" xsi:type="string">date</item>
-                    <item name="component" xsi:type="string">Magenest_Movie/js/custom_datepicker</item>
-                    <item name="template" xsi:type="string">ui/form/field</item>
-                    <item name="elementTmpl" xsi:type="string">ui/form/element/date</item>
-                    <item name="label" xsi:type="string">End Time</item>
+                    <item name="label" xsi:type="string" translate="true">Course End Date</item>
+                    <item name="visible" xsi:type="boolean">true</item>
                     <item name="dataScope" xsi:type="string">online_course_end</item>
-
+                    <item name="component" xsi:type="string">Magenest_Movie/js/custom_datepicker</item>
+                    <item name="inputDateFormat" xsi:type="string">yyyy-MM-dd</item>
+                    <item name="outputDateFormat" xsi:type="string">yyyy-MM-dd</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">false</item>
+                    </item>
+                    <item name="options" xsi:type="array">
+                        <item name="dateFormat" xsi:type="string">yyyy-MM-dd</item>
+                        <item name="timeFormat" xsi:type="string">HH:mm:ss</item>
+                        <item name="showsTime" xsi:type="boolean">true</item>
+                    </item>
+                    <item name="sortOrder" xsi:type="number">20</item>
                 </item>
             </argument>
         </field>

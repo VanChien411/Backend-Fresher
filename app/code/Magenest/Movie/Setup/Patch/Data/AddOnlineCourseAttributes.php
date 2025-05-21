@@ -31,6 +31,26 @@ class AddOnlineCourseAttributes implements DataPatchInterface
         $this->moduleDataSetup->getConnection()->startSetup();
         $eavSetup = $this->eavSetupFactory->create(['setup' => $this->moduleDataSetup]);
 
+        // Lấy ID của attribute set "Default"
+        $attributeSetId = $eavSetup->getAttributeSetId(\Magento\Catalog\Model\Product::ENTITY, 'Default');
+
+        // Tạo attribute group "Online Course Info" nếu chưa tồn tại
+        $attributeGroupName = 'Online Course Info';
+        $eavSetup->addAttributeGroup(
+            \Magento\Catalog\Model\Product::ENTITY,
+            $attributeSetId,
+            $attributeGroupName,
+            1 // Sort order của group
+        );
+
+        // Lấy ID của attribute group
+        $attributeGroupId = $eavSetup->getAttributeGroupId(
+            \Magento\Catalog\Model\Product::ENTITY,
+            $attributeSetId,
+            $attributeGroupName
+        );
+
+        // Tạo attributes
         foreach (['online_course_start', 'online_course_end'] as $code) {
             $eavSetup->addAttribute(
                 \Magento\Catalog\Model\Product::ENTITY,
@@ -44,7 +64,7 @@ class AddOnlineCourseAttributes implements DataPatchInterface
                     'class' => '',
                     'source' => '',
                     'global' => ScopedAttributeInterface::SCOPE_GLOBAL,
-                    'visible' => true,
+                    'visible' => true, // Không hiển thị trên form sản phẩm
                     'required' => false,
                     'user_defined' => true,
                     'default' => '',
@@ -55,6 +75,15 @@ class AddOnlineCourseAttributes implements DataPatchInterface
                     'unique' => false,
                     'apply_to' => ''
                 ]
+            );
+
+            // Gán attribute vào attribute set và group
+            $eavSetup->addAttributeToGroup(
+                \Magento\Catalog\Model\Product::ENTITY,
+                $attributeSetId,
+                $attributeGroupId,
+                $code,
+                5 // Sort order trong group
             );
         }
 
