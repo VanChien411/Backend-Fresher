@@ -1,0 +1,40 @@
+<?php
+
+/** @var \Magenest\Database\Block\Customer\Telephone $block */
+$telephone = $block->getCustomer()->getData('telephone');
+?>
+<div class="field telephone required" data-bind="scope: 'telephone-validator'">
+    <label for="telephone" class="label">
+        <span><?= $block->escapeHtml(__('Telephone')) ?></span>
+    </label>
+    <div class="control">
+        <input type="text"
+            name="telephone"
+            id="telephone"
+            data-bind="value: telephone,
+                          valueUpdate: 'afterkeydown',
+                          attr: {'data-validate': '{required:true, validate-telephone:true}'}"
+            title="<?= $block->escapeHtmlAttr(__('Telephone')) ?>"
+            class="input-text">
+        <div style="color: red;" class="validation-message" data-bind="visible: !validatePhone() && telephone()">
+            'Please enter a valid telephone number starting with 0, with exactly 10 digits.'
+        </div>
+    </div>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "telephone-validator": {
+                        "component": "Magenest_Database/js/validation",
+                        "config": {
+                            "telephone": "<?= $block->escapeJs($telephone) ?>"
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>

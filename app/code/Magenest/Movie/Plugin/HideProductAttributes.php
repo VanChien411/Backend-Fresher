@@ -47,8 +47,6 @@ class HideProductAttributes
                     }
                 }
             }
-        } else {
-            $this->logger->info('Group not found: ' . $groupCode);
         }
 
         return $meta;
