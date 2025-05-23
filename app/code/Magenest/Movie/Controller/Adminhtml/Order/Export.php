@@ -38,19 +38,33 @@ class Export extends Action
 
         // Prepare CSV content
         $csvData = [];
-        $csvData[] = ['Order ID', 'Customer Name', 'Grand Total', 'Status', 'Created At'];
+        $csvData[] = [
+            'Order ID', 'Customer Name', 'Order Status', 'Created At',
+            'Product SKU', 'Product Name', 'Qty Ordered', 'Price', 'Row Total'
+        ];
 
         foreach ($collection as $order) {
-            $csvData[] = [
-                $order->getIncrementId(),
-                $order->getCustomerName(),
-                $order->getGrandTotal(),
-                $order->getStatus(),
-                $order->getCreatedAt()
-            ];
+            $orderId = $order->getIncrementId();
+            $customerName = $order->getCustomerName();
+            $status = $order->getStatus();
+            $createdAt = $order->getCreatedAt();
+
+            foreach ($order->getAllVisibleItems() as $item) {
+                $csvData[] = [
+                    $orderId,
+                    $customerName,
+                    $status,
+                    $createdAt,
+                    $item->getSku(),
+                    $item->getName(),
+                    (int)$item->getQtyOrdered(),
+                    number_format($item->getPrice(), 2),
+                    number_format($item->getRowTotal(), 2)
+                ];
+            }
         }
 
-        // Create CSV file
+        // Create CSV content
         $content = '';
         foreach ($csvData as $row) {
             $content .= implode(',', $row) . "\n";
@@ -58,7 +72,7 @@ class Export extends Action
 
         // Return file for download
         return $this->fileFactory->create(
-            'orders_export_' . date('Ymd_His') . '.csv',
+            'order_products_export_' . date('Ymd_His') . '.csv',
             $content,
             DirectoryList::VAR_DIR,
             'text/csv'
