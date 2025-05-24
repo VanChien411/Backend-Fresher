@@ -1,0 +1,1 @@
+/var/www/html/Backend-Fresher/vendor/magento/module-page-builder/view/base/web/js/widget-initializer.js
