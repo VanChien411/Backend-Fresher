@@ -328,6 +328,7 @@ return [
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistGraphQl' => 1,
         'Magenest_Course' => 1,
+        'Magenest_CustomAddress' => 1,
         'Magenest_Database' => 1,
         'Magenest_KnockoutJs' => 1,
         'Magenest_Movie' => 1,
