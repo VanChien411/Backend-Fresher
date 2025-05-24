@@ -1,1 +1,8 @@
-/var/www/html/Backend-Fresher/vendor/magento/module-sales/view/adminhtml/web/js/bootstrap/order-create-index.js
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+require([
+    'Magento_Sales/order/create/giftmessage'
+]);
