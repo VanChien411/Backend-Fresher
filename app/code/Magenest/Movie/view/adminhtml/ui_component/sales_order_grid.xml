@@ -13,4 +13,17 @@
             </argument>
         </column>
     </columns>
+    <listingToolbar name="listing_top">
+        <massaction name="listing_massaction">
+            <action name="export_selected_orders">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="type" xsi:type="string">export_selected_orders</item>
+                        <item name="label" xsi:type="string" translate="true">Export Selected Orders</item>
+                        <item name="url" xsi:type="url" path="movie/order/export"/>
+                    </item>
+                </argument>
+            </action>
+        </massaction>
+    </listingToolbar>
 </listing>

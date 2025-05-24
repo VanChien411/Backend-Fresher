@@ -1,0 +1,16 @@
+<?php
+/** @var \Magento\Framework\View\TemplateEngineInterface $this */
+/** @var \Magenest\Movie\Block\Widget $block */
+/** @var \Magento\Csp\Api\InlineUtilInterface $csp */
+/** @var \Magento\Framework\Escaper $escaper */
+/** @var \Magento\Framework\View\Helper\SecureHtmlRenderer $secureRenderer */
+?>
+
+<?php if ($block->getData('posts')): ?>
+    <h2 class='posts'><?php echo $block->getData('posts'); ?></h2>
+    <p>This is sample widget. Perform your code here.</p>
+<?php endif; ?>
+
+<h3><?= $escaper->escapeHtml($block->getData('title')) ?></h3>
+<h3><?= $escaper->escapeHtml(__('Size:')) ?> <?= $escaper->escapeHtml($block->getData('size')) ?></h3>
+

@@ -1,0 +1,36 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Customer\Block\Form\Register $block */
+/** @var \Magento\Framework\Escaper $escaper */
+/** @var \Magento\Framework\View\Helper\SecureHtmlRenderer $secureRenderer */
+
+/** @var Magento\Customer\Helper\Address $addressHelper */
+$addressHelper = $block->getData('addressHelper');
+/** @var \Magento\Directory\Helper\Data $directoryHelper */
+$directoryHelper = $block->getData('directoryHelper');
+/** @var \Magento\Customer\ViewModel\Address\RegionProvider $regionProvider */
+$regionProvider = $block->getRegionProvider();
+$formData = $block->getFormData();
+/** @var \Magento\Customer\ViewModel\CreateAccountButton $createAccountButtonViewModel */
+$createAccountButtonViewModel = $block->getData('create_account_button_view_model');
+?>
+
+<!-- Thêm vào form đăng ký -->
+<fieldset class="fieldset create account" data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>">
+    <legend class="legend"><span><?= $block->escapeHtml(__('Account Information')) ?></span></legend>
+    <br>
+    <!-- Các trường khác giữ nguyên -->
+    <div class="field telephone required">
+        <label for="telephone" class="label"><span><?= $block->escapeHtml(__('Telephone')) ?></span></label>
+        <div class="control">
+            <input type="text" name="telephone" id="telephone"
+                   value="<?= $block->escapeHtml($block->getFormData()->getTelephone()) ?>"
+                   title="<?= $block->escapeHtmlAttr(__('Telephone')) ?>" class="input-text"
+                   data-validate="{required:true, 'validate-telephone':true}">
+        </div>
+    </div>
+</fieldset>

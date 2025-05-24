@@ -1,1 +1,0 @@
-/var/www/html/Backend-Fresher/vendor/mageplaza/module-smtp/view/adminhtml/web/js/testemail.js

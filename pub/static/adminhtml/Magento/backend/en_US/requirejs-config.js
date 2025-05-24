@@ -737,6 +737,37 @@ var config = {
 require.config(config);
 })();
 (function() {
+var config = {
+    config: {
+        mixins: {
+            'Magento_Ui/js/lib/validation/rules': {
+                'Magenest_Database/js/validation-rules-mixin': true
+            }
+        }
+    }
+};
+
+require.config(config);
+})();
+(function() {
+var config = {
+    paths: {
+        'fa': 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min'
+    },
+    shim: {
+        'fa': {
+            deps: ['jquery']
+        }
+    },
+    map: {
+        '*': {
+            'Magenest_Movie/js/custom_datepicker': 'Magenest_Movie/js/custom_datepicker'
+        }
+    }
+};
+require.config(config);
+})();
+(function() {
 /**
  * Mageplaza
  *
