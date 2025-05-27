@@ -12,7 +12,7 @@ class Add extends Action
     protected $resultPageFactory;
     protected $movieFactory;
 
-    public function __construct(Context $context, PageFactory $resultPageFactory,    MovieFactory $movieFactory)
+    public function __construct(Context $context, PageFactory $resultPageFactory, MovieFactory $movieFactory)
     {
         parent::__construct($context);
         $this->movieFactory = $movieFactory;
@@ -21,7 +21,7 @@ class Add extends Action
 
     public function execute()
     {
-        $id = $this->getRequest()->getParam('id');
+        $id = $this->getRequest()->getParam('movie_id');
         $movie = $this->movieFactory->create();
 
         if ($id) {

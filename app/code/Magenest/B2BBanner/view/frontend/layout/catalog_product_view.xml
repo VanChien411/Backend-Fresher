@@ -1,0 +1,12 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Magenest\B2BBanner\Block\Banner"
+                   name="magenest.b2bbanner"
+                   template="Magenest_B2BBanner::banner.phtml"
+                   before="-"
+                   cacheable="false"/>
+        </referenceContainer>
+    </body>
+</page>

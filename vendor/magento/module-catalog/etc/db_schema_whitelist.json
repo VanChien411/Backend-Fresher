@@ -987,7 +987,8 @@
             "final_price": true,
             "min_price": true,
             "max_price": true,
-            "tier_price": true
+            "tier_price": true,
+            "id": true
         },
         "index": {
             "CATALOG_PRODUCT_INDEX_PRICE_TMP_CUSTOMER_GROUP_ID": true,

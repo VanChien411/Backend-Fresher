@@ -27,6 +27,10 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="update_url" xsi:type="url" path="mui/index/render"/>
+                    <item name="storageConfig" xsi:type="array">
+                        <item name="indexField" xsi:type="string">movie_id</item>
+                    </item>
+
                 </item>
             </argument>
         </argument>
@@ -72,6 +76,7 @@
                 </item>
             </argument>
         </column>
+
         <column name="name">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">

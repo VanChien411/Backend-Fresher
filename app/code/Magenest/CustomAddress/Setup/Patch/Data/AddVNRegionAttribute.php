@@ -65,11 +65,15 @@ class AddVNRegionAttribute implements DataPatchInterface
                 'label' => 'Miền (VN Region)',
                 'input' => 'select',
                 'source' => \Magenest\CustomAddress\Model\Config\Source\VNRegion::class,
-                'required' => false,
                 'visible' => true,
+                'required' => false,
                 'user_defined' => true,
                 'system' => false,
+                'group' => 'General',
+                'global' => true,
+                'visible_on_front' => true,
                 'position' => 200
+
             ]
         );
 
@@ -82,7 +86,8 @@ class AddVNRegionAttribute implements DataPatchInterface
                 'adminhtml_customer_address',
                 'customer_address_edit',
                 'customer_register_address',
-                'customer_address'
+                'customer_address',
+                'checkout_register_address'
             ]
         ]);
         $attribute->save();

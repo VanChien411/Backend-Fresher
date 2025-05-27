@@ -21,7 +21,7 @@ class Edit extends Action
 
     public function execute()
     {
-        $id = $this->getRequest()->getParam('id');
+        $id = $this->getRequest()->getParam('movie_id');
         $movie = $this->movieFactory->create();
 
         if ($id) {

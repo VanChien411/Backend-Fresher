@@ -12,7 +12,8 @@
             "added_at": true,
             "modified_at": true,
             "orig_template_code": true,
-            "orig_template_variables": true
+            "orig_template_variables": true,
+            "is_legacy": true
         },
         "index": {
             "EMAIL_TEMPLATE_ADDED_AT": true,

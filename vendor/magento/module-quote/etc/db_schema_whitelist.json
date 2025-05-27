@@ -121,7 +121,9 @@
             "vat_is_valid": true,
             "vat_request_id": true,
             "vat_request_date": true,
-            "vat_request_success": true
+            "vat_request_success": true,
+            "validated_country_code": true,
+            "validated_vat_number": true
         },
         "index": {
             "QUOTE_ADDRESS_QUOTE_ID": true

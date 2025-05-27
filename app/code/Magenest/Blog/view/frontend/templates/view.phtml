@@ -1,0 +1,34 @@
+<?php /** @var \Magenest\Blog\Block\View $block */ ?>
+<?php $blog = $block->getBlog(); ?>
+<div class="magenest-blog-container">
+    <?php if ($blog): ?>
+        <article class="blog-article">
+            <header class="blog-header">
+                <h1 class="blog-title"><?php /* @escapeNotVerified */
+                    echo $block->escapeHtml($blog->getTitle()) ?></h1>
+                <div class="blog-meta">
+                    <span class="author"><?php /* @escapeNotVerified */
+                        echo __('By %1', $block->escapeHtml($blog->getData('author_name') ?: __('Unknown'))) ?></span>
+                    <time class="created"
+                          datetime="<?php echo $block->formatDate($blog->getCreatedAt(), 'yyyy-MM-dd') ?>">
+                        <?php echo $block->formatDate($blog->getCreatedAt(), \IntlDateFormatter::LONG) ?>
+                    </time>
+                </div>
+            </header>
+            <?php if ($blog->getDescription()): ?>
+                <div class="blog-description">
+                    <strong> Description : </strong>
+                    <?php /* @escapeNotVerified */
+                    echo nl2br($block->escapeHtml($blog->getDescription())) ?>
+                </div>
+            <?php endif; ?>
+            <div class="blog-content">
+                <strong> Content : </strong>
+                <?php /* @escapeNotVerified */
+                echo $blog->getContent() ?>
+            </div>
+        </article>
+    <?php else: ?>
+        <p class="no-blog"><?php echo __('Blog entry not found.') ?></p>
+    <?php endif; ?>
+</div>
