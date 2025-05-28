@@ -332,6 +332,7 @@ return [
         'Magenest_Course' => 1,
         'Magenest_CustomAddress' => 1,
         'Magenest_Database' => 1,
+        'Magenest_DeliveryTime' => 1,
         'Magenest_KnockoutJs' => 1,
         'Magenest_Movie' => 1,
         'Mageplaza_Core' => 1,

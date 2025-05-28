@@ -1,0 +1,1 @@
+/var/www/html/Backend-Fresher/lib/web/fotorama/fotorama.js

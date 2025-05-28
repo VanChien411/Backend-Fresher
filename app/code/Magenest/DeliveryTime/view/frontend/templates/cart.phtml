@@ -1,0 +1,16 @@
+<?php
+$quote = $block->getQuote();
+if ($quote) {
+    $deliveryDate = $quote->getDeliveryDate();
+} else {
+    $deliveryDate = null;
+}
+if ($deliveryDate): ?>
+    <div class="delivery-date">
+        <strong>Thời gian giao hàng dự kiến:</strong> <?= date('d/m/Y', strtotime($deliveryDate)) ?>
+    </div>
+<?php else: ?>
+    <div class="delivery-date">
+        <strong>Thời gian giao hàng dự kiến:</strong> Chưa xác định
+    </div>
+<?php endif; ?>
