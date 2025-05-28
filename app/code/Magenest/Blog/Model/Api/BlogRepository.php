@@ -5,63 +5,78 @@ namespace Magenest\Blog\Model\Api;
 use Magenest\Blog\Api\BlogRepositoryInterface;
 use Magenest\Blog\Api\RequestBlogInterface;
 use Magenest\Blog\Api\ResponseBlogInterfaceFactory;
-use Magento\Framework\App\ResourceConnection;
+use Magenest\Blog\Model\BlogFactory;
+use Magenest\Blog\Model\ResourceModel\Blog as BlogResource;
+use Magenest\Blog\Model\CategoryFactory;
+use Magenest\Blog\Model\ResourceModel\Category as CategoryResource;
+use Magenest\Blog\Model\BlogCategoryFactory;
+use Magenest\Blog\Model\ResourceModel\BlogCategory as BlogCategoryResource;
+use Magento\User\Model\UserFactory;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Exception\LocalizedException;
 
 class BlogRepository implements BlogRepositoryInterface
 {
-    private $resourceConnection;
     private $responseBlogFactory;
+    private $blogFactory;
+    private $blogResource;
+    private $categoryFactory;
+    private $categoryResource;
+    private $blogCategoryFactory;
+    private $blogCategoryResource;
+    private $userFactory;
 
-    /**
-     * @param ResourceConnection $resourceConnection
-     * @param ResponseBlogInterfaceFactory $responseBlogFactory
-     */
     public function __construct(
-        ResourceConnection           $resourceConnection,
-        ResponseBlogInterfaceFactory $responseBlogFactory
+        ResponseBlogInterfaceFactory $responseBlogFactory,
+        BlogFactory                  $blogFactory,
+        BlogResource                 $blogResource,
+        CategoryFactory              $categoryFactory,
+        CategoryResource             $categoryResource,
+        BlogCategoryFactory          $blogCategoryFactory,
+        BlogCategoryResource         $blogCategoryResource,
+        UserFactory                  $userFactory
     )
     {
-        $this->resourceConnection = $resourceConnection;
         $this->responseBlogFactory = $responseBlogFactory;
+        $this->blogFactory = $blogFactory;
+        $this->blogResource = $blogResource;
+        $this->categoryFactory = $categoryFactory;
+        $this->categoryResource = $categoryResource;
+        $this->blogCategoryFactory = $blogCategoryFactory;
+        $this->blogCategoryResource = $blogCategoryResource;
+        $this->userFactory = $userFactory;
     }
 
-    /**
-     * @return array|\Magenest\Blog\Api\ResponseBlogInterface[]
-     */
     public function getAllBlogs(): array
     {
-        $connection = $this->resourceConnection->getConnection();
-        $blogTable = $this->resourceConnection->getTableName('magenest_blog');
-        $categoryTable = $this->resourceConnection->getTableName('magenest_category');
-        $blogCategoryTable = $this->resourceConnection->getTableName('magenest_blog_category');
-
-        // Fetch all blogs
-        $select = $connection->select()->from(['b' => $blogTable]);
-        $blogs = $connection->fetchAll($select);
-
+        $blogCollection = $this->blogFactory->create()->getCollection();
         $result = [];
-        foreach ($blogs as $blog) {
-            // Fetch associated category names
-            $categorySelect = $connection->select()
-                ->from(['bc' => $blogCategoryTable])
-                ->join(['c' => $categoryTable], 'bc.category_id = c.id', ['c.name'])
-                ->where('bc.blog_id = ?', $blog['id']);
-            $categories = $connection->fetchAll($categorySelect);
-            $categoryNames = array_column($categories, 'name');
+
+        foreach ($blogCollection as $blogModel) {
+            // Fetch associated categories
+            $blogCategoryCollection = $this->blogCategoryFactory->create()->getCollection()
+                ->addFieldToFilter('blog_id', $blogModel->getId());
+            $categoryIds = $blogCategoryCollection->getColumnValues('category_id');
+            $categoryNames = [];
+            foreach ($categoryIds as $categoryId) {
+                $categoryModel = $this->categoryFactory->create();
+                $this->categoryResource->load($categoryModel, $categoryId);
+                if ($categoryModel->getId()) {
+                    $categoryNames[] = $categoryModel->getName();
+                }
+            }
 
             /** @var \Magenest\Blog\Api\ResponseBlogInterface $response */
             $response = $this->responseBlogFactory->create();
-            $response->setId((int)$blog['id'])
-                ->setAuthorId((int)$blog['author_id'])
-                ->setTitle($blog['title'])
-                ->setDescription($blog['description'] ?? null)
-                ->setContent($blog['content'] ?? null)
-                ->setUrlRewrite($blog['url_rewrite'])
-                ->setStatus((int)$blog['status'])
-                ->setCreateAt($blog['create_at'])
-                ->setUpdateAt($blog['update_at'])
+            $response->setId((int)$blogModel->getId())
+                ->setAuthorId((int)$blogModel->getAuthorId())
+                ->setTitle($blogModel->getTitle())
+                ->setDescription($blogModel->getDescription() ?? null)
+                ->setContent($blogModel->getContent() ?? null)
+                ->setUrlRewrite($blogModel->getUrlRewrite())
+                ->setStatus((int)$blogModel->getStatus())
+                ->setCreateAt($blogModel->getCreatedAt() ?? '')
+                ->setUpdateAt($blogModel->getUpdatedAt() ?? '')
                 ->setCategories($categoryNames);
 
             $result[] = $response;
@@ -70,147 +85,115 @@ class BlogRepository implements BlogRepositoryInterface
         return $result;
     }
 
-    /**
-     * @param RequestBlogInterface $blog
-     * @return \Magenest\Blog\Api\ResponseBlogInterface
-     * @throws LocalizedException
-     * @throws NoSuchEntityException
-     */
     public function createBlog(RequestBlogInterface $blog): \Magenest\Blog\Api\ResponseBlogInterface
     {
-        $connection = $this->resourceConnection->getConnection();
-        $blogTable = $this->resourceConnection->getTableName('magenest_blog');
-        $blogCategoryTable = $this->resourceConnection->getTableName('magenest_blog_category');
-        $categoryTable = $this->resourceConnection->getTableName('magenest_category');
-        $adminTable = $this->resourceConnection->getTableName('admin_user');
-
         // Validate required fields
         if (!$blog->getTitle() || !$blog->getAuthorId() || !$blog->getUrlRewrite()) {
             throw new LocalizedException(__('Title, author_id, and url_rewrite are required.'));
         }
 
-        // Validate author_id exists in admin_user
-        $adminSelect = $connection->select()
-            ->from($adminTable, ['user_id'])
-            ->where('user_id = ?', $blog->getAuthorId());
-        if (!$connection->fetchOne($adminSelect)) {
+        // Validate author_id
+        $userModel = $this->userFactory->create();
+        $userModel->load($blog->getAuthorId());
+        if (!$userModel->getId()) {
             throw new LocalizedException(__('Invalid author_id.'));
-        }
-
-        // Validate unique url_rewrite
-        $urlSelect = $connection->select()
-            ->from($blogTable, ['id'])
-            ->where('url_rewrite = ?', $blog->getUrlRewrite());
-        if ($connection->fetchOne($urlSelect)) {
-            throw new LocalizedException(__('URL rewrite already exists.'));
         }
 
         // Validate categories
         $categories = $blog->getCategories();
         if (!empty($categories)) {
             foreach ($categories as $categoryId) {
-                $categorySelect = $connection->select()
-                    ->from($categoryTable, ['id'])
-                    ->where('id = ?', $categoryId);
-                if (!$connection->fetchOne($categorySelect)) {
+                if (!is_int($categoryId)) {
+                    throw new LocalizedException(__('Category IDs must be integers.'));
+                }
+                $categoryModel = $this->categoryFactory->create();
+                $this->categoryResource->load($categoryModel, $categoryId);
+                if (!$categoryModel->getId()) {
                     throw new LocalizedException(__('Invalid category ID: %1', $categoryId));
                 }
             }
         }
 
-        // Prepare blog data
-        $blogData = [
+        // Create blog model instance
+        /** @var \Magenest\Blog\Model\Blog $blogModel */
+        $blogModel = $this->blogFactory->create();
+        $blogModel->setData([
             'author_id' => $blog->getAuthorId(),
             'title' => $blog->getTitle(),
             'description' => $blog->getDescription() ?? null,
             'content' => $blog->getContent() ?? null,
             'url_rewrite' => $blog->getUrlRewrite(),
-            'status' => $blog->getStatus() ?: 1,
-            'create_at' => date('Y-m-d H:i:s'),
-            'update_at' => date('Y-m-d H:i:s')
-        ];
+            'status' => $blog->getStatus() ?: 1
+        ]);
 
-        // Insert blog
-        $connection->insert($blogTable, $blogData);
-        $blogId = $connection->lastInsertId($blogTable);
+        try {
+            // Save blog model (triggers beforeSave and afterSave)
+            $this->blogResource->save($blogModel);
+        } catch (\Exception $e) {
+            throw new LocalizedException(__($e->getMessage()));
+        }
 
-        // Insert categories
+        $blogId = $blogModel->getId();
+
+        // Save blog-category associations
         foreach ($categories as $categoryId) {
-            $connection->insert($blogCategoryTable, [
+            $blogCategoryModel = $this->blogCategoryFactory->create();
+            $blogCategoryModel->setData([
                 'blog_id' => $blogId,
                 'category_id' => $categoryId
             ]);
+            $this->blogCategoryResource->save($blogCategoryModel);
         }
 
         return $this->getBlog($blogId);
     }
 
-    /**
-     * @param int $id
-     * @return \Magenest\Blog\Api\ResponseBlogInterface
-     * @throws NoSuchEntityException
-     */
     public function getBlog(int $id): \Magenest\Blog\Api\ResponseBlogInterface
     {
-        $connection = $this->resourceConnection->getConnection();
-        $blogTable = $this->resourceConnection->getTableName('magenest_blog');
-        $categoryTable = $this->resourceConnection->getTableName('magenest_category');
-        $blogCategoryTable = $this->resourceConnection->getTableName('magenest_blog_category');
+        /** @var \Magenest\Blog\Model\Blog $blogModel */
+        $blogModel = $this->blogFactory->create();
+        $this->blogResource->load($blogModel, $id);
 
-        // Fetch blog data
-        $select = $connection->select()
-            ->from(['b' => $blogTable])
-            ->where('b.id = ?', $id);
-        $blog = $connection->fetchRow($select);
-
-        if (!$blog) {
+        if (!$blogModel->getId()) {
             throw new NoSuchEntityException(__('Blog post not found.'));
         }
 
-        // Fetch associated category names
-        $categorySelect = $connection->select()
-            ->from(['bc' => $blogCategoryTable])
-            ->join(['c' => $categoryTable], 'bc.category_id = c.id', ['c.name'])
-            ->where('bc.blog_id = ?', $id);
-        $categories = $connection->fetchAll($categorySelect);
-        $categoryNames = array_column($categories, 'name');
+        // Fetch associated categories
+        $blogCategoryCollection = $this->blogCategoryFactory->create()->getCollection()
+            ->addFieldToFilter('blog_id', $id);
+        $categoryIds = $blogCategoryCollection->getColumnValues('category_id');
+        $categoryNames = [];
+        foreach ($categoryIds as $categoryId) {
+            $categoryModel = $this->categoryFactory->create();
+            $this->categoryResource->load($categoryModel, $categoryId);
+            if ($categoryModel->getId()) {
+                $categoryNames[] = $categoryModel->getName();
+            }
+        }
 
         /** @var \Magenest\Blog\Api\ResponseBlogInterface $response */
         $response = $this->responseBlogFactory->create();
-        $response->setId((int)$blog['id'])
-            ->setAuthorId((int)$blog['author_id'])
-            ->setTitle($blog['title'])
-            ->setDescription($blog['description'] ?? null)
-            ->setContent($blog['content'] ?? null)
-            ->setUrlRewrite($blog['url_rewrite'])
-            ->setStatus((int)$blog['status'])
-            ->setCreateAt($blog['create_at'])
-            ->setUpdateAt($blog['update_at'])
+        $response->setId((int)$blogModel->getId())
+            ->setAuthorId((int)$blogModel->getAuthorId())
+            ->setTitle($blogModel->getTitle())
+            ->setDescription($blogModel->getDescription() ?? null)
+            ->setContent($blogModel->getContent() ?? null)
+            ->setUrlRewrite($blogModel->getUrlRewrite())
+            ->setStatus((int)$blogModel->getStatus())
+            ->setCreateAt($blogModel->getCreatedAt() ?? '')
+            ->setUpdateAt($blogModel->getUpdatedAt() ?? '')
             ->setCategories($categoryNames);
 
         return $response;
     }
 
-    /**
-     * @param int $id
-     * @param RequestBlogInterface $blog
-     * @return \Magenest\Blog\Api\ResponseBlogInterface
-     * @throws LocalizedException
-     * @throws NoSuchEntityException
-     */
     public function updateBlog(int $id, RequestBlogInterface $blog): \Magenest\Blog\Api\ResponseBlogInterface
     {
-        $connection = $this->resourceConnection->getConnection();
-        $blogTable = $this->resourceConnection->getTableName('magenest_blog');
-        $blogCategoryTable = $this->resourceConnection->getTableName('magenest_blog_category');
-        $categoryTable = $this->resourceConnection->getTableName('magenest_category');
-        $adminTable = $this->resourceConnection->getTableName('admin_user');
+        // Load blog model
+        $blogModel = $this->blogFactory->create();
+        $this->blogResource->load($blogModel, $id);
 
-        // Verify blog exists
-        $select = $connection->select()
-            ->from($blogTable, ['id'])
-            ->where('id = ?', $id);
-        if (!$connection->fetchOne($select)) {
+        if (!$blogModel->getId()) {
             throw new NoSuchEntityException(__('Blog post not found.'));
         }
 
@@ -219,82 +202,82 @@ class BlogRepository implements BlogRepositoryInterface
             throw new LocalizedException(__('Title, author_id, and url_rewrite are required.'));
         }
 
-        // Validate author_id exists
-        $adminSelect = $connection->select()
-            ->from($adminTable, ['user_id'])
-            ->where('user_id = ?', $blog->getAuthorId());
-        if (!$connection->fetchOne($adminSelect)) {
+        // Validate author_id
+        $userModel = $this->userFactory->create()->load($blog->getAuthorId());
+        if (!$userModel->getId()) {
             throw new LocalizedException(__('Invalid author_id.'));
-        }
-
-        // Validate unique url_rewrite (excluding current blog)
-        $urlSelect = $connection->select()
-            ->from($blogTable, ['id'])
-            ->where('url_rewrite = ?', $blog->getUrlRewrite())
-            ->where('id != ?', $id);
-        if ($connection->fetchOne($urlSelect)) {
-            throw new LocalizedException(__('URL rewrite already exists.'));
         }
 
         // Validate categories
         $categories = $blog->getCategories();
-        if (!empty($categories)) {
-            foreach ($categories as $categoryId) {
-                $categorySelect = $connection->select()
-                    ->from($categoryTable, ['id'])
-                    ->where('id = ?', $categoryId);
-                if (!$connection->fetchOne($categorySelect)) {
-                    throw new LocalizedException(__('Invalid category ID: %1', $categoryId));
-                }
+        if (!is_array($categories)) {
+            $categories = [];
+        }
+
+        foreach ($categories as $categoryId) {
+            if (!is_int($categoryId)) {
+                throw new LocalizedException(__('Category IDs must be integers.'));
+            }
+            $categoryModel = $this->categoryFactory->create();
+            $this->categoryResource->load($categoryModel, $categoryId);
+            if (!$categoryModel->getId()) {
+                throw new LocalizedException(__('Invalid category ID: %1', $categoryId));
             }
         }
 
-        // Prepare blog data
-        $blogData = [
+        // Cập nhật dữ liệu blog
+        $blogModel->addData([
             'author_id' => $blog->getAuthorId(),
             'title' => $blog->getTitle(),
             'description' => $blog->getDescription() ?? null,
             'content' => $blog->getContent() ?? null,
             'url_rewrite' => $blog->getUrlRewrite(),
-            'status' => $blog->getStatus() ?: 1,
-            'update_at' => date('Y-m-d H:i:s')
-        ];
+            'status' => $blog->getStatus() ?: 1
+        ]);
 
-        // Update blog
-        $connection->update($blogTable, $blogData, ['id = ?' => $id]);
+        try {
+            $this->blogResource->save($blogModel);
+        } catch (\Exception $e) {
+            throw new LocalizedException(__('Could not update blog: %1', $e->getMessage()));
+        }
 
-        // Update categories
-        $connection->delete($blogCategoryTable, ['blog_id = ?' => $id]);
+        // XÓA toàn bộ quan hệ cũ (KHÔNG dùng $this->blogCategoryResource->delete($model))
+        $connection = $this->blogCategoryResource->getConnection();
+        $connection->delete(
+            $this->blogCategoryResource->getMainTable(),
+            ['blog_id = ?' => $id]
+        );
+
+        // Thêm lại quan hệ blog - category mới
         foreach ($categories as $categoryId) {
-            $connection->insert($blogCategoryTable, [
+            $blogCategoryModel = $this->blogCategoryFactory->create();
+            $blogCategoryModel->setData([
                 'blog_id' => $id,
                 'category_id' => $categoryId
             ]);
+            $this->blogCategoryResource->save($blogCategoryModel);
         }
 
+        // Trả về blog đã cập nhật
         return $this->getBlog($id);
     }
 
-    /**
-     * @param int $id
-     * @return bool
-     * @throws NoSuchEntityException
-     */
     public function deleteBlog(int $id): bool
     {
-        $connection = $this->resourceConnection->getConnection();
-        $blogTable = $this->resourceConnection->getTableName('magenest_blog');
+        /** @var \Magenest\Blog\Model\Blog $blogModel */
+        $blogModel = $this->blogFactory->create();
+        $this->blogResource->load($blogModel, $id);
 
-        // Verify blog exists
-        $select = $connection->select()
-            ->from($blogTable, ['id'])
-            ->where('id = ?', $id);
-        if (!$connection->fetchOne($select)) {
+        if (!$blogModel->getId()) {
             throw new NoSuchEntityException(__('Blog post not found.'));
         }
 
-        // Delete blog (cascades to blog_category due to foreign key)
-        $connection->delete($blogTable, ['id = ?' => $id]);
+        try {
+            // Delete blog model (cascades to blog_category if configured)
+            $this->blogResource->delete($blogModel);
+        } catch (\Exception $e) {
+            throw new LocalizedException(__('Unable to delete blog: %1', $e->getMessage()));
+        }
 
         return true;
     }
