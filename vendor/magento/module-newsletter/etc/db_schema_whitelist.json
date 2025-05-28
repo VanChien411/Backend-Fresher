@@ -31,7 +31,8 @@
             "template_sender_email": true,
             "template_actual": true,
             "added_at": true,
-            "modified_at": true
+            "modified_at": true,
+            "is_legacy": true
         },
         "index": {
             "NEWSLETTER_TEMPLATE_TEMPLATE_ACTUAL": true,

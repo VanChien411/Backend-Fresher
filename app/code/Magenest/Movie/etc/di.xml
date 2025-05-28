@@ -4,34 +4,25 @@
     <type name="Magento\Checkout\CustomerData\Cart">
         <plugin name="custom_cart_image" type="Magenest\Movie\Plugin\Checkout\CustomerData\CartAfter"/>
     </type>
-    <!-- Cấu hình virtualType cho Grid Collection -->
-    <virtualType name="Magenest\Movie\Grid\Collection"
-                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+    <!-- Configure the Collection class -->
+    <type name="Magenest\Movie\Model\ResourceModel\Movie\Grid\Collection">
         <arguments>
             <argument name="mainTable" xsi:type="string">magenest_movie</argument>
             <argument name="resourceModel" xsi:type="string">Magenest\Movie\Model\ResourceModel\Movie</argument>
         </arguments>
-    </virtualType>
-    <!-- Liên kết DataProvider với Collection -->
+    </type>
+
+    <!-- Link DataProvider with Collection -->
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
-                <item name="movie_grid_data_source" xsi:type="string">Magenest\Movie\Grid\Collection</item>
+                <item name="movie_grid_data_source" xsi:type="string">
+                    Magenest\Movie\Model\ResourceModel\Movie\Grid\Collection
+                </item>
             </argument>
         </arguments>
     </type>
 
-    <!--    <virtualType name="Magento\Catalog\Ui\DataProvider\Product\Form\Modifier\Pool">-->
-    <!--        <arguments>-->
-    <!--            <argument name="modifiers" xsi:type="array">-->
-    <!--                <item name="hide_original_fields" xsi:type="array">-->
-    <!--                    <item name="class" xsi:type="string">Magenest\Movie\Ui\DataProvider\Product\Form\Modifier\HideOriginalFields</item>-->
-    <!--                    <item name="sortOrder" xsi:type="number">1000</item>-->
-    <!--                </item>-->
-    <!--            </argument>-->
-    <!--        </arguments>-->
-    <!--    </virtualType>-->
-    
     <type name="Magento\Catalog\Ui\DataProvider\Product\Form\Modifier\General">
         <plugin name="magenest_movie_hide_attributes" type="Magenest\Movie\Plugin\HideProductAttributes"/>
     </type>

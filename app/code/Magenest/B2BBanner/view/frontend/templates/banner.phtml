@@ -1,0 +1,11 @@
+<?php
+
+/** @var \Magenest\B2BBanner\Block\Banner $block */
+?>
+<?php if ($block->canShowBanner()): ?>
+    <div class="b2b-banner" style="text-align:center;">
+        <img src="<?= $block->getViewFileUrl('Magenest_B2BBanner::images/banner_1.jpg') ?>"
+             alt="B2B Banner"
+             style="max-width: 100%; width: 100%; height: auto;"/>
+    </div>
+<?php endif; ?>

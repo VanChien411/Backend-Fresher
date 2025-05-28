@@ -2,72 +2,128 @@
 
 namespace Magenest\Movie\Model\ResourceModel\Movie\Grid;
 
-use Magento\Framework\View\Element\UiComponent\DataProvider\Document as MovieModel;
-use Magenest\Movie\Model\ResourceModel\Movie\Collection as MovieCollection;
-use Magento\Framework\Api\Search\SearchResultInterface;
+use Magento\Framework\App\ObjectManager;
+use Magento\Framework\Data\Collection\Db\FetchStrategyInterface as FetchStrategy;
+use Magento\Framework\Data\Collection\EntityFactoryInterface as EntityFactory;
+use Magento\Framework\Event\ManagerInterface as EventManager;
+use Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult;
+use Psr\Log\LoggerInterface as Logger;
+use Magenest\Movie\Model\ResourceModel\Movie as MovieResource;
 
-class Collection extends MovieCollection implements SearchResultInterface
+class Collection extends SearchResult
 {
-    protected $aggregations;
-
+    /**
+     * Initialize dependencies.
+     *
+     * @param EntityFactory $entityFactory
+     * @param Logger $logger
+     * @param FetchStrategy $fetchStrategy
+     * @param EventManager $eventManager
+     * @param string $mainTable
+     * @param string $resourceModel
+     */
     public function __construct(
-        \Magento\Framework\Data\Collection\EntityFactoryInterface    $entityFactory,
-        \Psr\Log\LoggerInterface                                     $logger,
-        \Magento\Framework\Data\Collection\Db\FetchStrategyInterface $fetchStrategy,
-        \Magento\Framework\Event\ManagerInterface                    $eventManager,
-                                                                     $mainTable,
-                                                                     $eventPrefix,
-                                                                     $eventObject,
-                                                                     $resourceModel,
-                                                                     $model = MovieModel::class,
-                                                                     $connection = null,
-        \Magento\Framework\Model\ResourceModel\Db\AbstractDb         $resource = null
+        EntityFactory $entityFactory,
+        Logger        $logger,
+        FetchStrategy $fetchStrategy,
+        EventManager  $eventManager,
+                      $mainTable = 'magenest_movie', // Replace with your actual movie table name
+                      $resourceModel = MovieResource::class
     )
     {
-        parent::__construct($entityFactory, $logger, $fetchStrategy, $eventManager, $connection, $resource);
-        $this->_eventPrefix = $eventPrefix;
-        $this->_eventObject = $eventObject;
-        $this->_init($model, $resourceModel);
-        $this->setMainTable($mainTable);
+        parent::__construct($entityFactory, $logger, $fetchStrategy, $eventManager, $mainTable, $resourceModel);
     }
 
+    /**
+     * Get aggregations.
+     *
+     * @return \Magento\Framework\Api\Search\AggregationInterface
+     */
     public function getAggregations()
     {
         return $this->aggregations;
     }
 
+    /**
+     * Set aggregations.
+     *
+     * @param \Magento\Framework\Api\Search\AggregationInterface $aggregations
+     * @return $this
+     */
     public function setAggregations($aggregations)
     {
         $this->aggregations = $aggregations;
+        return $this;
     }
 
-    public function getAllIds($limit = null, $offset = null)
-    {
-        return $this->getConnection()->fetchCol($this->_getAllIdsSelect($limit, $offset), $this->_bindParams);
-    }
-
+    /**
+     * Get search criteria.
+     *
+     * @return \Magento\Framework\Api\SearchCriteriaInterface|null
+     */
     public function getSearchCriteria()
     {
         return null;
     }
 
+    /**
+     * Set search criteria.
+     *
+     * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
+     * @return $this
+     */
     public function setSearchCriteria(\Magento\Framework\Api\SearchCriteriaInterface $searchCriteria = null)
     {
         return $this;
     }
 
+    /**
+     * Get total count.
+     *
+     * @return int
+     */
     public function getTotalCount()
     {
         return $this->getSize();
     }
 
+    /**
+     * Set total count.
+     *
+     * @param int $totalCount
+     * @return $this
+     */
     public function setTotalCount($totalCount)
     {
         return $this;
     }
 
+    /**
+     * Set items.
+     *
+     * @param array|null $items
+     * @return $this
+     */
     public function setItems(array $items = null)
     {
+        return $this;
+    }
+
+    /**
+     * Initialize select query.
+     *
+     * @return $this
+     */
+    protected function _initSelect()
+    {
+        parent::_initSelect();
+
+        // Map columns to main_table for filtering
+        $tableDescription = $this->getConnection()->describeTable($this->getMainTable());
+        foreach ($tableDescription as $columnInfo) {
+            $this->addFilterToMap($columnInfo['COLUMN_NAME'], 'main_table.' . $columnInfo['COLUMN_NAME']);
+        }
+
         return $this;
     }
 }

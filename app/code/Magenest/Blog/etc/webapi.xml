@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+    <!-- Get -->
+    <route url="/V1/blogs" method="GET">
+        <service class="Magenest\Blog\Api\BlogRepositoryInterface" method="getAllBlogs"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <!-- Create -->
+    <route url="/V1/blogs" method="POST">
+        <service class="Magenest\Blog\Api\BlogRepositoryInterface" method="createBlog"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <!-- Update -->
+    <route url="/V1/blogs/:id" method="PUT">
+        <service class="Magenest\Blog\Api\BlogRepositoryInterface" method="updateBlog"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <!-- Delete -->
+    <route url="/V1/blogs/:id" method="DELETE">
+        <service class="Magenest\Blog\Api\BlogRepositoryInterface" method="deleteBlog"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>

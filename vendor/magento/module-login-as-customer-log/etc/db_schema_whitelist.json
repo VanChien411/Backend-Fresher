@@ -5,7 +5,8 @@
             "user_name": true,
             "user_id": true,
             "customer_id": true,
-            "customer_email": true
+            "customer_email": true,
+            "time": true
         },
         "constraint": {
             "PRIMARY": true
