@@ -8,7 +8,7 @@ class Category extends AbstractDb
 {
     protected function _construct()
     {
-        $this->_init('magenest_category', 'category_id');
+        $this->_init('magenest_category', 'id');
     }
 }
 
