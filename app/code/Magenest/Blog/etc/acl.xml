@@ -6,6 +6,15 @@
             <resource id="Magento_Backend::admin">
                 <resource id="Magenest_Blog::blog" title="Blog" sortOrder="10">
                     <resource id="Magenest_Blog::manage" title="Manage Blog"/>
+                    <resource id="Magenest_Blog::blog_get" title="Get Blog Post" translate="title" sortOrder="10"/>
+                    <resource id="Magenest_Blog::blog_get_all" title="Get All Blog Posts" translate="title"
+                              sortOrder="20"/>
+                    <resource id="Magenest_Blog::blog_create" title="Create Blog Post" translate="title"
+                              sortOrder="30"/>
+                    <resource id="Magenest_Blog::blog_update" title="Update Blog Post" translate="title"
+                              sortOrder="40"/>
+                    <resource id="Magenest_Blog::blog_delete" title="Delete Blog Post" translate="title"
+                              sortOrder="50"/>
                 </resource>
             </resource>
         </resources>

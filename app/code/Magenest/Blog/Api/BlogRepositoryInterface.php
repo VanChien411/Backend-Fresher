@@ -2,18 +2,50 @@
 
 namespace Magenest\Blog\Api;
 
-use Magenest\Blog\Api\Data\BlogInterface;
-use Magento\Framework\Api\SearchCriteriaInterface;
-
 interface BlogRepositoryInterface
 {
-    public function save(BlogInterface $blog);
+    /**
+     * Get blog by ID
+     *
+     * @param int $id
+     * @return \Magenest\Blog\Api\ResponseBlogInterface
+     * @throws \Magento\Framework\Exception\NoSuchEntityException
+     */
+    public function getBlog(int $id);
 
-    public function getById($id);
+    /**
+     * Get all blogs
+     *
+     * @return \Magenest\Blog\Api\ResponseBlogInterface[]
+     */
+    public function getAllBlogs();
 
-    public function getList(SearchCriteriaInterface $searchCriteria);
+    /**
+     * Create new blog post
+     *
+     * @param \Magenest\Blog\Api\RequestBlogInterface $blog
+     * @return \Magenest\Blog\Api\ResponseBlogInterface
+     * @throws \Magento\Framework\Exception\LocalizedException
+     */
+    public function createBlog(\Magenest\Blog\Api\RequestBlogInterface $blog);
 
-    public function delete(BlogInterface $blog);
+    /**
+     * Update blog post by ID
+     *
+     * @param int $id
+     * @param \Magenest\Blog\Api\RequestBlogInterface $blog
+     * @return \Magenest\Blog\Api\ResponseBlogInterface
+     * @throws \Magento\Framework\Exception\NoSuchEntityException
+     * @throws \Magento\Framework\Exception\LocalizedException
+     */
+    public function updateBlog(int $id, \Magenest\Blog\Api\RequestBlogInterface $blog);
 
-    public function deleteById($id);
+    /**
+     * Delete blog post by ID
+     *
+     * @param int $id
+     * @return bool
+     * @throws \Magento\Framework\Exception\NoSuchEntityException
+     */
+    public function deleteBlog(int $id);
 }

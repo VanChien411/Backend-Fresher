@@ -80,31 +80,50 @@ class Blog extends AbstractModel
 
     public function afterSave()
     {
-        // 1. Xóa các rewrite cũ (nếu có)
-        $existingCollection = $this->urlRewriteFactory->create()->getCollection()
-            ->addFieldToFilter('entity_type', 'custom')
-            ->addFieldToFilter('entity_id', $this->getId())
-            ->addFieldToFilter('store_id', 1);
+        $entityId = $this->getId();
+        $requestPath = $this->getUrlRewrite();
 
-        /** @var \Magento\UrlRewrite\Model\UrlRewrite $old */
-        foreach ($existingCollection as $old) {
-            $this->urlRewriteResource->delete($old);
-        }
-
-        // 2a. Cách 1: tạo cho từng store view
         foreach ($this->storeManager->getStores() as $store) {
+            $storeId = $store->getId();
+
+            $collection = $this->urlRewriteFactory->create()->getCollection()
+                ->addFieldToFilter('entity_type', 'custom')
+                ->addFieldToFilter('entity_id', $entityId)
+                ->addFieldToFilter('store_id', $storeId);
+
+            // Xóa nếu request_path thay đổi
+            foreach ($collection as $oldRewrite) {
+                if ($oldRewrite->getRequestPath() != $requestPath) {
+                    $this->urlRewriteResource->delete($oldRewrite);
+                } else {
+                    // Nếu đã tồn tại đúng request_path thì không cần tạo mới
+                    continue 2;
+                }
+            }
+
+            // Kiểm tra trùng request_path với các entity khác
+            $existingPath = $this->urlRewriteFactory->create()->getCollection()
+                ->addFieldToFilter('request_path', $requestPath)
+                ->addFieldToFilter('store_id', $storeId)
+                ->addFieldToFilter('entity_id', ['neq' => $entityId])
+                ->addFieldToFilter('entity_type', 'custom')
+                ->getFirstItem();
+
+            if ($existingPath && $existingPath->getId()) {
+                throw new LocalizedException(__('URL Rewrite "%1" already exists in store %2', $requestPath, $store->getName()));
+            }
+
+            // Tạo mới url rewrite
             $rewrite = $this->urlRewriteFactory->create();
             $rewrite->setEntityType('custom')
-                ->setEntityId($this->getId())
-                ->setRequestPath($this->getUrlRewrite())
-                ->setTargetPath("blog/blog/view/id/{$this->getId()}")
-                ->setStoreId($store->getId())
+                ->setEntityId($entityId)
+                ->setRequestPath($requestPath)
+                ->setTargetPath("blog/blog/view/id/{$entityId}")
+                ->setStoreId($storeId)
                 ->setIsSystem(0);
+
             $this->urlRewriteResource->save($rewrite);
         }
-
-        // 3. Invalidate cache
-//        $this->cacheTypeList->invalidate('full_page');
 
         return parent::afterSave();
     }

@@ -19,4 +19,10 @@
             </argument>
         </arguments>
     </type>
+
+    <!--    Api -->
+    <preference for="Magenest\Blog\Api\BlogRepositoryInterface" type="Magenest\Blog\Model\Api\BlogRepository"/>
+    <preference for="Magenest\Blog\Api\RequestBlogInterface" type="Magenest\Blog\Model\Api\RequestBlog"/>
+    <preference for="Magenest\Blog\Api\ResponseBlogInterface" type="Magenest\Blog\Model\Api\ResponseBlog"/>
+    
 </config>
