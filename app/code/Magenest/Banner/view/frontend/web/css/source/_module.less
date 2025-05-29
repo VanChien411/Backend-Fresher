@@ -1,0 +1,22 @@
+.side-banners {
+  position: fixed; // hoặc absolute nếu chỉ nằm trong 1 container
+  top: 350px; // hoặc 0 nếu bạn muốn sát header
+  left: 0;
+  right: 0;
+  width: 100%;
+  pointer-events: none; // để không cản click vào nội dung chính
+
+  display: flex;
+  justify-content: space-between;
+  z-index: 10; // cao hơn nội dung thường
+
+  .banner-item {
+    width: 200px;
+    pointer-events: auto; // cho phép click vào banner
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}

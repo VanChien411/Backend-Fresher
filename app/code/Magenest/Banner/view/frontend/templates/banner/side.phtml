@@ -1,0 +1,16 @@
+<?php
+/** @var \Magenest\Banner\Block\Frontend\SideBanner $block */
+$banners = $block->getEnabledBanners();
+?>
+
+<?php if ($banners->getSize()): ?>
+    <div class="side-banners">
+        <?php foreach ($banners as $banner): ?>
+            <div class="banner-item">
+                <img src="<?= ($banner->getImage()) ?>"
+                     alt="<?= $banner->getTitle() ?>"/>
+                <div class="banner-title"><?= $banner->getTitle() ?></div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>

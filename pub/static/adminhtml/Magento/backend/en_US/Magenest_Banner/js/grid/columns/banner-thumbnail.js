@@ -1,0 +1,1 @@
+/var/www/html/Backend-Fresher/app/code/Magenest/Banner/view/adminhtml/web/js/grid/columns/banner-thumbnail.js
