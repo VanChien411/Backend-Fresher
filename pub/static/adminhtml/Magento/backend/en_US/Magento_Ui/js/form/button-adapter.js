@@ -1,1 +1,0 @@
-/var/www/html/Backend-Fresher/vendor/magento/module-ui/view/base/web/js/form/button-adapter.js

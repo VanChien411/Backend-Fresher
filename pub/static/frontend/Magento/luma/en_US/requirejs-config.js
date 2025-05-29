@@ -1036,6 +1036,17 @@ require.config(config);
 })();
 (function() {
 var config = {
+    map: {
+        '*': {
+            'Magenest_ColorSwitch/js/switcher': 'Magenest_ColorSwitch/js/switcher'
+        }
+    }
+};
+
+require.config(config);
+})();
+(function() {
+var config = {
     config: {}
 };
 require.config(config);
