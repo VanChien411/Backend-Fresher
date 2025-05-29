@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Menu/etc/menu.xsd">
+    <menu>
+        <add id="Magenest_Banner::banner_root"
+             title="Banner"
+             module="Magenest_Banner"
+             sortOrder="100"
+             resource="Magenest_Banner::banner_root"/>
+
+        <add id="Magenest_Banner::banner_manage"
+             title="Manage Banners"
+             module="Magenest_Banner"
+             sortOrder="10"
+             parent="Magenest_Banner::banner_root"
+             action="banner/banner/index"
+             resource="Magenest_Banner::banner_manage"/>
+    </menu>
+</config>

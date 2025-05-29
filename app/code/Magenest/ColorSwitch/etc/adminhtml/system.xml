@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!-- file: app/code/Magenest/ColorSwitch/etc/adminhtml/system.xml -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <!-- Section Color Switch (đứng ngay sau Movie, cùng dùng tab=magenest) -->
+        <section id="color_switch" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Color Switch</label>
+            <tab>magenest</tab>
+            <resource>Magenest_ColorSwitch::config</resource>
+            <group id="color_options" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Color Options</label>
+                <field id="colors" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Color List</label>
+                    <frontend_model>Magenest\ColorSwitch\Block\Adminhtml\System\Config\DynamicRows</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

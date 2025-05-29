@@ -1,0 +1,21 @@
+<div class="delivery-date">
+    <label for="delivery_type">Chọn loại giao hàng:</label>
+    <select name="delivery_type" id="delivery_type" onchange="toggleDeliveryDateInput(this)">
+        <option value="same_day">Giao trong ngày</option>
+        <option value="custom_date">Tự chọn ngày</option>
+    </select>
+    <div id="delivery_date_input" style="display: none;">
+        <label for="delivery_date">Chọn ngày giao hàng:</label>
+        <input type="date" name="delivery_date" id="delivery_date">
+    </div>
+</div>
+<script>
+    function toggleDeliveryDateInput(select) {
+        var deliveryDateInput = document.getElementById('delivery_date_input');
+        if (select.value === 'custom_date') {
+            deliveryDateInput.style.display = 'block';
+        } else {
+            deliveryDateInput.style.display = 'none';
+        }
+    }
+</script>

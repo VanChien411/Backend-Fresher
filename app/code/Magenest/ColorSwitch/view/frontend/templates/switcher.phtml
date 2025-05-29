@@ -1,0 +1,33 @@
+<?php
+/**
+ *
+ * @var $block \Magenest\ColorSwitch\Block\Switcher;
+ */
+$color = $block->getColorOptions();
+?>
+<div id="color-switcher" data-bind="scope: 'selectAction'">
+    <label for="color-select"><?= __('Background:') ?></label>
+    <select id="color-select"
+            data-bind="
+                    options: options,
+                    optionsText: 'label',
+                    optionsValue: 'value',
+                    value: selectedColor">
+    </select>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "selectAction": {
+                        "component": "Magenest_ColorSwitch/js/switcher",
+                        "configOptions": <?= /* @noEscape */
+    json_encode($color) ?>
+    }
+}
+}
+}
+}
+</script>

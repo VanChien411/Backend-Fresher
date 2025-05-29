@@ -5992,6 +5992,25 @@ div[data-content-type='video'] video {
 .product-info-stock-sku .configurable-variation-qty {
   display: none;
 }
+.side-banners {
+  position: fixed;
+  top: 350px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  pointer-events: none;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+.side-banners .banner-item {
+  width: 200px;
+  pointer-events: auto;
+}
+.side-banners .banner-item img {
+  width: 100%;
+  display: block;
+}
 .block-category-event {
   background: #f0f0f0;
   color: #333333;

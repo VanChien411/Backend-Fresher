@@ -1,0 +1,11 @@
+/* Container flex để label và select canh giữa hàng */
+#color-switcher {
+    display: flex;
+    align-items: center;
+}
+
+/* Đặt width cho select và tạo khoảng cách so với label */
+#color-switcher select {
+    width: 200px;
+    margin-left: 0.5rem; /* bạn có thể điều chỉnh khoảng cách */
+}

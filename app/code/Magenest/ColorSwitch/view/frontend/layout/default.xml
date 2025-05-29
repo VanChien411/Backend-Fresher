@@ -1,0 +1,13 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <!-- Load file switcher.css -->
+        <css src="Magenest_ColorSwitch::css/switcher.css"/>
+    </head>
+    <body>
+        <!-- chèn block trước closing </header> -->
+        <referenceContainer name="header.panel">
+            <block class="Magenest\ColorSwitch\Block\Switcher" name="color.switcher" template="switcher.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

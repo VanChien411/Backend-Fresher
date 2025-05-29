@@ -1,0 +1,6 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="checkout_cart_product_add_after">
+        <observer name="save_delivery_date_to_quote" instance="Magenest\DeliveryTime\Observer\SaveDeliveryDateToQuote"/>
+    </event>
+</config>
