@@ -1,0 +1,41 @@
+<?php
+/**
+ *
+ * @var $block \Magenest\PopupOffer\Block\Popup;
+ */
+$user_id = $block->getCustomerGroupId();
+?>
+<?php if ($block->getOfferMessage()): ?>
+    <div id="popup-offer" class="popup-offer" style="display: none;">
+        <div class="content">
+            <?= $block->escapeHtml($block->getOfferMessage()) ?>
+            <button id="close-popup">Đóng</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            if (!localStorage.getItem(<?= $user_id ?>)) {
+                document.getElementById('popup-offer').style.display = 'block';
+
+                document.getElementById('close-popup').addEventListener('click', function () {
+                    document.getElementById('popup-offer').style.display = 'none';
+                    localStorage.setItem(<?= $user_id ?>, '1');
+                });
+            }
+        });
+    </script>
+    <style>
+        .popup-offer {
+            position: fixed;
+            top: 20%;
+            left: 30%;
+            width: 40%;
+            background: white;
+            border: 2px solid #000;
+            z-index: 9999;
+            padding: 20px;
+            box-shadow: 0 0 10px #333;
+        }
+    </style>
+<?php endif; ?>

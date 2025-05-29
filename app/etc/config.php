@@ -337,6 +337,7 @@ return [
         'Magenest_DeliveryTime' => 1,
         'Magenest_KnockoutJs' => 1,
         'Magenest_Movie' => 1,
+        'Magenest_PopupOffer' => 1,
         'Mageplaza_Core' => 1,
         'Mageplaza_Smtp' => 1,
         'PayPal_Braintree' => 1,
