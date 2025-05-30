@@ -332,6 +332,7 @@ return [
         'Magenest_Blog' => 1,
         'Magenest_ColorSwitch' => 1,
         'Magenest_Course' => 1,
+        'Magenest_CourseTime' => 1,
         'Magenest_CustomAddress' => 1,
         'Magenest_Database' => 1,
         'Magenest_DeliveryTime' => 1,

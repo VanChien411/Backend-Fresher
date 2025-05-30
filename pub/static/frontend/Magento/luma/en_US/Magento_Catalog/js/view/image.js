@@ -1,1 +1,0 @@
-/var/www/html/Backend-Fresher/vendor/magento/module-catalog/view/frontend/web/js/view/image.js
