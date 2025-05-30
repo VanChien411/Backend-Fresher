@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="customer_course" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <label>Customer Course</label>
+            <tab>magenest</tab>
+            <resource>Magenest_CourseTime::config</resource>
+            <group id="course_options" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Course Options</label>
+                <field id="course" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Course List</label>
+                    <frontend_model>Magenest\CourseTime\Block\Adminhtml\System\Config\DynamicRows</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

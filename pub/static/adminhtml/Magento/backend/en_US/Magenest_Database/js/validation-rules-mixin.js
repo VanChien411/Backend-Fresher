@@ -1,1 +1,0 @@
-/var/www/html/Backend-Fresher/app/code/Magenest/Database/view/adminhtml/web/js/validation-rules-mixin.js

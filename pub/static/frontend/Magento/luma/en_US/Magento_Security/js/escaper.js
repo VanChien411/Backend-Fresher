@@ -1,1 +1,0 @@
-/var/www/html/Backend-Fresher/vendor/magento/module-security/view/base/web/js/escaper.js
