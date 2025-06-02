@@ -1,0 +1,1 @@
+/var/www/html/Backend-Fresher/app/code/Magenest/ColorSwitch/view/frontend/web/js/switcher.js
